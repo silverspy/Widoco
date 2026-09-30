@@ -5,7 +5,7 @@ WORKDIR /var/build/widoco
 
 COPY . .
 
-RUN mvn package && \
+RUN mvn -f build-reactor/pom.xml package && \
     mv ./JAR/widoco*.jar ./JAR/widoco.jar
 
 # ----

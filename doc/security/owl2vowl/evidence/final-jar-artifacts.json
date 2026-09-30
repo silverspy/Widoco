@@ -1,0 +1,356 @@
+[
+  {
+    "group": "es.oeg\r",
+    "artifact": "widoco\r",
+    "version": "1.4.26\r",
+    "metadata": "META-INF/maven/es.oeg/widoco/pom.properties"
+  },
+  {
+    "group": "org.apache.maven",
+    "artifact": "maven-model",
+    "version": "3.9.11",
+    "metadata": "META-INF/maven/org.apache.maven/maven-model/pom.properties"
+  },
+  {
+    "group": "org.codehaus.plexus",
+    "artifact": "plexus-utils",
+    "version": "3.6.1",
+    "metadata": "META-INF/maven/org.codehaus.plexus/plexus-utils/pom.properties"
+  },
+  {
+    "group": "org.jsoup",
+    "artifact": "jsoup",
+    "version": "1.23.1",
+    "metadata": "META-INF/maven/org.jsoup/jsoup/pom.properties"
+  },
+  {
+    "group": "it.gov.innovazione\r",
+    "artifact": "owl2vowl-core\r",
+    "version": "1.0.0-teamdigitale-5cdef094\r",
+    "metadata": "META-INF/maven/it.gov.innovazione/owl2vowl-core/pom.properties"
+  },
+  {
+    "group": "com.fasterxml.jackson.core",
+    "artifact": "jackson-databind",
+    "version": "2.18.11",
+    "metadata": "META-INF/maven/com.fasterxml.jackson.core/jackson-databind/pom.properties"
+  },
+  {
+    "group": "org.apache.logging.log4j",
+    "artifact": "log4j-api",
+    "version": "2.25.5",
+    "metadata": "META-INF/maven/org.apache.logging.log4j/log4j-api/pom.properties"
+  },
+  {
+    "group": "org.apache.logging.log4j",
+    "artifact": "log4j-to-slf4j",
+    "version": "2.25.5",
+    "metadata": "META-INF/maven/org.apache.logging.log4j/log4j-to-slf4j/pom.properties"
+  },
+  {
+    "group": "commons-io",
+    "artifact": "commons-io",
+    "version": "2.18.0",
+    "metadata": "META-INF/maven/commons-io/commons-io/pom.properties"
+  },
+  {
+    "group": "org.apache.commons",
+    "artifact": "commons-lang3",
+    "version": "3.18.0",
+    "metadata": "META-INF/maven/org.apache.commons/commons-lang3/pom.properties"
+  },
+  {
+    "group": "com.google.guava",
+    "artifact": "guava",
+    "version": "33.4.0-jre",
+    "metadata": "META-INF/maven/com.google.guava/guava/pom.properties"
+  },
+  {
+    "group": "com.google.guava",
+    "artifact": "failureaccess",
+    "version": "1.0.2",
+    "metadata": "META-INF/maven/com.google.guava/failureaccess/pom.properties"
+  },
+  {
+    "group": "com.google.guava",
+    "artifact": "listenablefuture",
+    "version": "9999.0-empty-to-avoid-conflict-with-guava",
+    "metadata": "META-INF/maven/com.google.guava/listenablefuture/pom.properties"
+  },
+  {
+    "group": "com.google.errorprone",
+    "artifact": "error_prone_annotations",
+    "version": "2.36.0",
+    "metadata": "META-INF/maven/com.google.errorprone/error_prone_annotations/pom.properties"
+  },
+  {
+    "group": "com.google.j2objc",
+    "artifact": "j2objc-annotations",
+    "version": "3.0.0",
+    "metadata": "META-INF/maven/com.google.j2objc/j2objc-annotations/pom.properties"
+  },
+  {
+    "group": "org.apache.httpcomponents",
+    "artifact": "httpclient",
+    "version": "4.5.14",
+    "metadata": "META-INF/maven/org.apache.httpcomponents/httpclient/pom.properties"
+  },
+  {
+    "group": "org.apache.httpcomponents",
+    "artifact": "httpcore",
+    "version": "4.4.16",
+    "metadata": "META-INF/maven/org.apache.httpcomponents/httpcore/pom.properties"
+  },
+  {
+    "group": "commons-logging",
+    "artifact": "commons-logging",
+    "version": "1.2",
+    "metadata": "META-INF/maven/commons-logging/commons-logging/pom.properties"
+  },
+  {
+    "group": "commons-codec\r",
+    "artifact": "commons-codec\r",
+    "version": "1.11\r",
+    "metadata": "META-INF/maven/commons-codec/commons-codec/pom.properties"
+  },
+  {
+    "group": "jakarta.annotation",
+    "artifact": "jakarta.annotation-api",
+    "version": "2.1.1",
+    "metadata": "META-INF/maven/jakarta.annotation/jakarta.annotation-api/pom.properties"
+  },
+  {
+    "group": "org.slf4j\r",
+    "artifact": "slf4j-api\r",
+    "version": "1.7.36\r",
+    "metadata": "META-INF/maven/org.slf4j/slf4j-api/pom.properties"
+  },
+  {
+    "group": "org.slf4j\r",
+    "artifact": "slf4j-simple\r",
+    "version": "1.7.36\r",
+    "metadata": "META-INF/maven/org.slf4j/slf4j-simple/pom.properties"
+  },
+  {
+    "group": "net.sourceforge.owlapi",
+    "artifact": "owlapi-api",
+    "version": "5.1.18",
+    "metadata": "META-INF/maven/net.sourceforge.owlapi/owlapi-api/pom.properties"
+  },
+  {
+    "group": "net.sourceforge.owlapi",
+    "artifact": "owlapi-apibinding",
+    "version": "5.1.18",
+    "metadata": "META-INF/maven/net.sourceforge.owlapi/owlapi-apibinding/pom.properties"
+  },
+  {
+    "group": "net.sourceforge.owlapi",
+    "artifact": "owlapi-compatibility",
+    "version": "5.1.18",
+    "metadata": "META-INF/maven/net.sourceforge.owlapi/owlapi-compatibility/pom.properties"
+  },
+  {
+    "group": "net.sourceforge.owlapi",
+    "artifact": "owlapi-distribution",
+    "version": "5.1.18",
+    "metadata": "META-INF/maven/net.sourceforge.owlapi/owlapi-distribution/pom.properties"
+  },
+  {
+    "group": "net.sourceforge.owlapi",
+    "artifact": "owlapi-impl",
+    "version": "5.1.18",
+    "metadata": "META-INF/maven/net.sourceforge.owlapi/owlapi-impl/pom.properties"
+  },
+  {
+    "group": "net.sourceforge.owlapi",
+    "artifact": "owlapi-oboformat",
+    "version": "5.1.18",
+    "metadata": "META-INF/maven/net.sourceforge.owlapi/owlapi-oboformat/pom.properties"
+  },
+  {
+    "group": "net.sourceforge.owlapi",
+    "artifact": "owlapi-parsers",
+    "version": "5.1.18",
+    "metadata": "META-INF/maven/net.sourceforge.owlapi/owlapi-parsers/pom.properties"
+  },
+  {
+    "group": "net.sourceforge.owlapi",
+    "artifact": "owlapi-rio",
+    "version": "5.1.18",
+    "metadata": "META-INF/maven/net.sourceforge.owlapi/owlapi-rio/pom.properties"
+  },
+  {
+    "group": "net.sourceforge.owlapi",
+    "artifact": "owlapi-tools",
+    "version": "5.1.18",
+    "metadata": "META-INF/maven/net.sourceforge.owlapi/owlapi-tools/pom.properties"
+  },
+  {
+    "group": "com.fasterxml.jackson.core",
+    "artifact": "jackson-core",
+    "version": "2.18.11",
+    "metadata": "META-INF/maven/com.fasterxml.jackson.core/jackson-core/pom.properties"
+  },
+  {
+    "group": "com.fasterxml.jackson.core",
+    "artifact": "jackson-annotations",
+    "version": "2.18.11",
+    "metadata": "META-INF/maven/com.fasterxml.jackson.core/jackson-annotations/pom.properties"
+  },
+  {
+    "group": "org.slf4j\r",
+    "artifact": "jcl-over-slf4j\r",
+    "version": "1.7.22\r",
+    "metadata": "META-INF/maven/org.slf4j/jcl-over-slf4j/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-model",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-model/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-api",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-api/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-languages",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-languages/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-datatypes",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-datatypes/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-binary",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-binary/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-n3",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-n3/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-nquads",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-nquads/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-ntriples",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-ntriples/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-rdfjson",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-rdfjson/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-jsonld",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-jsonld/pom.properties"
+  },
+  {
+    "group": "org.apache.httpcomponents",
+    "artifact": "httpclient-cache",
+    "version": "4.5.14",
+    "metadata": "META-INF/maven/org.apache.httpcomponents/httpclient-cache/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-rdfxml",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-rdfxml/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-trix",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-trix/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-turtle",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-turtle/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-trig",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-trig/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-rio-hdt",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-rio-hdt/pom.properties"
+  },
+  {
+    "group": "org.eclipse.rdf4j",
+    "artifact": "rdf4j-util",
+    "version": "3.4.3",
+    "metadata": "META-INF/maven/org.eclipse.rdf4j/rdf4j-util/pom.properties"
+  },
+  {
+    "group": "com.github.jsonld-java",
+    "artifact": "jsonld-java",
+    "version": "0.13.0",
+    "metadata": "META-INF/maven/com.github.jsonld-java/jsonld-java/pom.properties"
+  },
+  {
+    "group": "org.apache.httpcomponents",
+    "artifact": "fluent-hc",
+    "version": "4.5.14",
+    "metadata": "META-INF/maven/org.apache.httpcomponents/fluent-hc/pom.properties"
+  },
+  {
+    "group": "org.apache.httpcomponents",
+    "artifact": "httpclient-osgi",
+    "version": "4.5.14",
+    "metadata": "META-INF/maven/org.apache.httpcomponents/httpclient-osgi/pom.properties"
+  },
+  {
+    "group": "org.apache.httpcomponents",
+    "artifact": "httpmime",
+    "version": "4.5.14",
+    "metadata": "META-INF/maven/org.apache.httpcomponents/httpmime/pom.properties"
+  },
+  {
+    "group": "org.apache.httpcomponents",
+    "artifact": "httpcore-nio",
+    "version": "4.4.16",
+    "metadata": "META-INF/maven/org.apache.httpcomponents/httpcore-nio/pom.properties"
+  },
+  {
+    "group": "org.apache.httpcomponents",
+    "artifact": "httpcore-osgi",
+    "version": "4.4.16",
+    "metadata": "META-INF/maven/org.apache.httpcomponents/httpcore-osgi/pom.properties"
+  },
+  {
+    "group": "com.github.vsonnier\r",
+    "artifact": "hppcrt\r",
+    "version": "0.7.5\r",
+    "metadata": "META-INF/maven/com.github.vsonnier/hppcrt/pom.properties"
+  },
+  {
+    "group": "com.google.code.findbugs\r",
+    "artifact": "jsr305\r",
+    "version": "3.0.2\r",
+    "metadata": "META-INF/maven/com.google.code.findbugs/jsr305/pom.properties"
+  }
+]

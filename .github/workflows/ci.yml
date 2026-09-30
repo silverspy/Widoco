@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [develop, master]
+    branches: [develop, master, replace-owl2vowl-with-teamdigitale-core]
     tags:
      - 'v*'
   pull_request:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        jdk: [11, 14, 17]
+        jdk: [11, 17, 21]
     steps:
       - uses: actions/checkout@v7
       # details https://github.com/actions/setup-java
@@ -28,7 +28,15 @@ jobs:
           distribution: 'zulu'
           cache: maven
       - name: Build with Maven
-        run: mvn -e --batch-mode package
+        run: mvn -e --batch-mode -f build-reactor/pom.xml verify org.apache.maven.plugins:maven-dependency-plugin:3.8.1:tree -DoutputFile=dependency-tree.txt
+      - name: Audit dependencies and packaged bytecode without suppressions
+        run: |
+          mkdir -p target/security
+          node scripts/security/tree-inventory.mjs dependency-tree.txt target/security/resolved-artifacts.json
+          python scripts/security/jar-inventory.py JAR/widoco-1.4.26-jar-with-dependencies.jar target/security/jar.json --assert-clean
+          python scripts/security/audit-packaged-classes.py JAR/widoco-1.4.26-jar-with-dependencies.jar target/security/resolved-artifacts.json "$HOME/.m2/repository" target/security/bytecode-provenance.json owl2vowl-core/target/owl2vowl-core-1.0.0-teamdigitale-5cdef094.jar
+          node scripts/security/scan-osv.mjs target/security/resolved-artifacts.json target/security/resolved-osv.json --fail-on-vulnerability
+          node scripts/security/scan-osv.mjs target/security/jar-artifacts.json target/security/jar-osv.json --fail-on-vulnerability
       - name: Include JDK in filename
         run: |
           FN=$(ls JAR/*.jar)
@@ -39,6 +47,7 @@ jobs:
           name: widoco_JDK-${{ matrix.jdk }}
           path: JAR/*.jar
   docker:
+    if: github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU

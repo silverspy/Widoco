@@ -93,9 +93,11 @@ and it will show right next to the title. The [WIDOCO metadata documentation](do
 We provide JAR files for each release (see the [releases](https://github.com/dgarijo/Widoco/releases) page). However, if you want to build WIDOCO from scratch, just cd into the project folder and run:
 
 ```bash
-mvn install
+mvn -f build-reactor/pom.xml clean install
 ```
 The JAR will be generated in a "JAR" folder. The name will follow the pattern: `widoco-{VERSION_ID}-jar-with-dependencies.jar`, where {VERSION_ID} is the version number of the tool.
+
+This branch builds a standalone Java 11 OWL2VOWL core from the pinned Team Digitale sources, without Spring Boot or an HTTP server. See the [security comparison and reproduction instructions](doc/security/owl2vowl/REPORT.md) for validation results and converter limitations.
 
 ### JAR execution
 

@@ -1,0 +1,41 @@
+[main] INFO widoco.gui.GuiController - 
+
+--WIzard for DOCumenting Ontologies (WIDOCO).
+ https://w3id.org/widoco/
+
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790805630525
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\JAR\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\JAR\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\JAR\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while reading configuration properties from []: 
+[main] WARN widoco.Configuration - Error while reading configuration properties from []: 
+[main] INFO widoco.gui.GuiController - Processed configuration, loading ontology now. isFromFile=true
+[main] INFO widoco.WidocoUtils - Load ontology integration-widoco/target/security/cli-input.owl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.gui.GuiController - Generating documentation for integration-widoco/target/security/cli-input.owl in lang en
+[main] INFO widoco.gui.GuiController - Load properties from the ontology in lang en
+[main] INFO widoco.CreateResources - Generate documentation in evidence/final-java11-documentation
+[main] INFO widoco.CreateResources - - ontology IRI: https://example.org/main
+[main] INFO lode.LODEGeneration - Found imported ontology: Optional[https://example.org/imported]
+Warning at function f:isInDomain on line 2111 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasMembers on line 2099 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:isInRange on line 2105 column 54 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasSubclasses on line 2093 column 58 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+[main] INFO widoco.LODEParser - Parsing Complete!
+[main] INFO widoco.WidocoUtils - Copying resource folder from webvowl_1.1.7_patched to evidence\final-java11-documentation\webvowl
+[main] INFO widoco.CreateResources - No previous version provided. No changelog produced!
+Converting Ontology:
+  -> preLoadOntontology()00:00:34
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<https://example.org/main>) VersionIRI(<null>))) [Axioms: 24 Logical Axioms: 16] First 20 axioms: {ObjectPropertyRange(<https://example.org/main#exact> <https://example.org/imported#External>) ObjectPropertyRange(<https://example.org/main#min> <https://example.org/imported#External>) ObjectPropertyRange(<https://example.org/main#max> <https://example.org/imported#External>) ObjectPropertyRange(<https://example.org/main#knows> <https://example.org/imported#External>) Declaration(ObjectProperty(<https://example.org/main#exact>)) Declaration(Class(<https://example.org/imported#External>)) Declaration(ObjectProperty(<https://example.org/main#knows>)) Declaration(ObjectProperty(<https://example.org/main#min>)) Declaration(DataProperty(<https://example.org/main#name>)) Declaration(ObjectProperty(<https://example.org/main#max>)) Declaration(Class(<https://example.org/main#Child>)) Declaration(Class(<https://example.org/main#Person>)) DataPropertyRange(<https://example.org/main#name> xsd:string) SubClassOf(<https://example.org/main#Child> ObjectSomeValuesFrom(<https://example.org/main#knows> <https://example.org/imported#External>)) SubClassOf(<https://example.org/main#Person> ObjectMaxCardinality(3 <https://example.org/main#max> owl:Thing)) SubClassOf(<https://example.org/main#Person> ObjectMinCardinality(1 <https://example.org/main#min> owl:Thing)) SubClassOf(<https://example.org/main#Child> <https://example.org/main#Person>) SubClassOf(<https://example.org/main#Child> ObjectAllValuesFrom(<https://example.org/main#knows> <https://example.org/imported#External>)) SubClassOf(<https://example.org/main#Person> ObjectExactCardinality(2 <https://example.org/main#exact> owl:Thing)) ObjectPropertyDomain(<https://example.org/main#exact> <https://example.org/main#Person>) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: https://example.org/main
+  -> preParsing() 00:00:34
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - WalkStructure Success!
+  -> parsing()00:00:34
+  -> postParsing() 00:00:34
+--- Finished --- 00:00:34
+[main] INFO widoco.Configuration - Doc successfully generated for lang en
+Documentation generated successfully
