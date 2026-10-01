@@ -5,7 +5,7 @@ const {pathToFileURL,fileURLToPath}=require('node:url');
 const {chromium}=require('playwright');
 (async()=>{
   const [folder,output]=process.argv.slice(2);
-  const browser=await chromium.launch({channel:'msedge',headless:true});
+  const browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL,headless:true});
   const page=await browser.newPage();
   const errors=[],network=[],activeNetwork=[];
   page.on('pageerror',e=>errors.push(e.message));

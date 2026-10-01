@@ -15,9 +15,13 @@
  */
 package widoco;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import diff.CompareOntologies;
 import diff.OntologyDifferencesRenderer;
 import java.io.File;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.*;
 
 import org.slf4j.Logger;
@@ -642,66 +646,66 @@ public class Constants {
 		return ns;
 	}
 
-	/**
-	 * Serialize specification metadata as JSON and encode it for HTML embedding.
-	 *
-	 * @param c
-	 * @return
-	 */
+	private static String htmlText(String value) {
+		return value == null ? "" : value.replace("&", "&amp;").replace("<", "&lt;")
+				.replace(">", "&gt;").replace("\"", "&quot;").replace("'", "&#39;");
+	}
 
-    private static String htmlText(String value) {
-        return value == null ? "" : value.replace("&", "&amp;").replace("<", "&lt;")
-                .replace(">", "&gt;").replace("\"", "&quot;").replace("'", "&#39;");
-    }
+	private static String htmlUrl(String value) {
+		if (value == null) {
+			return "";
+		}
+		try {
+			String scheme = new URI(value).getScheme();
+			if (scheme != null && !Set.of("http", "https", "mailto", "urn").contains(scheme.toLowerCase(Locale.ROOT))) {
+				return "";
+			}
+			return htmlText(value);
+		} catch (URISyntaxException ex) {
+			return "";
+		}
+	}
 
-    private static String htmlUrl(String value) {
-        if (value == null) return "";
-        try {
-            String scheme = new java.net.URI(value).getScheme();
-            if (scheme != null && !Set.of("http", "https", "mailto", "urn").contains(scheme.toLowerCase(Locale.ROOT))) return "";
-            return htmlText(value);
-        } catch (java.net.URISyntaxException ex) { return ""; }
-    }
+	private static List<Map<String, String>> jsonAgents(List<Agent> agents) {
+		List<Map<String, String>> result = new ArrayList<>();
+		for (Agent agent : agents) {
+			Map<String, String> item = new LinkedHashMap<>();
+			item.put("@type", "Person");
+			if (agent.getName() != null && !agent.getName().isEmpty()) item.put("name", agent.getName());
+			if (agent.getURL() != null && !agent.getURL().isEmpty()) item.put("url", agent.getURL());
+			result.add(item);
+		}
+		return result;
+	}
 
-    private static List<Map<String, String>> jsonAgents(List<Agent> agents) {
-        List<Map<String, String>> result = new ArrayList<>();
-        for (Agent agent : agents) {
-            Map<String, String> item = new LinkedHashMap<>();
-            item.put("@type", "Person");
-            if (agent.getName() != null && !agent.getName().isEmpty()) item.put("name", agent.getName());
-            if (agent.getURL() != null && !agent.getURL().isEmpty()) item.put("url", agent.getURL());
-            result.add(item);
-        }
-        return result;
-    }
-
-    public static String getJSONLDSnippet(Configuration c) {
-        Ontology o = c.getMainOntology();
-        Map<String, Object> metadata = new LinkedHashMap<>();
-        metadata.put("@context", "https://schema.org");
-        metadata.put("@type", "TechArticle");
-        metadata.put("url", o.getNamespaceURI());
-        metadata.put("image", WEBVOWL_SERVICE + o.getNamespaceURI());
-        metadata.put("name", o.getTitle() == null || o.getTitle().isEmpty() ? o.getNamespaceURI() : o.getTitle());
-        metadata.put("headline", c.getAbstractSection() == null || c.getAbstractSection().isEmpty()
-                ? "Document describing the ontology " + o.getNamespaceURI() : c.getAbstractSection().replace("\n", "").trim());
-        metadata.put("dateReleased", o.getCreationDate() == null || o.getCreationDate().isEmpty() ? new Date().toString() : o.getCreationDate());
-        if (o.getModifiedDate() != null && !o.getModifiedDate().isEmpty()) metadata.put("dateModified", o.getModifiedDate());
-        if (o.getRevision() != null && !o.getRevision().isEmpty()) metadata.put("version", o.getRevision());
-        if (o.getLicense() != null && o.getLicense().getUrl() != null && !o.getLicense().getUrl().isEmpty()) metadata.put("license", o.getLicense().getUrl());
-        if (o.getCodeRepository() != null && !o.getCodeRepository().isEmpty()) metadata.put("codeRepository", o.getCodeRepository());
-        if (!o.getCreators().isEmpty()) metadata.put("author", jsonAgents(o.getCreators()));
-        if (!o.getContributors().isEmpty()) metadata.put("contributor", jsonAgents(o.getContributors()));
-        try {
-            // Escape HTML delimiters as JSON Unicode escapes so that metadata
-            // cannot terminate its script element, while retaining JSON values.
-            String json = new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(metadata)
-                    .replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026");
-            return "\n\n<!-- SCHEMA.ORG METADATA -->\n<script type=\"application/ld+json\">" + json + "</script>\n\n";
-        } catch (com.fasterxml.jackson.core.JsonProcessingException ex) {
-            throw new IllegalStateException("Unable to serialize ontology metadata", ex);
-        }
-    }
+	/** Serialize specification metadata safely for an HTML script element. */
+	public static String getJSONLDSnippet(Configuration c) {
+		Ontology o = c.getMainOntology();
+		Map<String, Object> metadata = new LinkedHashMap<>();
+		metadata.put("@context", "https://schema.org");
+		metadata.put("@type", "TechArticle");
+		metadata.put("url", o.getNamespaceURI());
+		metadata.put("image", WEBVOWL_SERVICE + o.getNamespaceURI());
+		metadata.put("name", o.getTitle() == null || o.getTitle().isEmpty() ? o.getNamespaceURI() : o.getTitle());
+		metadata.put("headline", c.getAbstractSection() == null || c.getAbstractSection().isEmpty()
+				? "Document describing the ontology " + o.getNamespaceURI() : c.getAbstractSection().replace("\n", "").trim());
+		metadata.put("dateReleased", o.getCreationDate() == null || o.getCreationDate().isEmpty() ? new Date().toString() : o.getCreationDate());
+		if (o.getModifiedDate() != null && !o.getModifiedDate().isEmpty()) metadata.put("dateModified", o.getModifiedDate());
+		if (o.getRevision() != null && !o.getRevision().isEmpty()) metadata.put("version", o.getRevision());
+		if (o.getLicense() != null && o.getLicense().getUrl() != null && !o.getLicense().getUrl().isEmpty()) metadata.put("license", o.getLicense().getUrl());
+		if (o.getCodeRepository() != null && !o.getCodeRepository().isEmpty()) metadata.put("codeRepository", o.getCodeRepository());
+		if (!o.getCreators().isEmpty()) metadata.put("author", jsonAgents(o.getCreators()));
+		if (!o.getContributors().isEmpty()) metadata.put("contributor", jsonAgents(o.getContributors()));
+		try {
+			// Escape HTML delimiters as JSON Unicode escapes so that metadata
+			// cannot terminate its script element, while retaining JSON values.
+			String json = new ObjectMapper().writeValueAsString(metadata)
+					.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026");
+			return "\n\n<!-- SCHEMA.ORG METADATA -->\n<script type=\"application/ld+json\">" + json + "</script>\n\n";
+		} catch (JsonProcessingException ex) {
+			throw new IllegalStateException("Unable to serialize ontology metadata", ex);
+		}
+	}
 
 	/**
          * Function that creates an index document assuming sections have been created separately

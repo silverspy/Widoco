@@ -1,9 +1,0 @@
-allprojects {
-    tasks.register('writeSecurityInventory') {
-        doLast {
-            def artifacts = configurations.runtimeClasspath.resolvedConfiguration.resolvedArtifacts
-            def rows = artifacts.collect { a -> [group: a.moduleVersion.id.group, artifact: a.name, version: a.moduleVersion.id.version, file: a.file.absolutePath] }.sort { a, b -> (a.group + ':' + a.artifact) <=> (b.group + ':' + b.artifact) }
-            new File(rootProject.projectDir, '../../evidence/fork-artifacts.json').text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(rows))
-        }
-    }
-}

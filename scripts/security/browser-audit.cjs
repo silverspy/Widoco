@@ -8,7 +8,7 @@ const assert = require('node:assert/strict');
   const base = JSON.parse(fs.readFileSync(fixture,'utf8'));
   const assertSafe = process.argv.includes('--assert-safe');
   const disableCsp = process.argv.includes('--disable-csp');
-  const browser = await chromium.launch({channel:'msedge',headless:true});
+  const browser = await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL,headless:true});
   const results = [];
   for (const scenario of ['input-unmodified','metadata-view','metadata-editor','search-label','hash-url','unsafe-link','prototype-input','bundled-prototype-api']) {
     const json = structuredClone(base);

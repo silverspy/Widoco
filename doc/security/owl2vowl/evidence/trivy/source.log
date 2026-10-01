@@ -1,4 +1,0 @@
-2026-10-01T12:00:38+02:00	INFO	[vuln] Vulnerability scanning is enabled
-2026-10-01T12:00:41+02:00	FATAL	Error	remote Maven repository returned 429 Too Many Requests for https://repo.maven.apache.org/maven2/jakarta/platform/jakartaee-api-parent/9.1.0/jakartaee-api-parent-9.1.0.pom. Retry-After: 1800.
-The repository blocks all subsequent requests from this IP until the block clears.
-To avoid this, populate the local Maven cache before scanning (e.g. run `mvn dependency:resolve` and cache ~/.m2 in CI).

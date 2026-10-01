@@ -1,1 +1,0 @@
-61 artifacts scanned; 0 affected; 0 unique advisories

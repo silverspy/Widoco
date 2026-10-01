@@ -4,7 +4,7 @@ const {pathToFileURL} = require('node:url');
 const {chromium} = require('playwright');
 (async () => {
   const [source, json, output] = process.argv.slice(2);
-  const browser = await chromium.launch({channel:'msedge', headless:true});
+  const browser = await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL, headless:true});
   const page = await browser.newPage({viewport:{width:1400,height:1000}});
   const errors = [], requests = [];
   page.on('pageerror', e => errors.push(e.message));

@@ -4,7 +4,7 @@ const {pathToFileURL} = require('node:url');
 const {chromium} = require('playwright');
 (async () => {
   const [assets, fixtures, output] = process.argv.slice(2);
-  const browser = await chromium.launch({channel:'msedge', headless:true});
+  const browser = await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL, headless:true});
   const results = [];
   for (const kind of ['exact','min','max']) {
     for (const injected of [false,true]) {

@@ -68,18 +68,8 @@ jobs:
           sha256sum --check --ignore-missing checksums.txt
           tar -xzf trivy_0.74.0_Linux-64bit.tar.gz trivy
       - name: Scan the actual JAR, manifests and packaged frontend inventory
-        run: |
-          mkdir -p target/security/trivy
-          touch target/security/trivy/empty.trivyignore
-          .trivy-tools/trivy rootfs --scanners vuln --detection-priority comprehensive --ignorefile target/security/trivy/empty.trivyignore --list-all-pkgs --no-progress --timeout 15m --format json --output target/security/trivy/final-jar.json JAR/widoco-1.4.26-jar-with-dependencies.jar
-          .trivy-tools/trivy fs --scanners vuln --detection-priority comprehensive --ignorefile target/security/trivy/empty.trivyignore --list-all-pkgs --no-progress --timeout 15m --format json --output target/security/trivy/source.json .
-          python scripts/security/audit-frontend-jar.py JAR/widoco-1.4.26-jar-with-dependencies.jar src/main/resources target/security/trivy/frontend-provenance.json target/security/trivy/frontend-assets
-          node scripts/security/frontend-sbom.mjs scripts/security/frontend-components.json target/security/trivy/frontend.cdx.json
-          .trivy-tools/trivy sbom --scanners vuln --detection-priority comprehensive --ignorefile target/security/trivy/empty.trivyignore --list-all-pkgs --no-progress --format json --output target/security/trivy/frontend.json target/security/trivy/frontend.cdx.json
-          .trivy-tools/trivy --version > target/security/trivy/version.txt
-          sha256sum JAR/widoco-1.4.26-jar-with-dependencies.jar > target/security/trivy/sha256.txt
-          node scripts/security/summarize-trivy.mjs target/security/trivy/summary.json target/security/trivy/final-jar.json target/security/trivy/source.json target/security/trivy/frontend.json
-          node -e "const r=require('./target/security/trivy/final-jar.json');if(!r.Results?.some(x=>x.Type==='jar'&&x.Packages?.length))throw Error('No Java packages identified')"
+        shell: pwsh
+        run: ./scripts/security/scan-trivy.ps1 -Trivy ./.trivy-tools/trivy -Cache .trivy-cache
       - name: Upload the scanned JAR and unfiltered reports
         if: always()
         uses: actions/upload-artifact@v7

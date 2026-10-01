@@ -6,7 +6,7 @@ const {chromium} = require('playwright');
 
 (async () => {
   const [html, assets, output] = process.argv.slice(2);
-  const browser = await chromium.launch({channel:'msedge', headless:true});
+  const browser = await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL, headless:true});
   try {
     const page = await browser.newPage();
     const errors = [];
