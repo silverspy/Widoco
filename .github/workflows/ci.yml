@@ -21,12 +21,14 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          ref: 716269409d2a32b7361e44921bb1e1d5b47a7719
+          ref: c3bde3aa1aa9a55034846894333e5ef465f57114
       - uses: actions/checkout@v7
         with:
           ref: 126ae833223a8aecdc51a08e7b1b0c7de7634110
           path: audit-tools
-          sparse-checkout: /scripts/security/
+          sparse-checkout: |
+            /scripts/security/
+            /src/test/java/diagram/DiagramGenerationTest.java
           sparse-checkout-cone-mode: false
       # details https://github.com/actions/setup-java
       - name: Set up JDK  ${{ matrix.jdk }}
@@ -37,6 +39,13 @@ jobs:
           cache: maven
       - name: Build with Maven
         run: mvn -e --batch-mode verify org.apache.maven.plugins:maven-dependency-plugin:3.8.1:tree -DoutputFile=dependency-tree.txt
+      - name: Run converter regression from the audit checkout
+        run: |
+          mkdir -p target/security/external-tests
+          test_classpath="JAR/widoco-1.4.26-jar-with-dependencies.jar:$HOME/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:$HOME/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"
+          javac --release 11 -cp "$test_classpath" -d target/security/external-tests audit-tools/src/test/java/diagram/DiagramGenerationTest.java
+          java -cp "target/security/external-tests:$test_classpath" org.junit.runner.JUnitCore diagram.DiagramGenerationTest > target/security/external-diagram-test.txt
+          cat target/security/external-diagram-test.txt
       - name: Check resolved dependencies and packaged bytecode
         run: |
           mkdir -p target/security
@@ -58,12 +67,13 @@ jobs:
             JAR/*.jar
             target/security/*.json
             target/security/source-commit.txt
+            target/security/external-diagram-test.txt
   java-security:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
         with:
-          ref: 716269409d2a32b7361e44921bb1e1d5b47a7719
+          ref: c3bde3aa1aa9a55034846894333e5ef465f57114
       - uses: actions/checkout@v7
         with:
           ref: 126ae833223a8aecdc51a08e7b1b0c7de7634110
