@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [develop, master]
+    branches: [develop, master, fix-owl2vowl-security]
     tags:
      - 'v*'
   pull_request:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        jdk: [11, 14, 17]
+        jdk: [11, 17, 21]
     steps:
       - uses: actions/checkout@v7
       # details https://github.com/actions/setup-java
@@ -28,7 +28,15 @@ jobs:
           distribution: 'zulu'
           cache: maven
       - name: Build with Maven
-        run: mvn -e --batch-mode package
+        run: mvn -e --batch-mode verify org.apache.maven.plugins:maven-dependency-plugin:3.8.1:tree -DoutputFile=dependency-tree.txt
+      - name: Check resolved dependencies and packaged bytecode
+        run: |
+          mkdir -p target/security
+          node scripts/security/tree-inventory.mjs dependency-tree.txt target/security/resolved-artifacts.json
+          python scripts/security/jar-inventory.py JAR/widoco-1.4.26-jar-with-dependencies.jar target/security/jar.json --assert-clean
+          python scripts/security/audit-packaged-classes.py JAR/widoco-1.4.26-jar-with-dependencies.jar target/security/resolved-artifacts.json "$HOME/.m2/repository" target/security/bytecode-provenance.json
+          node scripts/security/scan-osv.mjs target/security/resolved-artifacts.json target/security/resolved-osv.json --fail-on-vulnerability
+          node scripts/security/scan-osv.mjs target/security/jar-artifacts.json target/security/jar-osv.json --fail-on-vulnerability
       - name: Include JDK in filename
         run: |
           FN=$(ls JAR/*.jar)
@@ -38,7 +46,45 @@ jobs:
         with:
           name: widoco_JDK-${{ matrix.jdk }}
           path: JAR/*.jar
+  java-security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          distribution: zulu
+          java-version: '11'
+          cache: maven
+      - run: mvn --batch-mode verify
+      - name: Install checksum-verified Trivy 0.74.0
+        run: |
+          mkdir -p .trivy-tools
+          cd .trivy-tools
+          curl --fail --location --retry 3 --output trivy_0.74.0_Linux-64bit.tar.gz https://github.com/aquasecurity/trivy/releases/download/v0.74.0/trivy_0.74.0_linux-64bit.tar.gz
+          curl --fail --location --retry 3 --output checksums.txt https://github.com/aquasecurity/trivy/releases/download/v0.74.0/trivy_0.74.0_checksums.txt
+          sha256sum --check --ignore-missing checksums.txt
+          tar -xzf trivy_0.74.0_Linux-64bit.tar.gz trivy
+      - name: Scan Java packages in the actual JAR and Maven manifests
+        run: |
+          mkdir -p target/security
+          : > target/security/empty.trivyignore
+          scan_args=(--cache-dir .trivy-cache --scanners vuln --detection-priority comprehensive --ignorefile target/security/empty.trivyignore --list-all-pkgs --no-progress --timeout 15m --format json)
+          .trivy-tools/trivy rootfs "${scan_args[@]}" --output target/security/trivy-java-jar.json JAR/widoco-1.4.26-jar-with-dependencies.jar
+          .trivy-tools/trivy fs "${scan_args[@]}" --output target/security/trivy-source.json .
+          node scripts/security/summarize-trivy.mjs target/security/trivy-summary.json target/security/trivy-java-jar.json target/security/trivy-source.json
+          node -e "const r=require('./target/security/trivy-java-jar.json'); if(!r.Results?.some(x=>x.Type==='jar'&&x.Packages?.length)) throw new Error('Trivy detected no Java packages');"
+          .trivy-tools/trivy --cache-dir .trivy-cache --version > target/security/trivy-version.txt
+          sha256sum JAR/widoco-1.4.26-jar-with-dependencies.jar > target/security/sha256.txt
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: widoco-java-security
+          path: |
+            JAR/widoco-1.4.26-jar-with-dependencies.jar
+            target/security/*.json
+            target/security/*.txt
   docker:
+    if: github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest
     steps:
       - name: Set up QEMU

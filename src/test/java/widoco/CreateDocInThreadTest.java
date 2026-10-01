@@ -158,7 +158,7 @@ public class CreateDocInThreadTest {
     public void testOntologyFromURL() {
         System.out.println("Testing Ontology: prov-o");
         try{
-            String pathToOnto = "http://www.w3.org/ns/prov-o";
+            String pathToOnto = "https://www.w3.org/ns/prov-o";
             String aux = c.getTmpFile().getAbsolutePath()+File.separator+"auxOntology";
             c.setFromFile(false);
             this.c.setOntologyURI(pathToOnto);

@@ -2,6 +2,9 @@
 ## Eclipse
 #################
 
+dependency-tree.txt
+dependency-reduced-pom.xml
+
 JAR/*
 
 *.pydevproject
