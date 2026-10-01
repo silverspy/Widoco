@@ -487,6 +487,10 @@ public class CreateResources {
 		// copy jquery
 		WidocoUtils.copyLocalResource("/lode/jquery.js",
 				new File(resources.getAbsolutePath() + File.separator + "jquery.js"));
+		for (String script : new String[]{"marked.min.js", "purify.min.js", "mermaid.min.js"}) {
+			WidocoUtils.copyLocalResource("/lode/" + script,
+					new File(resources.getAbsolutePath() + File.separator + script));
+		}
 		// icon
 		WidocoUtils.copyLocalResource("/widoco/images/rdf.icon",
 				new File(resources.getAbsolutePath() + File.separator + "rdf.icon"));

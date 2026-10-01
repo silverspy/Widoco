@@ -3,6 +3,10 @@
 #################
 
 JAR/*
+dependency-tree.txt
+dependency-reduced-pom.xml
+tmp*/
+.browser-tools/
 
 *.pydevproject
 .project

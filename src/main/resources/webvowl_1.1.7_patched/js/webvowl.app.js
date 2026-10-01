@@ -1,3 +1,11 @@
+// External ontology links must not accept executable or local-file schemes.
+webvowl.safeExternalUrl = function(value) {
+  if (typeof value !== "string" || !/^https?:\/\//i.test(value)) return null;
+  try {
+    var url = new URL(value);
+    return url.protocol === "http:" || url.protocol === "https:" ? url.href : null;
+  } catch (error) { return null; }
+};
 webvowl.app =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -61,376 +69,7 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 91:
-/***/ (function(module, exports, __webpack_require__) {
-
-	var Symbol = __webpack_require__(92),
-	    getRawTag = __webpack_require__(95),
-	    objectToString = __webpack_require__(96);
-
-	/** `Object#toString` result references. */
-	var nullTag = '[object Null]',
-	    undefinedTag = '[object Undefined]';
-
-	/** Built-in value references. */
-	var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
-
-	/**
-	 * The base implementation of `getTag` without fallbacks for buggy environments.
-	 *
-	 * @private
-	 * @param {*} value The value to query.
-	 * @returns {string} Returns the `toStringTag`.
-	 */
-	function baseGetTag(value) {
-	  if (value == null) {
-	    return value === undefined ? undefinedTag : nullTag;
-	  }
-	  return (symToStringTag && symToStringTag in Object(value))
-	    ? getRawTag(value)
-	    : objectToString(value);
-	}
-
-	module.exports = baseGetTag;
-
-
-/***/ }),
-
-/***/ 92:
-/***/ (function(module, exports, __webpack_require__) {
-
-	var root = __webpack_require__(93);
-
-	/** Built-in value references. */
-	var Symbol = root.Symbol;
-
-	module.exports = Symbol;
-
-
-/***/ }),
-
-/***/ 93:
-/***/ (function(module, exports, __webpack_require__) {
-
-	var freeGlobal = __webpack_require__(94);
-
-	/** Detect free variable `self`. */
-	var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-
-	/** Used as a reference to the global object. */
-	var root = freeGlobal || freeSelf || Function('return this')();
-
-	module.exports = root;
-
-
-/***/ }),
-
-/***/ 94:
-/***/ (function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
-	var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
-
-	module.exports = freeGlobal;
-
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ }),
-
-/***/ 95:
-/***/ (function(module, exports, __webpack_require__) {
-
-	var Symbol = __webpack_require__(92);
-
-	/** Used for built-in method references. */
-	var objectProto = Object.prototype;
-
-	/** Used to check objects for own properties. */
-	var hasOwnProperty = objectProto.hasOwnProperty;
-
-	/**
-	 * Used to resolve the
-	 * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
-	 * of values.
-	 */
-	var nativeObjectToString = objectProto.toString;
-
-	/** Built-in value references. */
-	var symToStringTag = Symbol ? Symbol.toStringTag : undefined;
-
-	/**
-	 * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
-	 *
-	 * @private
-	 * @param {*} value The value to query.
-	 * @returns {string} Returns the raw `toStringTag`.
-	 */
-	function getRawTag(value) {
-	  var isOwn = hasOwnProperty.call(value, symToStringTag),
-	      tag = value[symToStringTag];
-
-	  try {
-	    value[symToStringTag] = undefined;
-	    var unmasked = true;
-	  } catch (e) {}
-
-	  var result = nativeObjectToString.call(value);
-	  if (unmasked) {
-	    if (isOwn) {
-	      value[symToStringTag] = tag;
-	    } else {
-	      delete value[symToStringTag];
-	    }
-	  }
-	  return result;
-	}
-
-	module.exports = getRawTag;
-
-
-/***/ }),
-
-/***/ 96:
-/***/ (function(module, exports) {
-
-	/** Used for built-in method references. */
-	var objectProto = Object.prototype;
-
-	/**
-	 * Used to resolve the
-	 * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
-	 * of values.
-	 */
-	var nativeObjectToString = objectProto.toString;
-
-	/**
-	 * Converts `value` to a string using `Object.prototype.toString`.
-	 *
-	 * @private
-	 * @param {*} value The value to convert.
-	 * @returns {string} Returns the converted string.
-	 */
-	function objectToString(value) {
-	  return nativeObjectToString.call(value);
-	}
-
-	module.exports = objectToString;
-
-
-/***/ }),
-
-/***/ 103:
-/***/ (function(module, exports, __webpack_require__) {
-
-	var baseGetTag = __webpack_require__(91),
-	    isObjectLike = __webpack_require__(104);
-
-	/** `Object#toString` result references. */
-	var symbolTag = '[object Symbol]';
-
-	/**
-	 * Checks if `value` is classified as a `Symbol` primitive or object.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
-	 * @example
-	 *
-	 * _.isSymbol(Symbol.iterator);
-	 * // => true
-	 *
-	 * _.isSymbol('abc');
-	 * // => false
-	 */
-	function isSymbol(value) {
-	  return typeof value == 'symbol' ||
-	    (isObjectLike(value) && baseGetTag(value) == symbolTag);
-	}
-
-	module.exports = isSymbol;
-
-
-/***/ }),
-
-/***/ 104:
-/***/ (function(module, exports) {
-
-	/**
-	 * Checks if `value` is object-like. A value is object-like if it's not `null`
-	 * and has a `typeof` result of "object".
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
-	 * @example
-	 *
-	 * _.isObjectLike({});
-	 * // => true
-	 *
-	 * _.isObjectLike([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isObjectLike(_.noop);
-	 * // => false
-	 *
-	 * _.isObjectLike(null);
-	 * // => false
-	 */
-	function isObjectLike(value) {
-	  return value != null && typeof value == 'object';
-	}
-
-	module.exports = isObjectLike;
-
-
-/***/ }),
-
-/***/ 112:
-/***/ (function(module, exports) {
-
-	/**
-	 * Checks if `value` is classified as an `Array` object.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.1.0
-	 * @category Lang
-	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is an array, else `false`.
-	 * @example
-	 *
-	 * _.isArray([1, 2, 3]);
-	 * // => true
-	 *
-	 * _.isArray(document.body.children);
-	 * // => false
-	 *
-	 * _.isArray('abc');
-	 * // => false
-	 *
-	 * _.isArray(_.noop);
-	 * // => false
-	 */
-	var isArray = Array.isArray;
-
-	module.exports = isArray;
-
-
-/***/ }),
-
-/***/ 154:
-/***/ (function(module, exports) {
-
-	/**
-	 * A specialized version of `_.map` for arrays without support for iteratee
-	 * shorthands.
-	 *
-	 * @private
-	 * @param {Array} [array] The array to iterate over.
-	 * @param {Function} iteratee The function invoked per iteration.
-	 * @returns {Array} Returns the new mapped array.
-	 */
-	function arrayMap(array, iteratee) {
-	  var index = -1,
-	      length = array == null ? 0 : array.length,
-	      result = Array(length);
-
-	  while (++index < length) {
-	    result[index] = iteratee(array[index], index, array);
-	  }
-	  return result;
-	}
-
-	module.exports = arrayMap;
-
-
-/***/ }),
-
-/***/ 219:
-/***/ (function(module, exports, __webpack_require__) {
-
-	var baseToString = __webpack_require__(220);
-
-	/**
-	 * Converts `value` to a string. An empty string is returned for `null`
-	 * and `undefined` values. The sign of `-0` is preserved.
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 4.0.0
-	 * @category Lang
-	 * @param {*} value The value to convert.
-	 * @returns {string} Returns the converted string.
-	 * @example
-	 *
-	 * _.toString(null);
-	 * // => ''
-	 *
-	 * _.toString(-0);
-	 * // => '-0'
-	 *
-	 * _.toString([1, 2, 3]);
-	 * // => '1,2,3'
-	 */
-	function toString(value) {
-	  return value == null ? '' : baseToString(value);
-	}
-
-	module.exports = toString;
-
-
-/***/ }),
-
-/***/ 220:
-/***/ (function(module, exports, __webpack_require__) {
-
-	var Symbol = __webpack_require__(92),
-	    arrayMap = __webpack_require__(154),
-	    isArray = __webpack_require__(112),
-	    isSymbol = __webpack_require__(103);
-
-	/** Used as references for various `Number` constants. */
-	var INFINITY = 1 / 0;
-
-	/** Used to convert symbols to primitives and strings. */
-	var symbolProto = Symbol ? Symbol.prototype : undefined,
-	    symbolToString = symbolProto ? symbolProto.toString : undefined;
-
-	/**
-	 * The base implementation of `_.toString` which doesn't convert nullish
-	 * values to empty strings.
-	 *
-	 * @private
-	 * @param {*} value The value to process.
-	 * @returns {string} Returns the string.
-	 */
-	function baseToString(value) {
-	  // Exit early for strings to avoid a performance hit in some environments.
-	  if (typeof value == 'string') {
-	    return value;
-	  }
-	  if (isArray(value)) {
-	    // Recursively convert values (susceptible to call stack limits).
-	    return arrayMap(value, baseToString) + '';
-	  }
-	  if (isSymbol(value)) {
-	    return symbolToString ? symbolToString.call(value) : '';
-	  }
-	  var result = (value + '');
-	  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
-	}
-
-	module.exports = baseToString;
-
-
-/***/ }),
-
+/* Unused Lodash helper modules removed. */
 /***/ 319:
 /***/ (function(module, exports) {
 
@@ -4035,7 +3674,7 @@ webvowl.app =
 /***/ 329:
 /***/ (function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(d3) {var unescape = __webpack_require__(330);
+	/* WEBPACK VAR INJECTION */(function(d3) {
 
 	module.exports = function ( graph ){
 	  
@@ -4193,7 +3832,7 @@ webvowl.app =
 	  function append_message( msg ){
 	    var bpContainer = d3.select("#bulletPoint_container");
 	    var div = bpContainer.append("div");
-	    div.node().innerHTML = msg;
+	    div.text(msg).style("white-space", "pre-wrap");
 	    loadingModule.scrollDownDetails();
 	  }
 	  
@@ -4211,8 +3850,7 @@ webvowl.app =
 	    var htmlCollection = bpContainer.node().getElementsByTagName("LI");
 	    var lastItem = htmlCollection.length - 1;
 	    if ( lastItem >= 0 ) {
-	      var oldText = htmlCollection[lastItem].innerHTML;
-	      htmlCollection[lastItem].innerHTML = oldText + msg;
+	      htmlCollection[lastItem].appendChild(document.createTextNode(msg));
 	    }
 	    loadingModule.scrollDownDetails();
 	  }
@@ -4220,8 +3858,8 @@ webvowl.app =
 	  function append_bulletPoint( msg ){
 	    var bp_container = d3.select("#bulletPoint_container");
 	    var bp = bp_container.append("li");
-	    bp.node().innerHTML = msg;
-	    d3.select("#currentLoadingStep").node().innerHTML = msg;
+	    bp.text(msg).style("white-space", "pre-wrap");
+	    d3.select("#currentLoadingStep").text(msg);
 	    loadingModule.scrollDownDetails();
 	  }
 	  
@@ -4329,11 +3967,11 @@ webvowl.app =
 	      if ( tokenMessage.length > 0 ) {
 	        liForToken = o2vConverterContainer.append("li");
 	        liForToken.attr("type", "disc");
-	        liForToken.node().innerHTML = tokenMessage.replace(/\n/g, "<br>");
+	        liForToken.text(tokenMessage).style("white-space", "pre-wrap");
 	      }
 	    }
 	    if ( liForToken )
-	      liForToken.node().innerHTML += "<br>";
+	      liForToken.node().appendChild(document.createTextNode("\n"));
 	    
 	    loadingModule.scrollDownDetails();
 	  }
@@ -4519,10 +4157,10 @@ webvowl.app =
 	      "href=\"http://visualdataweb.de/validator/\">OWL Validator</a>");
 	    
 	    if ( error !== null && error.status === 500 ) {
-	      append_message("<span style='color:red'>Could not find ontology  at the URL</span>");
+	      append_message("Could not find ontology  at the URL");
 	    }
 	    if ( request && request.responseText.length === 0 ) {
-	      append_message("<span style='color:red'>Received empty graph</span>");
+	      append_message("Received empty graph");
 	    }
 	    graph.handleOnLoadingError();
 	    ontologyMenu.conversionFinished();
@@ -4543,10 +4181,10 @@ webvowl.app =
 	      "href=\"http://visualdataweb.de/validator/\">OWL Validator</a>");
 	    
 	    if ( error !== null && error.status === 500 ) {
-	      append_message("<span style='color:red'>Could not find ontology  at the URL</span>");
+	      append_message("Could not find ontology  at the URL");
 	    }
 	    if ( request && request.responseText.length === 0 ) {
-	      append_message("<span style='color:red'>Received empty graph</span>");
+	      append_message("Received empty graph");
 	    }
 	    graph.handleOnLoadingError();
 	    ontologyMenu.conversionFinished();
@@ -4565,10 +4203,10 @@ webvowl.app =
 	    //     "Ontology could not be loaded.<br>Is it a valid OWL ontology? Please check with <a target=\"_blank\"" +
 	    //     "href=\"http://visualdataweb.de/validator/\">OWL Validator</a>");
 	    if ( error !== null && error.status === 500 ) {
-	      append_message("<span style='color:red'>Could not convert direct input</span>");
+	      append_message("Could not convert direct input");
 	    }
 	    if ( request && request.responseText.length === 0 ) {
-	      append_message("<span style='color:red'>Received empty graph</span>");
+	      append_message("Received empty graph");
 	    }
 	    
 	    graph.handleOnLoadingError();
@@ -4706,96 +4344,7 @@ webvowl.app =
 
 /***/ }),
 
-/***/ 330:
-/***/ (function(module, exports, __webpack_require__) {
-
-	var toString = __webpack_require__(219),
-	    unescapeHtmlChar = __webpack_require__(331);
-
-	/** Used to match HTML entities and HTML characters. */
-	var reEscapedHtml = /&(?:amp|lt|gt|quot|#39);/g,
-	    reHasEscapedHtml = RegExp(reEscapedHtml.source);
-
-	/**
-	 * The inverse of `_.escape`; this method converts the HTML entities
-	 * `&amp;`, `&lt;`, `&gt;`, `&quot;`, and `&#39;` in `string` to
-	 * their corresponding characters.
-	 *
-	 * **Note:** No other HTML entities are unescaped. To unescape additional
-	 * HTML entities use a third-party library like [_he_](https://mths.be/he).
-	 *
-	 * @static
-	 * @memberOf _
-	 * @since 0.6.0
-	 * @category String
-	 * @param {string} [string=''] The string to unescape.
-	 * @returns {string} Returns the unescaped string.
-	 * @example
-	 *
-	 * _.unescape('fred, barney, &amp; pebbles');
-	 * // => 'fred, barney, & pebbles'
-	 */
-	function unescape(string) {
-	  string = toString(string);
-	  return (string && reHasEscapedHtml.test(string))
-	    ? string.replace(reEscapedHtml, unescapeHtmlChar)
-	    : string;
-	}
-
-	module.exports = unescape;
-
-
-/***/ }),
-
-/***/ 331:
-/***/ (function(module, exports, __webpack_require__) {
-
-	var basePropertyOf = __webpack_require__(332);
-
-	/** Used to map HTML entities to characters. */
-	var htmlUnescapes = {
-	  '&amp;': '&',
-	  '&lt;': '<',
-	  '&gt;': '>',
-	  '&quot;': '"',
-	  '&#39;': "'"
-	};
-
-	/**
-	 * Used by `_.unescape` to convert HTML entities to characters.
-	 *
-	 * @private
-	 * @param {string} chr The matched character to unescape.
-	 * @returns {string} Returns the unescaped character.
-	 */
-	var unescapeHtmlChar = basePropertyOf(htmlUnescapes);
-
-	module.exports = unescapeHtmlChar;
-
-
-/***/ }),
-
-/***/ 332:
-/***/ (function(module, exports) {
-
-	/**
-	 * The base implementation of `_.propertyOf` without support for deep paths.
-	 *
-	 * @private
-	 * @param {Object} object The object to query.
-	 * @returns {Function} Returns the new accessor function.
-	 */
-	function basePropertyOf(object) {
-	  return function(key) {
-	    return object == null ? undefined : object[key];
-	  };
-	}
-
-	module.exports = basePropertyOf;
-
-
-/***/ }),
-
+/* Unused Lodash unescape modules removed. */
 /***/ 333:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5374,7 +4923,7 @@ webvowl.app =
 	          testEntry.title = newResults[i] + "\n" + visible + "/" + eLen + " elements are visible.";
 	        }
 	      }
-	      searchEntryNode.node().innerHTML = croppedText;
+	      searchEntryNode.text(croppedText);
 	      m_search.node().appendChild(testEntry);
 	    }
 	  }
@@ -6004,7 +5553,7 @@ webvowl.app =
 	  function updateGraphInformation(){
 	    var title = languageTools.textInLanguage(ontologyInfo.title, graph.language());
 	    d3.select("#title").text(title || "No title available");
-	    d3.select("#about").attr("href", ontologyInfo.iri).attr("target", "_blank").text(ontologyInfo.iri);
+	    d3.select("#about").attr("href", webvowl.safeExternalUrl(ontologyInfo.iri)).attr("target", "_blank").attr("rel", "noopener noreferrer").text(ontologyInfo.iri);
 	    d3.select("#version").text(ontologyInfo.version || "--");
 	    var authors = ontologyInfo.author;
 	    if ( typeof authors === "string" ) {
@@ -6184,7 +5733,8 @@ webvowl.app =
 	    
 	    if ( iri ) {
 	      tag = element.append("a")
-	        .attr("href", iri)
+	        .attr("href", webvowl.safeExternalUrl(iri))
+        .attr("rel", "noopener noreferrer")
 	        .attr("title", iri)
 	        .attr("target", "_blank");
 	    } else {
@@ -6416,23 +5966,23 @@ webvowl.app =
 	    if ( generalMetaObj.hasOwnProperty("title") ) {
 	      // title has language to it -.-
 	      if ( typeof generalMetaObj.title === "object" ) {
-	        d3.select("#title").node().value = languageTools.textInLanguage(generalMetaObj.title, preferredLanguage);
+	        d3.select("#title").text(languageTools.textInLanguage(generalMetaObj.title, preferredLanguage));
 	      } else {
-	        d3.select("#title").node().innerHTML = generalMetaObj.title;
+	        d3.select("#title").node().textContent = generalMetaObj.title;
 	      }
 	      
 	    }
-	    if ( generalMetaObj.hasOwnProperty("iri") ) d3.select("#about").node().innerHTML = generalMetaObj.iri;
-	    if ( generalMetaObj.hasOwnProperty("iri") ) d3.select("#about").node().href = generalMetaObj.iri;
-	    if ( generalMetaObj.hasOwnProperty("version") ) d3.select("#version").node().innerHTML = generalMetaObj.version;
-	    if ( generalMetaObj.hasOwnProperty("author") ) d3.select("#authors").node().innerHTML = generalMetaObj.author;
+	    if ( generalMetaObj.hasOwnProperty("iri") ) d3.select("#about").node().textContent = generalMetaObj.iri;
+	    if ( generalMetaObj.hasOwnProperty("iri") ) d3.select("#about").attr("href", webvowl.safeExternalUrl(generalMetaObj.iri)).attr("rel", "noopener noreferrer");
+	    if ( generalMetaObj.hasOwnProperty("version") ) d3.select("#version").node().textContent = generalMetaObj.version;
+	    if ( generalMetaObj.hasOwnProperty("author") ) d3.select("#authors").node().textContent = generalMetaObj.author;
 	    // this could also be an object >>
 	    if ( generalMetaObj.hasOwnProperty("description") ) {
 	      if ( typeof generalMetaObj.description === "object" ) {
-	        d3.select("#description").node().innerHTML = languageTools.textInLanguage(generalMetaObj.description, preferredLanguage);
+	        d3.select("#description").text(languageTools.textInLanguage(generalMetaObj.description, preferredLanguage));
 	      }
 	      else {
-	        d3.select("#description").node().innerHTML = generalMetaObj.description;
+	        d3.select("#description").node().textContent = generalMetaObj.description;
 	      }
 	    }
 	  };
@@ -6506,8 +6056,8 @@ webvowl.app =
 	    if ( identifier === "defaultDatatype" ) elementDescription = "Datatype: ";
 	    if ( identifier === "defaultProperty" ) elementDescription = "Property: ";
 	    
-	    d3.select("#" + identifier).node().innerHTML = elementDescription + element.innerHTML;
-	    d3.select("#" + identifier).node().title = element.innerHTML;
+	    d3.select("#" + identifier).text(elementDescription + element.textContent);
+	    d3.select("#" + identifier).node().title = element.textContent;
 	  }
 	  
 	  function classSelectorFunction(){
@@ -8388,8 +7938,8 @@ webvowl.app =
 	  
 	  loadingModule.emptyGraphContentError = function (){
 	    graph.clearGraphData();
-	    ontologyMenu.append_message_toLastBulletPoint("<span style='color:red;'>failed</span>");
-	    ontologyMenu.append_message_toLastBulletPoint("<br><span style=\"color:red;\">Error: Received empty graph</span>");
+	    ontologyMenu.append_message_toLastBulletPoint("failed");
+	    ontologyMenu.append_message_toLastBulletPoint("<br>Error: Received empty graph");
 	    loadingWasSuccessFul = false;
 	    graph.handleOnLoadingError();
 	    loadingModule.setErrorMode();
@@ -8459,6 +8009,11 @@ webvowl.app =
 	  
 	  loadingModule.from_JSON_URL = function ( fileName ){
 	    var filename = decodeURIComponent(fileName.slice("url=".length));
+    if (!webvowl.safeExternalUrl(filename)) {
+      ontologyMenu.append_message("Invalid JSON URL: " + filename);
+      loadingModule.setErrorMode();
+      return;
+    }
 	    ontologyIdentifierFromURL = filename;
 	    
 	    var ontologyContent = "";
@@ -8497,7 +8052,7 @@ webvowl.app =
 	        // could not get server timestamp -> no connection to owl2vowl
 	        ontologyMenu.append_bulletPoint("Could not establish connection to OWL2VOWL service");
 	        loadingModule.setErrorMode();
-	        ontologyMenu.append_message_toLastBulletPoint("<br><span style='color:red'>Could not connect to OWL2VOWL service </span>");
+	        ontologyMenu.append_message_toLastBulletPoint("\nCould not connect to OWL2VOWL service ");
 	        loadingModule.showErrorDetailsMessage();
 	        d3.select("#progressBarValue").style("width", "0%");
 	        d3.select("#progressBarValue").classed("busyProgressBar", false);
@@ -8606,13 +8161,13 @@ webvowl.app =
 	  };
 	  
 	  function fallbackForJSON_URL( callback, parameter ){
-	    ontologyMenu.append_message_toLastBulletPoint("<br>Trying to convert with other communication protocol.");
+	    ontologyMenu.append_message_toLastBulletPoint("\nTrying to convert with other communication protocol.");
 	    callback(parameter);
 	    
 	  }
 	  
 	  function fallbackConversion( parameter ){
-	    ontologyMenu.append_message_toLastBulletPoint("<br>Trying to convert with other communication protocol.");
+	    ontologyMenu.append_message_toLastBulletPoint("\nTrying to convert with other communication protocol.");
 	    var file = parameter[0];
 	    var name = parameter[1];
 	    var formData = new FormData();
@@ -8627,7 +8182,7 @@ webvowl.app =
 	        ontologyMenu.setCachedOntology(name, ontologyContent);
 	        ontologyIdentifierFromURL = name;
 	        missingImportsWarning = true; // using this variable for warnings
-	        ontologyMenu.append_message_toLastBulletPoint("<br>Success, <span style='color:yellow'>but you are using a deprecated OWL2VOWL service!<span>");
+	        ontologyMenu.append_message_toLastBulletPoint("\nSuccess, <span style='color:yellow'>but you are using a deprecated OWL2VOWL service!<span>");
 	        parseOntologyContent(ontologyContent);
 	      }
 	    };
@@ -8635,10 +8190,10 @@ webvowl.app =
 	    // check what this thing is doing;
 	    xhr.onreadystatechange = function (){
 	      if ( xhr.readyState === 4 && xhr.status === 0 ) {
-	        ontologyMenu.append_message_toLastBulletPoint("<br>Old protocol also failed to establish connection to OWL2VOWL service!");
+	        ontologyMenu.append_message_toLastBulletPoint("\nOld protocol also failed to establish connection to OWL2VOWL service!");
 	        loadingModule.setErrorMode();
 	        ontologyMenu.append_bulletPoint("Failed to load ontology");
-	        ontologyMenu.append_message_toLastBulletPoint("<br><span style='color:red'>Could not connect to OWL2VOWL service </span>");
+	        ontologyMenu.append_message_toLastBulletPoint("\nCould not connect to OWL2VOWL service ");
 	        loadingModule.showErrorDetailsMessage();
 	      }
 	    };
@@ -8653,7 +8208,7 @@ webvowl.app =
 	        ontologyMenu.append_bulletPoint("Could not establish connection to OWL2VOWL service");
 	        loadingModule.setErrorMode();
 	        ontologyMenu.append_bulletPoint("Failed to load ontology");
-	        ontologyMenu.append_message_toLastBulletPoint("<br><span style='color:red'>Could not connect to OWL2VOWL service </span>");
+	        ontologyMenu.append_message_toLastBulletPoint("\nCould not connect to OWL2VOWL service ");
 	        loadingModule.showErrorDetailsMessage();
 	      } else {
 	        conversion_sessionId = request.responseText;
@@ -8778,7 +8333,7 @@ webvowl.app =
 	          if (error.status===0){ // assumption this is CORS error when running locally (error status == 0)
 	            ontologyMenu.append_message_toLastBulletPoint(" <span style='color: red'>ERROR STATUS:</span> " + error.status);
 	            if (window.location.toString().startsWith("file:/")){
-	              ontologyMenu.append_message_toLastBulletPoint("<br><p>WebVOWL runs in a local instance.</p>");
+	              ontologyMenu.append_message_toLastBulletPoint("\n<p>WebVOWL runs in a local instance.</p>");
 	              ontologyMenu.append_message_toLastBulletPoint("<p>CORS prevents to automatically load files on host system.</p>");
 	              ontologyMenu.append_message_toLastBulletPoint("<p>You can load preprocessed ontologies (i.e. VOWL-JSON files) using the upload feature in the ontology menu or by dragging the files and dropping them on the canvas.</p>");
 	              ontologyMenu.append_message_toLastBulletPoint("<p><i>Hint: </i>Note that the conversion of ontologies into the VOWL-JSON format is not part of WebVOWL but requires an additional converter such as OWL2VOWL.</p>");
@@ -8809,8 +8364,8 @@ webvowl.app =
 	  
 	  loadingModule.notValidJsonFile = function (){
 	    graph.clearGraphData();
-	    ontologyMenu.append_message_toLastBulletPoint(" <span style='color:red;'>failed</span>");
-	    ontologyMenu.append_message_toLastBulletPoint("<br><span style='color:red;'>Error: Received empty graph</span>");
+	    ontologyMenu.append_message_toLastBulletPoint(" failed");
+	    ontologyMenu.append_message_toLastBulletPoint("\nError: Received empty graph");
 	    loadingWasSuccessFul = false;
 	    graph.handleOnLoadingError();
 	    
@@ -9159,7 +8714,7 @@ webvowl.app =
 	      msgHeader.style("display", "inline-flex");
 	      msgHeader.style("max-width", graphWidth + "px");
 	      
-	      msgHeader.node().innerHTML = header;
+	      msgHeader.node().textContent = header;
 	    }
 	    if ( reason.length > 0 ) {
 	      var reasonContainer = warningContainer.append("div");
@@ -9174,7 +8729,7 @@ webvowl.app =
 	      // some classes
 	      msgReason.style("display", "inline-flex");
 	      msgReason.style("max-width", graphWidth + "px");
-	      msgReason.node().innerHTML = reason;
+	      msgReason.node().textContent = reason;
 	    }
 	    if ( action.length > 0 ) {
 	      var actionContainer = warningContainer.append("div");
@@ -9188,7 +8743,7 @@ webvowl.app =
 	      // some classes
 	      msgAction.style("display", "inline-flex");
 	      msgAction.style("max-width", graphWidth + "px");
-	      msgAction.node().innerHTML = action;
+	      msgAction.node().textContent = action;
 	    }
 	    
 	    var gotItButton = warningContainer.append("label");
@@ -9288,7 +8843,7 @@ webvowl.app =
 	      msgHeader.style("display", "inline-flex");
 	      msgHeader.style("max-width", graphWidth + "px");
 	      
-	      msgHeader.node().innerHTML = header;
+	      msgHeader.node().textContent = header;
 	    }
 	    if ( reason.length > 0 ) {
 	      var reasonContainer = warningContainer.append("div");
@@ -9303,7 +8858,7 @@ webvowl.app =
 	      // some classes
 	      msgReason.style("display", "inline-flex");
 	      msgReason.style("max-width", graphWidth + "px");
-	      msgReason.node().innerHTML = reason;
+	      msgReason.node().textContent = reason;
 	    }
 	    if ( action.length > 0 ) {
 	      var actionContainer = warningContainer.append("div");
@@ -9317,7 +8872,7 @@ webvowl.app =
 	      // some classes
 	      msgAction.style("display", "inline-flex");
 	      msgAction.style("max-width", graphWidth + "px");
-	      msgAction.node().innerHTML = action;
+	      msgAction.node().textContent = action;
 	    }
 	    
 	    var gotItButton;

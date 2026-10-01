@@ -1,0 +1,9 @@
+[
+  {"name":"d3","version":"3.5.17","files":["webvowl_1.1.7_patched/js/d3.min.js"]},
+  {"name":"jquery","version":"3.7.1","files":["lode/jquery.js","oops/js/jquery-3.7.1.js"]},
+  {"name":"marked","version":"18.0.2","files":["lode/marked.min.js"]},
+  {"name":"dompurify","version":"3.4.16","files":["lode/purify.min.js"]},
+  {"name":"mermaid","version":"11.16.1","files":["lode/mermaid.min.js"]},
+  {"name":"dompurify","version":"3.4.0","files":["lode/mermaid.min.js"],"note":"Version banner physically present inside the Mermaid bundle; not the separately loaded sanitizer."},
+  {"name":"bootstrap","version":"3.0.3","files":["oops/js/bootstrap.js","oops/js/bootstrap.min.js"]}
+]

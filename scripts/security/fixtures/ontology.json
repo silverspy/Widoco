@@ -1,0 +1,168 @@
+{
+  "_comment" : "Created with OWL2VOWL (version teamdigitale-5cdef094-core), http://vowl.visualdataweb.org",
+  "header" : {
+    "baseIris" : [ "https://example.org/imported", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://example.org/main" ],
+    "prefixList" : {
+      "owl" : "http://www.w3.org/2002/07/owl#",
+      "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "xsd" : "http://www.w3.org/2001/XMLSchema#",
+      "" : "https://example.org/imported#",
+      "xml" : "http://www.w3.org/XML/1998/namespace",
+      "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+    },
+    "iri" : "https://example.org/main"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://example.org/imported#External",
+    "baseIri" : "https://example.org/imported",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "External"
+    },
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "https://example.org/main#Person",
+    "baseIri" : "https://example.org/main",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "subClasses" : [ "6" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://example.org/main#Child",
+    "baseIri" : "https://example.org/main",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Child"
+    },
+    "id" : "6",
+    "superClasses" : [ "1" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "11",
+    "type" : "owl:allValuesFrom"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://example.org/main#min",
+    "baseIri" : "https://example.org/main",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "min"
+    },
+    "minCardinality" : "1",
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://example.org/main#knows",
+    "baseIri" : "https://example.org/main",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "knows"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://example.org/main#name",
+    "baseIri" : "https://example.org/main",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "name"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "4"
+  }, {
+    "range" : "1",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://example.org/main#exact",
+    "baseIri" : "https://example.org/main",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "exact"
+    },
+    "cardinality" : "2",
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://example.org/main#max",
+    "baseIri" : "https://example.org/main",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "max"
+    },
+    "maxCardinality" : "3",
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "9"
+  }, {
+    "iri" : "https://example.org/main#knows",
+    "baseIri" : "https://example.org/main",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "knows"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "someValues" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://example.org/main#knows",
+    "baseIri" : "https://example.org/main",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "knows"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "allValues" ],
+    "id" : "11"
+  } ]
+}
