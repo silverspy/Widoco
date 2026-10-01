@@ -16,9 +16,21 @@ records both actual copies of the same version. No advisory is suppressed or
 reclassified. The actual evaluation template passes browser tests for table
 sorting and Bootstrap collapse panels with the replacement.
 
-Final tested JAR: `JAR/widoco-1.4.26-jar-with-dependencies.jar`.
+Local rebuilt JAR (browser tests and packaged inventory scans):
+`JAR/widoco-1.4.26-jar-with-dependencies.jar`.
 
 SHA-256: `23c82de7a9d1f54b0e6d2b33ba942f7e25ad43123aacd73c89af22f850bdff83`.
+
+**Native Trivy validation is also complete.** The dedicated
+[successful CI run](https://github.com/silverspy/Widoco/actions/runs/36850560381)
+builds and natively scans a Java 11 JAR from commit
+`dcf1aa2f4ea5ff8eafe00de45467719de92e5b65`. The
+[widoco-trivy-audit artifact](https://github.com/silverspy/Widoco/actions/runs/36850560381/artifacts/11156015329)
+contains that exact JAR, its `sha256.txt`, database/version information and full
+unfiltered JSON reports. Use this artifact for the JAR directly validated by
+native Trivy. Its build timestamps and line endings can differ from the local
+JAR above; the two hashes must not be conflated. The artifact ZIP digest is
+`6c5e03054c58e2c19babc6231073979d270d5faf518d214284232fcd1654d24b`.
 
 ## Recorded results
 
@@ -28,7 +40,7 @@ SHA-256: `23c82de7a9d1f54b0e6d2b33ba942f7e25ad43123aacd73c89af22f850bdff83`.
 | Corrected packaged frontend inventory | **0 HIGH, 0 CRITICAL**; 13 MEDIUM, 4 LOW; seven identified component/version pairs |
 | Final source manifests | Zero findings: reactor POM 126 packages, converter POM 59, WIDOCO POM 66; these counts overlap |
 | Final packaged Java inventory | Zero findings across 59 Maven coordinates extracted from the actual final JAR |
-| Native JAR artifact analysis | Local Java DB downloads failed twice; native validation moved to the dedicated GitHub CI job and is not yet counted as successful |
+| Native JAR artifact analysis in CI | **Zero findings**, including zero HIGH/CRITICAL; actual Java package detection is checked before accepting the report |
 
 The vulnerability database used for the recorded successful scans was updated
 at **2026-10-01T07:23:35.748678538Z**. Full unfiltered JSON results, logs, explicit
@@ -66,15 +78,18 @@ locally built converter POM/JAR. No transitive dependencies were intentionally
 skipped to bypass that failure. The first native JAR attempt failed when the
 default Java DB mirror closed its HTTP/2 connection; the official GitHub registry
 retry also failed with a protocol error while downloading the 975,559,142-byte
-database layer. Native validation is moved to the dedicated `trivy` CI job, which
-builds and uploads the actual scanned JAR plus unfiltered reports. Failed and
-empty scans are not included in successful counts.
+database layer. Native validation subsequently succeeds in the dedicated `trivy`
+CI job, which builds and uploads the actual scanned JAR plus unfiltered reports.
+[ci-job.log](evidence/trivy/ci-job.log) and
+[ci-results.json](evidence/trivy/ci-results.json) record the successful run and
+counts. Failed and empty scans are not included in successful counts.
 
 Full Maven clean compilation and verification now pass: **26 tests**, no failures
 or skips. The initial rerun failed on the legacy HTTP W3C ontology test URL;
 using its direct HTTPS endpoint restores the same download test. Packaged
 security checks, 32 viewer attack scenarios, graph/export regressions,
 documentation Markdown/Mermaid tests and the new OOPS browser checks pass.
+The final code also passes all Java 11/17/21 CI test and security jobs.
 
 This audit covers application vulnerabilities in the recorded artifacts and
 inventories. It does not scan a deployed Docker image, its OS/JVM packages,
@@ -114,3 +129,4 @@ trivy rootfs --scanners vuln --detection-priority comprehensive --list-all-pkgs 
 findings, scanner errors, or a native JAR report identifying no Java packages.
 It never uses `--ignore-unfixed`. Re-scan the exact artifact/image deployed;
 rebuilding can change the JAR hash even without a dependency change.
+
