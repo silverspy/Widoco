@@ -1,0 +1,77 @@
+{
+  "browser": "154.0.4258.37",
+  "results": [
+    {
+      "scenario": "input-unmodified",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": false,
+      "aboutHref": "https://example.org/main",
+      "injectedElements": 0,
+      "errors": []
+    },
+    {
+      "scenario": "metadata-view",
+      "before": 1,
+      "executed": 1,
+      "prototypePolluted": false,
+      "aboutHref": "https://example.org/main",
+      "injectedElements": 3,
+      "errors": []
+    },
+    {
+      "scenario": "metadata-editor",
+      "before": 1,
+      "executed": 1,
+      "prototypePolluted": false,
+      "aboutHref": "https://example.org/main",
+      "injectedElements": 3,
+      "errors": []
+    },
+    {
+      "scenario": "search-label",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": false,
+      "aboutHref": "https://example.org/main",
+      "injectedElements": 1,
+      "errors": []
+    },
+    {
+      "scenario": "hash-url",
+      "before": 4,
+      "executed": 4,
+      "prototypePolluted": false,
+      "aboutHref": "#",
+      "injectedElements": 1,
+      "errors": []
+    },
+    {
+      "scenario": "unsafe-link",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": false,
+      "aboutHref": "javascript:window.__auditExecuted=3",
+      "injectedElements": 0,
+      "errors": []
+    },
+    {
+      "scenario": "prototype-input",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": false,
+      "aboutHref": "https://example.org/main",
+      "injectedElements": 0,
+      "errors": []
+    },
+    {
+      "scenario": "bundled-prototype-api",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": true,
+      "aboutHref": "https://example.org/main",
+      "injectedElements": 0,
+      "errors": []
+    }
+  ]
+}

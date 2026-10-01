@@ -1,0 +1,331 @@
+[ {
+  "scenario" : "named-some",
+  "propertyTypes" : [ "owl:objectProperty", "owl:someValuesFrom", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "someValues", "object" ],
+    "id" : "3"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "named-all",
+  "propertyTypes" : [ "owl:objectProperty", "owl:allValuesFrom", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  }, {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "allValues", "object" ],
+    "id" : "3"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "anonymous-some",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "anonymous-all",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "object-exact-positive",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "cardinality" : "2",
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "object-min-positive",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "minCardinality" : "2",
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "object-max-positive",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "maxCardinality" : "2",
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "object-exact-zero",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "object-min-zero",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "object-max-zero",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "qualified-exact",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "qualified-min",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "qualified-max",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#property",
+    "baseIri" : "https://example.org/audit",
+    "range" : "0",
+    "label" : {
+      "IRI-based" : "property"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "object" ],
+    "id" : "1"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "data-exact-positive",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#dataProperty",
+    "baseIri" : "https://example.org/audit",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "dataProperty"
+    },
+    "cardinality" : "2",
+    "domain" : "2",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "5"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "data-min-positive",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#dataProperty",
+    "baseIri" : "https://example.org/audit",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "dataProperty"
+    },
+    "minCardinality" : "2",
+    "domain" : "2",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "5"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "data-max-positive",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#dataProperty",
+    "baseIri" : "https://example.org/audit",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "dataProperty"
+    },
+    "maxCardinality" : "2",
+    "domain" : "2",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "5"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "data-exact-zero",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#dataProperty",
+    "baseIri" : "https://example.org/audit",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "dataProperty"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "5"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "data-min-zero",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#dataProperty",
+    "baseIri" : "https://example.org/audit",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "dataProperty"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "5"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+}, {
+  "scenario" : "data-max-zero",
+  "propertyTypes" : [ "owl:objectProperty", "owl:datatypeProperty" ],
+  "propertyAttributes" : [ {
+    "iri" : "https://example.org/audit#dataProperty",
+    "baseIri" : "https://example.org/audit",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "dataProperty"
+    },
+    "domain" : "2",
+    "attributes" : [ "external", "datatype" ],
+    "id" : "5"
+  } ],
+  "classCount" : 4,
+  "callerOntologyPreserved" : true
+} ]

@@ -1,0 +1,25 @@
+{
+  "cases": 19,
+  "identicalAfterSetNormalization": true,
+  "scenarios": [
+    "named-some",
+    "named-all",
+    "anonymous-some",
+    "anonymous-all",
+    "object-exact-positive",
+    "object-min-positive",
+    "object-max-positive",
+    "object-exact-zero",
+    "object-min-zero",
+    "object-max-zero",
+    "qualified-exact",
+    "qualified-min",
+    "qualified-max",
+    "data-exact-positive",
+    "data-min-positive",
+    "data-max-positive",
+    "data-exact-zero",
+    "data-min-zero",
+    "data-max-zero"
+  ]
+}

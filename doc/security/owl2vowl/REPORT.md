@@ -2,6 +2,12 @@
 
 ## Result and scope
 
+**Follow-up viewer audit:** the Java zero-advisory result below does not cover
+JavaScript. [JS_AND_FEATURE_AUDIT.md](JS_AND_FEATURE_AUDIT.md) reproduces two
+inherited DOM XSS entry points and a vulnerable bundled Lodash primitive. It also
+compares the old/new actual converters: the tested limitations already existed
+in the original converter. These viewer findings remain unpatched.
+
 The integration is a working, server-free Java library extraction from Team
 Digitale, not a dependency on its Spring Boot WAR. WIDOCO still writes static
 WebVOWL assets and `webvowl/data/ontology.json`. Both source builds and the actual

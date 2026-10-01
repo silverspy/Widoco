@@ -1,0 +1,25 @@
+{
+  "webvowl": "1.1.7",
+  "lodashCore": "4.17.15",
+  "d3": "3.5.17",
+  "files": [
+    {
+      "name": "d3.min.js",
+      "bytes": 151729,
+      "sha256": "a762ca217f7dc1d7eace1d35a067389856810b70e23487082f08bc01f54cdbd4",
+      "identicalToBaseline": true
+    },
+    {
+      "name": "webvowl.js",
+      "bytes": 776511,
+      "sha256": "ba0ff783c1742c5ad1a8af26b8ed32abadaebd60b07805860dc600526281cc94",
+      "identicalToBaseline": true
+    },
+    {
+      "name": "webvowl.app.js",
+      "bytes": 359485,
+      "sha256": "694ad5fe698707b5e2b471f3e781224d3fac1811b6538ecf6ca6386caf767ec1",
+      "identicalToBaseline": true
+    }
+  ]
+}

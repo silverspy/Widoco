@@ -1,0 +1,381 @@
+Converting Ontology:
+  -> preLoadOntontology()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:named-some>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) SubClassOf(<urn:audit:Person> ObjectSomeValuesFrom(<urn:audit:property> <urn:audit:Target>)) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) DataPropertyRange(<urn:audit:dataProperty> xsd:string) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:named-some
+  -> preParsing() 09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+  -> parsing()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:54
+--- Finished --- 09:36:54
+Converting Ontology:
+  -> preLoadOntontology()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:named-all>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) DataPropertyRange(<urn:audit:dataProperty> xsd:string) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) SubClassOf(<urn:audit:Person> ObjectAllValuesFrom(<urn:audit:property> <urn:audit:Target>)) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:named-all
+  -> preParsing() 09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+  -> parsing()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:54
+--- Finished --- 09:36:54
+Converting Ontology:
+  -> preLoadOntontology()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:anonymous-some>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) SubClassOf(<urn:audit:Person> ObjectSomeValuesFrom(<urn:audit:property> ObjectIntersectionOf(<urn:audit:Other> <urn:audit:Target>))) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) DataPropertyRange(<urn:audit:dataProperty> xsd:string) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:anonymous-some
+  -> preParsing() 09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+  -> parsing()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:54
+--- Finished --- 09:36:54
+Converting Ontology:
+  -> preLoadOntontology()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:anonymous-all>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {SubClassOf(<urn:audit:Person> ObjectAllValuesFrom(<urn:audit:property> ObjectIntersectionOf(<urn:audit:Other> <urn:audit:Target>))) DataPropertyRange(<urn:audit:dataProperty> xsd:string) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:anonymous-all
+  -> preParsing() 09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+  -> parsing()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:54
+--- Finished --- 09:36:54
+Converting Ontology:
+  -> preLoadOntontology()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:object-exact-positive>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) DataPropertyRange(<urn:audit:dataProperty> xsd:string) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) SubClassOf(<urn:audit:Person> ObjectExactCardinality(2 <urn:audit:property> owl:Thing)) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:object-exact-positive
+  -> preParsing() 09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+  -> parsing()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:54
+--- Finished --- 09:36:54
+Converting Ontology:
+  -> preLoadOntontology()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:object-min-positive>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {DataPropertyRange(<urn:audit:dataProperty> xsd:string) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) SubClassOf(<urn:audit:Person> ObjectMinCardinality(2 <urn:audit:property> owl:Thing)) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:object-min-positive
+  -> preParsing() 09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 22
+  -> parsing()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:54
+--- Finished --- 09:36:54
+Converting Ontology:
+  -> preLoadOntontology()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:object-max-positive>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {SubClassOf(<urn:audit:Person> ObjectMaxCardinality(2 <urn:audit:property> owl:Thing)) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) DataPropertyRange(<urn:audit:dataProperty> xsd:string) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:object-max-positive
+  -> preParsing() 09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+  -> parsing()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:54
+--- Finished --- 09:36:54
+Converting Ontology:
+  -> preLoadOntontology()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:object-exact-zero>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {SubClassOf(<urn:audit:Person> ObjectExactCardinality(0 <urn:audit:property> owl:Thing)) DataPropertyRange(<urn:audit:dataProperty> xsd:string) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:object-exact-zero
+  -> preParsing() 09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+  -> parsing()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:54
+--- Finished --- 09:36:54
+Converting Ontology:
+  -> preLoadOntontology()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:object-min-zero>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {SubClassOf(<urn:audit:Person> ObjectMinCardinality(0 <urn:audit:property> owl:Thing)) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) DataPropertyRange(<urn:audit:dataProperty> xsd:string) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:object-min-zero
+  -> preParsing() 09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+  -> parsing()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:54
+--- Finished --- 09:36:54
+Converting Ontology:
+  -> preLoadOntontology()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:object-max-zero>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) SubClassOf(<urn:audit:Person> ObjectMaxCardinality(0 <urn:audit:property> owl:Thing)) DataPropertyRange(<urn:audit:dataProperty> xsd:string) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:object-max-zero
+  -> preParsing() 09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+  -> parsing()09:36:54
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:55
+--- Finished --- 09:36:55
+Converting Ontology:
+  -> preLoadOntontology()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:qualified-exact>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) SubClassOf(<urn:audit:Person> ObjectExactCardinality(2 <urn:audit:property> <urn:audit:Target>)) DataPropertyRange(<urn:audit:dataProperty> xsd:string) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:qualified-exact
+  -> preParsing() 09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 18
+  -> parsing()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:55
+--- Finished --- 09:36:55
+Converting Ontology:
+  -> preLoadOntontology()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:qualified-min>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {DataPropertyRange(<urn:audit:dataProperty> xsd:string) SubClassOf(<urn:audit:Person> ObjectMinCardinality(2 <urn:audit:property> <urn:audit:Target>)) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:qualified-min
+  -> preParsing() 09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 22
+  -> parsing()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:55
+--- Finished --- 09:36:55
+Converting Ontology:
+  -> preLoadOntontology()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:qualified-max>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {DataPropertyRange(<urn:audit:dataProperty> xsd:string) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) SubClassOf(<urn:audit:Person> ObjectMaxCardinality(2 <urn:audit:property> <urn:audit:Target>)) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:qualified-max
+  -> preParsing() 09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 22
+  -> parsing()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:55
+--- Finished --- 09:36:55
+Converting Ontology:
+  -> preLoadOntontology()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:data-exact-positive>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {DataPropertyRange(<urn:audit:dataProperty> xsd:string) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) SubClassOf(<urn:audit:Person> DataExactCardinality(2 <urn:audit:dataProperty> rdfs:Literal)) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:data-exact-positive
+  -> preParsing() 09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 22
+  -> parsing()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:55
+--- Finished --- 09:36:55
+Converting Ontology:
+  -> preLoadOntontology()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:data-min-positive>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {SubClassOf(<urn:audit:Person> DataMinCardinality(2 <urn:audit:dataProperty> rdfs:Literal)) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) DataPropertyRange(<urn:audit:dataProperty> xsd:string) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:data-min-positive
+  -> preParsing() 09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+  -> parsing()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:55
+--- Finished --- 09:36:55
+Converting Ontology:
+  -> preLoadOntontology()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:data-max-positive>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {DataPropertyRange(<urn:audit:dataProperty> xsd:string) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) SubClassOf(<urn:audit:Person> DataMaxCardinality(2 <urn:audit:dataProperty> rdfs:Literal)) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:data-max-positive
+  -> preParsing() 09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 22
+  -> parsing()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:55
+--- Finished --- 09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+Converting Ontology:
+  -> preLoadOntontology()09:36:55
+  -> preParsing() 09:36:55
+  -> parsing()09:36:55
+  -> postParsing() 09:36:55
+--- Finished --- 09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:data-exact-zero>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) SubClassOf(<urn:audit:Person> DataExactCardinality(0 <urn:audit:dataProperty> rdfs:Literal)) DataPropertyRange(<urn:audit:dataProperty> xsd:string) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:data-exact-zero
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+Converting Ontology:
+  -> preLoadOntontology()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:data-min-zero>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) DataPropertyRange(<urn:audit:dataProperty> xsd:string) SubClassOf(<urn:audit:Person> DataMinCardinality(0 <urn:audit:dataProperty> rdfs:Literal)) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:data-min-zero
+  -> preParsing() 09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+  -> parsing()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:55
+--- Finished --- 09:36:55
+Converting Ontology:
+  -> preLoadOntontology()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<urn:audit:data-max-zero>) VersionIRI(<null>))) [Axioms: 8 Logical Axioms: 5] First 20 axioms: {SubClassOf(<urn:audit:Person> DataMaxCardinality(0 <urn:audit:dataProperty> rdfs:Literal)) DataPropertyDomain(<urn:audit:dataProperty> <urn:audit:Person>) DataPropertyRange(<urn:audit:dataProperty> xsd:string) ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>) Declaration(Class(<urn:audit:Person>)) Declaration(Class(<urn:audit:Target>)) Declaration(Class(<urn:audit:Other>)) ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: urn:audit:data-max-zero
+  -> preParsing() 09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - @WORKAROUND WalkStructure Failed!
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - Exception: java.lang.StringIndexOutOfBoundsException: Range [0, -1) out of bounds for length 16
+  -> parsing()09:36:55
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - ProcessClasses : Failed to accept owlClassAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyRange(<urn:audit:property> <urn:audit:Target>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           @WORKAROUND: Failed to accept property with HAS_VALUE OR  SubObjectPropertyOf ... SKIPPING THIS
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyName: <urn:audit:property>
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter -           propertyAxiom: ObjectPropertyDomain(<urn:audit:property> <urn:audit:Person>)
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - DataPropertyVisitor : Failed to accept OWLDataPropertyAxiom -> Skipping
+  -> postParsing() 09:36:55
+--- Finished --- 09:36:55
+Recorded 19 scenarios for it.gov.innovazione.owl2vowl.Owl2Vowl
