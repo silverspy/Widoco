@@ -48,6 +48,47 @@ jobs:
         with:
           name: widoco_JDK-${{ matrix.jdk }}
           path: JAR/*.jar
+  trivy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v6
+        with:
+          java-version: '11'
+          distribution: 'zulu'
+          cache: maven
+      - name: Build, test and install the local converter for manifest resolution
+        run: mvn --batch-mode -f build-reactor/pom.xml install
+      - name: Install checksum-verified Trivy 0.74.0
+        run: |
+          mkdir -p .trivy-tools
+          cd .trivy-tools
+          curl --fail --location --retry 3 --output trivy_0.74.0_linux-64bit.tar.gz https://github.com/aquasecurity/trivy/releases/download/v0.74.0/trivy_0.74.0_linux-64bit.tar.gz
+          curl --fail --location --retry 3 --output checksums.txt https://github.com/aquasecurity/trivy/releases/download/v0.74.0/trivy_0.74.0_checksums.txt
+          sha256sum --check --ignore-missing checksums.txt
+          tar -xzf trivy_0.74.0_linux-64bit.tar.gz trivy
+      - name: Scan the actual JAR, manifests and packaged frontend inventory
+        run: |
+          mkdir -p target/security/trivy
+          touch target/security/trivy/empty.trivyignore
+          .trivy-tools/trivy rootfs --scanners vuln --detection-priority comprehensive --ignorefile target/security/trivy/empty.trivyignore --list-all-pkgs --no-progress --timeout 15m --format json --output target/security/trivy/final-jar.json JAR/widoco-1.4.26-jar-with-dependencies.jar
+          .trivy-tools/trivy fs --scanners vuln --detection-priority comprehensive --ignorefile target/security/trivy/empty.trivyignore --list-all-pkgs --no-progress --timeout 15m --format json --output target/security/trivy/source.json .
+          python scripts/security/audit-frontend-jar.py JAR/widoco-1.4.26-jar-with-dependencies.jar src/main/resources target/security/trivy/frontend-provenance.json target/security/trivy/frontend-assets
+          node scripts/security/frontend-sbom.mjs scripts/security/frontend-components.json target/security/trivy/frontend.cdx.json
+          .trivy-tools/trivy sbom --scanners vuln --detection-priority comprehensive --ignorefile target/security/trivy/empty.trivyignore --list-all-pkgs --no-progress --format json --output target/security/trivy/frontend.json target/security/trivy/frontend.cdx.json
+          .trivy-tools/trivy --version > target/security/trivy/version.txt
+          sha256sum JAR/widoco-1.4.26-jar-with-dependencies.jar > target/security/trivy/sha256.txt
+          node scripts/security/summarize-trivy.mjs target/security/trivy/summary.json target/security/trivy/final-jar.json target/security/trivy/source.json target/security/trivy/frontend.json
+          node -e "const r=require('./target/security/trivy/final-jar.json');if(!r.Results?.some(x=>x.Type==='jar'&&x.Packages?.length))throw Error('No Java packages identified')"
+      - name: Upload the scanned JAR and unfiltered reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: widoco-trivy-audit
+          path: |
+            JAR/widoco-1.4.26-jar-with-dependencies.jar
+            target/security/trivy/*.json
+            target/security/trivy/*.txt
   docker:
     if: github.ref == 'refs/heads/master' || startsWith(github.ref, 'refs/tags/')
     runs-on: ubuntu-latest

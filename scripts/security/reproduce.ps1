@@ -37,3 +37,9 @@ if ($LASTEXITCODE -ne 0) { throw 'Offline browser rendering failed' }
 & "$PSScriptRoot/verify-viewer.ps1" -Python $Python
 node scripts/security/browser-documentation-security.cjs target/security/documentation target/security/documentation-security.json
 if ($LASTEXITCODE -ne 0) { throw 'Documentation security regression failed' }
+& "$env:JAVA_HOME/bin/javac.exe" --release 11 -cp JAR/widoco-1.4.26-jar-with-dependencies.jar -d target/security/viewer/classes scripts/security/OopsFrontendProbe.java
+if ($LASTEXITCODE -ne 0) { throw 'OOPS frontend fixture compilation failed' }
+& "$env:JAVA_HOME/bin/java.exe" -cp ('target/security/viewer/classes' + [IO.Path]::PathSeparator + 'JAR/widoco-1.4.26-jar-with-dependencies.jar') OopsFrontendProbe target/security/oops.html
+if ($LASTEXITCODE -ne 0) { throw 'OOPS frontend fixture generation failed' }
+node scripts/security/browser-oops-regression.cjs target/security/oops.html target/security/frontend-assets target/security/oops-browser.json
+if ($LASTEXITCODE -ne 0) { throw 'OOPS sorting or collapse regression failed' }

@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-10-01T10:14:02.317Z",
+  "scans": [
+    {
+      "file": "evidence/trivy/packaged-java.json",
+      "artifact": "evidence\\trivy\\packaged-java.cdx.json",
+      "artifactType": "cyclonedx",
+      "results": [
+        {
+          "target": "Java",
+          "type": "jar",
+          "packages": 59,
+          "findings": 0
+        }
+      ],
+      "findingInstances": 0,
+      "uniqueAdvisories": 0,
+      "counts": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "UNKNOWN": 0
+      },
+      "findings": []
+    }
+  ]
+}

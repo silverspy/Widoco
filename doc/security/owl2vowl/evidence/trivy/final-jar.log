@@ -1,0 +1,4 @@
+2026-10-01T11:59:57+02:00	INFO	[vuln] Vulnerability scanning is enabled
+2026-10-01T11:59:57+02:00	INFO	[javadb] Downloading Java DB...
+2026-10-01T11:59:57+02:00	INFO	[javadb] Downloading artifact...	repo="mirror.gcr.io/aquasec/trivy-java-db:1"
+2026-10-01T12:09:20+02:00	FATAL	Fatal error	run error: rootfs scan error: scan error: scan failed: failed analysis: post analysis error: post analysis error: Unable to initialize the Java DB: Java DB update failed: OCI artifact error: failed to download Java DB: failed to download artifact from mirror.gcr.io/aquasec/trivy-java-db:1: oci download error: copy error: http2: server sent GOAWAY and closed the connection; LastStreamID=9, ErrCode=NO_ERROR, debug="server_shutting_down"

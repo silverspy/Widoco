@@ -1,0 +1,974 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] owl2vowl-core                                                      [jar]
+[INFO] Widoco                                                             [jar]
+[INFO] widoco-converter-reactor                                           [pom]
+[INFO] 
+[INFO] ------------------< it.gov.innovazione:owl2vowl-core >------------------
+[INFO] Building owl2vowl-core 1.0.0-teamdigitale-5cdef094                 [1/3]
+[INFO]   from C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\owl2vowl-core\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ owl2vowl-core ---
+[INFO] Deleting C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\owl2vowl-core\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ owl2vowl-core ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ owl2vowl-core ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 91 source files with javac [debug release 11] to target\classes
+[INFO] /C:/Users/silve/OneDrive/Documents/ChatGPT/Widoco fix vulenrability/integration-widoco/owl2vowl-core/src/main/java/it/gov/innovazione/owl2vowl/export/types/JsonGenerator.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/Users/silve/OneDrive/Documents/ChatGPT/Widoco fix vulenrability/integration-widoco/owl2vowl-core/src/main/java/it/gov/innovazione/owl2vowl/export/types/JsonGenerator.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ owl2vowl-core ---
+[INFO] skip non existing resourceDirectory C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\owl2vowl-core\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ owl2vowl-core ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 11] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ owl2vowl-core ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running ConverterTest
+Converting Ontology:
+  -> preLoadOntontology()12:05:49
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<https://example.org/main>) VersionIRI(<null>))) [Axioms: 17 Logical Axioms: 16] First 20 axioms: {DataPropertyRange(<https://example.org/main#name> xsd:string) ObjectPropertyRange(<https://example.org/main#min> <https://example.org/imported#External>) ObjectPropertyRange(<https://example.org/main#max> <https://example.org/imported#External>) ObjectPropertyRange(<https://example.org/main#exact> <https://example.org/imported#External>) ObjectPropertyRange(<https://example.org/main#knows> <https://example.org/imported#External>) ObjectPropertyDomain(<https://example.org/main#exact> <https://example.org/main#Person>) ObjectPropertyDomain(<https://example.org/main#max> <https://example.org/main#Person>) ObjectPropertyDomain(<https://example.org/main#knows> <https://example.org/main#Person>) ObjectPropertyDomain(<https://example.org/main#min> <https://example.org/main#Person>) SubClassOf(<https://example.org/main#Child> ObjectSomeValuesFrom(<https://example.org/main#knows> <https://example.org/imported#External>)) SubClassOf(<https://example.org/main#Person> ObjectExactCardinality(2 <https://example.org/main#exact> owl:Thing)) SubClassOf(<https://example.org/main#Person> ObjectMinCardinality(1 <https://example.org/main#min> owl:Thing)) SubClassOf(<https://example.org/main#Child> <https://example.org/main#Person>) SubClassOf(<https://example.org/main#Child> ObjectAllValuesFrom(<https://example.org/main#knows> <https://example.org/imported#External>)) SubClassOf(<https://example.org/main#Person> ObjectMaxCardinality(3 <https://example.org/main#max> owl:Thing)) DataPropertyDomain(<https://example.org/main#name> <https://example.org/main#Person>) Declaration(Class(<https://example.org/main#Person>)) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: https://example.org/main
+  -> preParsing() 12:05:49
+  -> parsing()12:05:49
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - WalkStructure Success!
+  -> postParsing() 12:05:49
+--- Finished --- 12:05:49
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.242 s -- in ConverterTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ owl2vowl-core ---
+[INFO] Building jar: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\owl2vowl-core\target\owl2vowl-core-1.0.0-teamdigitale-5cdef094.jar
+[INFO] 
+[INFO] --- dependency:3.8.1:tree (default-cli) @ owl2vowl-core ---
+[INFO] Wrote dependency tree to: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\owl2vowl-core\dependency-tree.txt
+[INFO] 
+[INFO] ---------------------------< es.oeg:widoco >----------------------------
+[INFO] Building Widoco 1.4.26                                             [2/3]
+[INFO]   from C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ widoco ---
+[INFO] Deleting C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ widoco ---
+[INFO] Copying 96 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ widoco ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 31 source files with javac [debug release 11] to target\classes
+[INFO] /C:/Users/silve/OneDrive/Documents/ChatGPT/Widoco fix vulenrability/integration-widoco/src/main/java/oops/OOPSevaluation.java: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\src\main\java\oops\OOPSevaluation.java uses unchecked or unsafe operations.
+[INFO] /C:/Users/silve/OneDrive/Documents/ChatGPT/Widoco fix vulenrability/integration-widoco/src/main/java/oops/OOPSevaluation.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ widoco ---
+[INFO] Copying 5 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ widoco ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 7 source files with javac [debug release 11] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ widoco ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junit4.JUnit4Provider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running diagram.DiagramGenerationTest
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849156117
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+Converting Ontology:
+  -> preLoadOntontology()12:05:56
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<https://example.org/diagram>) VersionIRI(<null>))) [Axioms: 2 Logical Axioms: 0] First 20 axioms: {AnnotationAssertion(rdfs:label <https://example.org/diagram#Person> "Person � caf�"@en) Declaration(Class(<https://example.org/diagram#Person>)) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: https://example.org/diagram
+  -> preParsing() 12:05:56
+  -> parsing()12:05:56
+  -> postParsing() 12:05:56
+--- Finished --- 12:05:56
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - WalkStructure Success!
+Converting Ontology:
+  -> preLoadOntontology()12:05:56
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Converting Ontolgy...
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Loading ontology ... [Ontology(OntologyID(OntologyIRI(<https://example.org/diagram>) VersionIRI(<null>))) [Axioms: 2 Logical Axioms: 0] First 20 axioms: {AnnotationAssertion(rdfs:label <https://example.org/diagram#Person> "Person � caf�"@en) Declaration(Class(<https://example.org/diagram#Person>)) }]
+[main] INFO it.gov.innovazione.owl2vowl.converter.OntologyConverter - Ontologies loaded! Main Ontology: https://example.org/diagram
+  -> preParsing() 12:05:56
+[main] INFO it.gov.innovazione.owl2vowl.converter.AbstractConverter - WalkStructure Success!
+  -> parsing()12:05:56
+  -> postParsing() 12:05:56
+--- Finished --- 12:05:56
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.898 s -- in diagram.DiagramGenerationTest
+[INFO] Running oops.OOPSevaluationTest
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against inputstream:ontology163023775305901
+[main] INFO oops.OOPSevaluation - Pitfall number: 3
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against inputstream:ontology163023775305902
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.178 s -- in oops.OOPSevaluationTest
+[INFO] Running widoco.CreateDocInThreadTest
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849156834
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+Testing Ontology: BNE
+[main] INFO widoco.WidocoUtils - Load ontology test\bne.ttl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305903
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO widoco.CreateResources - Generate documentation in myDoc
+[main] INFO widoco.CreateResources - - ontology IRI: 
+Warning at function f:isInDomain on line 2111 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasMembers on line 2099 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:isInRange on line 2105 column 54 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasSubclasses on line 2093 column 58 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+[main] INFO widoco.LODEParser - Parsing Complete!
+[main] INFO widoco.CreateResources - No previous version provided. No changelog produced!
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849161681
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+Testing Ontology: otalex.owl
+[main] INFO widoco.WidocoUtils - Load ontology test\otalex.owl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305904
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO widoco.CreateResources - Generate documentation in myDoc
+[main] INFO widoco.CreateResources - - ontology IRI: 
+Warning at function f:isInDomain on line 2111 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasMembers on line 2099 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:isInRange on line 2105 column 54 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasSubclasses on line 2093 column 58 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+[main] INFO widoco.LODEParser - Parsing Complete!
+[main] INFO widoco.CreateResources - No previous version provided. No changelog produced!
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849162932
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] INFO widoco.WidocoUtils - Load ontology test\example_annotated.owl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305905
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO widoco.CreateResources - Generate documentation in myDoc
+[main] INFO widoco.CreateResources - - ontology IRI: https://w3id.org/example
+Warning at function f:isInDomain on line 2111 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasMembers on line 2099 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:isInRange on line 2105 column 54 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasSubclasses on line 2093 column 58 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+[main] INFO widoco.LODEParser - Parsing Complete!
+[main] INFO widoco.CreateResources - Attempting to generate an automated changelog
+Downloading old ontology https://w3id.org/example/1.0.0
+[main] INFO widoco.WidocoUtils - Attempting to download vocabulary in application/rdf+xml
+[main] ERROR widoco.WidocoUtils - Failed to download vocabulary in RDF format [application/rdf+xml]: java.net.SocketException: Connection reset
+[main] ERROR widoco.CreateResources - Could not generate changelog: Failed to download vocabulary in RDF format [application/rdf+xml]: 
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849248415
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+Testing Ontology: PAC2_EX2_RDF.rdf
+[main] INFO widoco.WidocoUtils - Load ontology test\PAC2_EX2_RDF.rdf
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305906
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO widoco.CreateResources - Generate documentation in myDoc
+[main] INFO widoco.CreateResources - - ontology IRI: 
+Warning at function f:isInDomain on line 2111 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasMembers on line 2099 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:isInRange on line 2105 column 54 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasSubclasses on line 2093 column 58 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+[main] INFO widoco.LODEParser - Parsing Complete!
+[main] INFO widoco.CreateResources - No previous version provided. No changelog produced!
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849249225
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+Testing Ontology: coil.owl
+[main] INFO widoco.WidocoUtils - Load ontology test\coil.owl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305907
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO widoco.CreateResources - Generate documentation in myDoc
+[main] INFO widoco.CreateResources - - ontology IRI: 
+Warning at function f:isInDomain on line 2111 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasMembers on line 2099 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:isInRange on line 2105 column 54 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasSubclasses on line 2093 column 58 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+[main] INFO widoco.LODEParser - Parsing Complete!
+[main] INFO widoco.CreateResources - No previous version provided. No changelog produced!
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849249776
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+Testing Ontology: prov-o
+[main] INFO widoco.WidocoUtils - Attempting to download vocabulary in application/rdf+xml
+[main] ERROR widoco.WidocoUtils - Failed to download vocabulary in RDF format [application/rdf+xml]: java.net.SocketException: Connection reset
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849294569
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+Testing Ontology: observation.owl
+[main] INFO widoco.WidocoUtils - Load ontology test\observation.owl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305908
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO widoco.CreateResources - Generate documentation in myDoc
+[main] INFO widoco.CreateResources - - ontology IRI: 
+Warning at function f:isInDomain on line 2111 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasMembers on line 2099 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:isInRange on line 2105 column 54 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasSubclasses on line 2093 column 58 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+[main] INFO widoco.LODEParser - Parsing Complete!
+[main] INFO widoco.CreateResources - No previous version provided. No changelog produced!
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849295101
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] INFO widoco.WidocoUtils - Load ontology test\medatatestont.ttl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305909
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO widoco.CreateResources - Generate documentation in myDoc
+[main] INFO widoco.CreateResources - - ontology IRI: https://identifier.my.ont/ont/
+Warning at function f:isInDomain on line 2111 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasMembers on line 2099 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:isInRange on line 2105 column 54 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasSubclasses on line 2093 column 58 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+[main] INFO widoco.LODEParser - Parsing Complete!
+[main] INFO widoco.CreateResources - No previous version provided. No changelog produced!
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849295546
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] INFO widoco.WidocoUtils - Load ontology test\medatatestont.ttl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305910
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO widoco.CreateResources - Generate documentation in myDoc
+[main] INFO widoco.CreateResources - - ontology IRI: https://identifier.my.ont/ont/
+Warning at function f:isInDomain on line 2111 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasMembers on line 2099 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:isInRange on line 2105 column 54 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasSubclasses on line 2093 column 58 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+[main] INFO widoco.LODEParser - Parsing Complete!
+[main] INFO widoco.CreateResources - No previous version provided. No changelog produced!
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849295971
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] INFO widoco.WidocoUtils - Load ontology test\without_namespaces.ttl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305911
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO widoco.CreateResources - Generate documentation in myDoc
+[main] INFO widoco.CreateResources - - ontology IRI: https://example.org#
+Warning at function f:isInDomain on line 2111 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasMembers on line 2099 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:isInRange on line 2105 column 54 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasSubclasses on line 2093 column 58 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+[main] INFO widoco.LODEParser - Parsing Complete!
+[main] INFO widoco.CreateResources - No previous version provided. No changelog produced!
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849296431
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] INFO widoco.WidocoUtils - Load ontology test\example_test.owl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305912
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO widoco.CreateResources - Generate documentation in myDoc
+[main] INFO widoco.CreateResources - - ontology IRI: https://w3id.org/example
+Warning at function f:isInDomain on line 2111 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasMembers on line 2099 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:isInRange on line 2105 column 54 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasSubclasses on line 2093 column 58 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+[main] INFO widoco.LODEParser - Parsing Complete!
+[main] INFO widoco.CreateResources - Attempting to generate an automated changelog
+Downloading old ontology https://w3id.org/example/1.0.0
+[main] INFO widoco.WidocoUtils - Attempting to download vocabulary in application/rdf+xml
+[main] INFO diff.CompareOntologies - old ontology version loaded
+[main] INFO widoco.CreateResources - Changelog successfully created
+[ERROR] Tests run: 11, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 144.2 s <<< FAILURE! -- in widoco.CreateDocInThreadTest
+[ERROR] widoco.CreateDocInThreadTest.testOntologyFromURL -- Time elapsed: 44.79 s <<< FAILURE!
+java.lang.AssertionError: Error while running test Failed to download vocabulary in RDF format [application/rdf+xml]: 
+	at org.junit.Assert.fail(Assert.java:89)
+	at widoco.CreateDocInThreadTest.testOntologyFromURL(CreateDocInThreadTest.java:170)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+
+[INFO] Running widoco.ExternalEntitiesTest
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849301019
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+Testing Ontology: External Entity
+[main] INFO widoco.WidocoUtils - Load ontology C:\Users\silve\AppData\Local\Temp\external-entity5560172675498970875\external-entity.ttl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305913
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO widoco.CreateResources - Generate documentation in myDoc
+[main] INFO widoco.CreateResources - - ontology IRI: 
+Warning at function f:isInDomain on line 2111 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasMembers on line 2099 column 55 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:isInRange on line 2105 column 54 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+Warning at function f:hasSubclasses on line 2093 column 58 of extraction.xsl:
+  SXWN9000: A function that computes atomic values should use xsl:sequence rather than xsl:value-of
+[main] INFO widoco.LODEParser - Parsing Complete!
+[main] INFO widoco.CreateResources - No previous version provided. No changelog produced!
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.714 s -- in widoco.ExternalEntitiesTest
+[INFO] Running widoco.MetadataSecurityTest
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849302759
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849302899
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.260 s -- in widoco.MetadataSecurityTest
+[INFO] Running widoco.OntologyLanguageTest
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849303039
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] INFO widoco.WidocoUtils - Load ontology test\OSO_1_1_0.owl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305914
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against file:/C:/Users/silve/OneDrive/Documents/ChatGPT/Widoco%20fix%20vulenrability/integration-widoco/test/OSO_1_1_0.owl
+[main] INFO org.semanticweb.owlapi.io.DocumentSources - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#inScheme -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#hasTopConcept -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#topConceptOf -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#prefLabel -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#altLabel -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#hiddenLabel -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#notation -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#note -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#changeNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#definition -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#editorialNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#example -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#historyNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#scopeNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#semanticRelation -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#broader -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#narrower -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#related -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#broaderTransitive -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#narrowerTransitive -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#member -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#memberList -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#mappingRelation -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#broadMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#narrowMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#relatedMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#exactMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#closeMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against http://xmlns.com/foaf/0.1/
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/mbox -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/mbox_sha1sum -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/gender -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/geekcode -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/dnaChecksum -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/sha1 -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/based_near -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/title -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/nick -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/jabberID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/aimChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/skypeID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/icqChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/yahooChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/msnChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/name -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/firstName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/lastName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/givenName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/givenname -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/surname -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/family_name -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/familyName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/phone -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/homepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/weblog -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/openid -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/tipjar -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/plan -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/made -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/maker -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/img -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/depiction -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/depicts -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/thumbnail -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/myersBriggs -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/workplaceHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/workInfoHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/schoolHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/knows -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/interest -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/topic_interest -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/publications -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/currentProject -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/pastProject -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/fundedBy -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/logo -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/topic -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/primaryTopic -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/focus -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/isPrimaryTopicOf -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/page -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/theme -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/account -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/holdsAccount -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/accountServiceHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/accountName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/member -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/membershipClass -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/birthday -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/age -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/status -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.OWLRDFConsumer - Unparsed triple: http://www.w3.org/2002/07/owl#equivalentProperty -> http://xmlns.com/foaf/0.1/maker -> http://purl.org/dc/terms/creator
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/aimChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/aimChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/aimChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/icqChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/icqChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/icqChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/mbox_sha1sum in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/jabberID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/jabberID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/jabberID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/msnChatID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/msnChatID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/msnChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/yahooChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/yahooChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/yahooChatID>))]
+[main] WARN org.semanticweb.owlapi.util.OWLAnnotationPropertyTransformer - Annotation property range axiom turned to data property range after parsing. This could introduce errors if the original range was an anonymous expression: http://www.w3.org/2000/01/rdf-schema#Literal is the new domain.
+[main] INFO org.semanticweb.owlapi.io.DocumentSources - URL connection input stream is compressed using gzip
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#wasRevisionOf in punning not allowed [Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#wasRevisionOf>)), Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasRevisionOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#specializationOf in punning not allowed [Declaration(ObjectProperty(<http://www.w3.org/ns/prov#specializationOf>)), Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#specializationOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/aimChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/aimChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/aimChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/icqChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/icqChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/icqChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#wasRevisionOf in punning not allowed [Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#wasRevisionOf>)), Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasRevisionOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/mbox_sha1sum in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/jabberID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/jabberID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/jabberID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#specializationOf in punning not allowed [Declaration(ObjectProperty(<http://www.w3.org/ns/prov#specializationOf>)), Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#specializationOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/msnChatID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/msnChatID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/msnChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/yahooChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/yahooChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/yahooChatID>))]
+[main] ERROR widoco.Configuration - Error while getting ontology revision. No literal provided
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849324317
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] INFO widoco.WidocoUtils - Load ontology test\OSO_1_1_0.owl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305915
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against file:/C:/Users/silve/OneDrive/Documents/ChatGPT/Widoco%20fix%20vulenrability/integration-widoco/test/OSO_1_1_0.owl
+[main] INFO org.semanticweb.owlapi.io.DocumentSources - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#inScheme -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#hasTopConcept -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#topConceptOf -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#prefLabel -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#altLabel -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#hiddenLabel -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#notation -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#note -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#changeNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#definition -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#editorialNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#example -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#historyNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#scopeNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#semanticRelation -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#broader -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#narrower -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#related -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#broaderTransitive -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#narrowerTransitive -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#member -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#memberList -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#mappingRelation -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#broadMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#narrowMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#relatedMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#exactMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#closeMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against http://xmlns.com/foaf/0.1/
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/mbox -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/mbox_sha1sum -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/gender -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/geekcode -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/dnaChecksum -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/sha1 -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/based_near -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/title -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/nick -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/jabberID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/aimChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/skypeID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/icqChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/yahooChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/msnChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/name -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/firstName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/lastName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/givenName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/givenname -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/surname -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/family_name -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/familyName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/phone -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/homepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/weblog -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/openid -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/tipjar -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/plan -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/made -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/maker -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/img -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/depiction -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/depicts -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/thumbnail -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/myersBriggs -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/workplaceHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/workInfoHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/schoolHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/knows -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/interest -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/topic_interest -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/publications -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/currentProject -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/pastProject -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/fundedBy -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/logo -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/topic -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/primaryTopic -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/focus -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/isPrimaryTopicOf -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/page -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/theme -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/account -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/holdsAccount -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/accountServiceHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/accountName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/member -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/membershipClass -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/birthday -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/age -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/status -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.OWLRDFConsumer - Unparsed triple: http://www.w3.org/2002/07/owl#equivalentProperty -> http://xmlns.com/foaf/0.1/maker -> http://purl.org/dc/terms/creator
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/aimChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/aimChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/aimChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/icqChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/icqChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/icqChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/jabberID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/jabberID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/jabberID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/mbox_sha1sum in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/msnChatID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/msnChatID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/msnChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/yahooChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/yahooChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/yahooChatID>))]
+[main] WARN org.semanticweb.owlapi.util.OWLAnnotationPropertyTransformer - Annotation property range axiom turned to data property range after parsing. This could introduce errors if the original range was an anonymous expression: http://www.w3.org/2000/01/rdf-schema#Literal is the new domain.
+[main] INFO org.semanticweb.owlapi.io.DocumentSources - URL connection input stream is compressed using gzip
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#wasRevisionOf in punning not allowed [Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#wasRevisionOf>)), Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasRevisionOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#specializationOf in punning not allowed [Declaration(ObjectProperty(<http://www.w3.org/ns/prov#specializationOf>)), Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#specializationOf>))]
+[main] INFO org.semanticweb.owlapi.io.DocumentSources - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against http://www.w3.org/2003/01/geo/wgs84_pos
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#lat -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#location -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#long -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#alt -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#lat_long -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/aimChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/aimChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/aimChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/icqChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/icqChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/icqChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#wasRevisionOf in punning not allowed [Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#wasRevisionOf>)), Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasRevisionOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/mbox_sha1sum in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#specializationOf in punning not allowed [Declaration(ObjectProperty(<http://www.w3.org/ns/prov#specializationOf>)), Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#specializationOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/msnChatID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/msnChatID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/msnChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/jabberID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/jabberID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/jabberID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/yahooChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/yahooChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/yahooChatID>))]
+[main] ERROR widoco.Configuration - Error while getting ontology revision. No literal provided
+[main] ERROR widoco.Configuration - Error while getting ontology revision. No literal provided
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849339137
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] INFO widoco.WidocoUtils - Load ontology test\OSO_1_1_0.owl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305916
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against file:/C:/Users/silve/OneDrive/Documents/ChatGPT/Widoco%20fix%20vulenrability/integration-widoco/test/OSO_1_1_0.owl
+[main] INFO org.semanticweb.owlapi.io.DocumentSources - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#inScheme -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#hasTopConcept -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#topConceptOf -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#prefLabel -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#altLabel -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#hiddenLabel -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#notation -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#note -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#changeNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#definition -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#editorialNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#example -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#historyNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#scopeNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#semanticRelation -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#broader -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#narrower -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#related -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#broaderTransitive -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#narrowerTransitive -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#member -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#memberList -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#mappingRelation -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#broadMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#narrowMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#relatedMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#exactMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#closeMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against http://xmlns.com/foaf/0.1/
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/mbox -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/mbox_sha1sum -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/gender -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/geekcode -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/dnaChecksum -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/sha1 -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/based_near -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/title -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/nick -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/jabberID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/aimChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/skypeID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/icqChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/yahooChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/msnChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/name -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/firstName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/lastName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/givenName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/givenname -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/surname -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/family_name -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/familyName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/phone -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/homepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/weblog -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/openid -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/tipjar -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/plan -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/made -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/maker -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/img -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/depiction -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/depicts -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/thumbnail -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/myersBriggs -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/workplaceHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/workInfoHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/schoolHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/knows -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/interest -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/topic_interest -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/publications -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/currentProject -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/pastProject -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/fundedBy -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/logo -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/topic -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/primaryTopic -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/focus -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/isPrimaryTopicOf -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/page -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/theme -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/account -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/holdsAccount -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/accountServiceHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/accountName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/member -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/membershipClass -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/birthday -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/age -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/status -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.OWLRDFConsumer - Unparsed triple: http://www.w3.org/2002/07/owl#equivalentProperty -> http://xmlns.com/foaf/0.1/maker -> http://purl.org/dc/terms/creator
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/aimChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/aimChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/aimChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/icqChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/icqChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/icqChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/jabberID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/jabberID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/jabberID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/mbox_sha1sum in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/yahooChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/yahooChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/yahooChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/msnChatID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/msnChatID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/msnChatID>))]
+[main] WARN org.semanticweb.owlapi.util.OWLAnnotationPropertyTransformer - Annotation property range axiom turned to data property range after parsing. This could introduce errors if the original range was an anonymous expression: http://www.w3.org/2000/01/rdf-schema#Literal is the new domain.
+[main] INFO org.semanticweb.owlapi.io.DocumentSources - URL connection input stream is compressed using gzip
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#wasRevisionOf in punning not allowed [Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#wasRevisionOf>)), Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasRevisionOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#specializationOf in punning not allowed [Declaration(ObjectProperty(<http://www.w3.org/ns/prov#specializationOf>)), Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#specializationOf>))]
+[main] INFO org.semanticweb.owlapi.io.DocumentSources - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against http://www.w3.org/2003/01/geo/wgs84_pos
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#lat -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#location -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#long -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#alt -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#lat_long -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/aimChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/aimChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/aimChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/icqChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/icqChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/icqChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#wasRevisionOf in punning not allowed [Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#wasRevisionOf>)), Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasRevisionOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/mbox_sha1sum in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#specializationOf in punning not allowed [Declaration(ObjectProperty(<http://www.w3.org/ns/prov#specializationOf>)), Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#specializationOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/msnChatID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/msnChatID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/msnChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/jabberID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/jabberID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/jabberID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/yahooChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/yahooChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/yahooChatID>))]
+[main] ERROR widoco.Configuration - Error while getting ontology revision. No literal provided
+[main] INFO widoco.WidocoUtils - Copying resource folder from lode to tmp1790849341483
+[main] WARN widoco.Configuration - Error while reading configuration properties from [C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties]: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] WARN widoco.Configuration - Error while loading the default property file: C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\config\config.properties (Le chemin d�acc�s sp�cifi� est introuvable)
+[main] INFO widoco.WidocoUtils - Load ontology test\OSO_1_1_0.owl
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305917
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against file:/C:/Users/silve/OneDrive/Documents/ChatGPT/Widoco%20fix%20vulenrability/integration-widoco/test/OSO_1_1_0.owl
+[main] INFO org.semanticweb.owlapi.io.DocumentSources - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#inScheme -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#hasTopConcept -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#topConceptOf -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#prefLabel -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#altLabel -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#hiddenLabel -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#notation -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#note -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#changeNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#definition -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#editorialNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#example -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#historyNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#scopeNote -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#semanticRelation -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#broader -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#narrower -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#related -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#broaderTransitive -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#narrowerTransitive -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#member -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#memberList -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#mappingRelation -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#broadMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#narrowMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#relatedMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#exactMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2004/02/skos/core#closeMatch -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against http://xmlns.com/foaf/0.1/
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/mbox -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/mbox_sha1sum -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/gender -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/geekcode -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/dnaChecksum -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/sha1 -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/based_near -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/title -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/nick -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/jabberID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/aimChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/skypeID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/icqChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/yahooChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/msnChatID -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/name -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/firstName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/lastName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/givenName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/givenname -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/surname -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/family_name -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/familyName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/phone -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/homepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/weblog -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/openid -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/tipjar -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/plan -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/made -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/maker -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/img -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/depiction -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/depicts -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/thumbnail -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/myersBriggs -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/workplaceHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/workInfoHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/schoolHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/knows -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/interest -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/topic_interest -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/publications -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/currentProject -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/pastProject -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/fundedBy -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/logo -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/topic -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/primaryTopic -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/focus -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/isPrimaryTopicOf -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/page -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/theme -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/account -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/holdsAccount -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/accountServiceHomepage -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/accountName -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/member -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/membershipClass -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/birthday -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/age -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://xmlns.com/foaf/0.1/status -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.OWLRDFConsumer - Unparsed triple: http://www.w3.org/2002/07/owl#equivalentProperty -> http://xmlns.com/foaf/0.1/maker -> http://purl.org/dc/terms/creator
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/aimChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/aimChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/aimChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/icqChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/icqChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/icqChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/mbox_sha1sum in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/jabberID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/jabberID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/jabberID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/msnChatID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/msnChatID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/msnChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/yahooChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/yahooChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/yahooChatID>))]
+[main] WARN org.semanticweb.owlapi.util.OWLAnnotationPropertyTransformer - Annotation property range axiom turned to data property range after parsing. This could introduce errors if the original range was an anonymous expression: http://www.w3.org/2000/01/rdf-schema#Literal is the new domain.
+[main] INFO org.semanticweb.owlapi.io.DocumentSources - URL connection input stream is compressed using gzip
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#wasRevisionOf in punning not allowed [Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasRevisionOf>)), Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#wasRevisionOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#specializationOf in punning not allowed [Declaration(ObjectProperty(<http://www.w3.org/ns/prov#specializationOf>)), Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#specializationOf>))]
+[main] INFO org.semanticweb.owlapi.io.DocumentSources - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.AbstractState - Notice: root element does not have an xml:base. Relative IRIs will be resolved against http://www.w3.org/2003/01/geo/wgs84_pos
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#lat -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#location -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#long -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#alt -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] INFO org.semanticweb.owlapi.rdf.rdfxml.parser.TripleHandlers - Usage of rdf vocabulary: http://www.w3.org/2003/01/geo/wgs84_pos#lat_long -> http://www.w3.org/1999/02/22-rdf-syntax-ns#type -> http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/aimChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/aimChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/aimChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/icqChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/icqChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/icqChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#wasRevisionOf in punning not allowed [Declaration(ObjectProperty(<http://www.w3.org/ns/prov#wasRevisionOf>)), Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#wasRevisionOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/mbox_sha1sum in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/mbox_sha1sum>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://www.w3.org/ns/prov#specializationOf in punning not allowed [Declaration(ObjectProperty(<http://www.w3.org/ns/prov#specializationOf>)), Declaration(AnnotationProperty(<http://www.w3.org/ns/prov#specializationOf>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/msnChatID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/msnChatID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/msnChatID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/jabberID in punning not allowed [Declaration(DataProperty(<http://xmlns.com/foaf/0.1/jabberID>)), Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/jabberID>))]
+[main] WARN uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity http://xmlns.com/foaf/0.1/yahooChatID in punning not allowed [Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/yahooChatID>)), Declaration(DataProperty(<http://xmlns.com/foaf/0.1/yahooChatID>))]
+[main] ERROR widoco.Configuration - Error while getting ontology revision. No literal provided
+[main] ERROR widoco.Configuration - Error while getting ontology revision. No literal provided
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 40.45 s -- in widoco.OntologyLanguageTest
+[INFO] Running widoco.TestJenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Creating JenaCatalogIRIMapper
+[main] INFO widoco.CatalogIRIMapper - Loading 3 inputstream:ontology163023775305918
+[main] INFO widoco.CatalogIRIMapper - Loaded ont-policy ontology
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2000/01/rdf-schema -> file:///test/lib/ontologies/w3c/rdf-schema.rdf
+[main] INFO widoco.CatalogIRIMapper - http://www.w3.org/2002/07/owl -> file:///test/lib/ontologies/w3c/owl.owl
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in widoco.TestJenaCatalogIRIMapper
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   CreateDocInThreadTest.testOntologyFromURL:170 Error while running test Failed to download vocabulary in RDF format [application/rdf+xml]: 
+[INFO] 
+[ERROR] Tests run: 25, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] owl2vowl-core 1.0.0-teamdigitale-5cdef094 .......... SUCCESS [  9.553 s]
+[INFO] Widoco 1.4.26 ...................................... FAILURE [03:12 min]
+[INFO] widoco-converter-reactor 1.4.26 .................... SKIPPED
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:22 min
+[INFO] Finished at: 2026-10-01T12:09:03+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.4:test (default-test) on project widoco: There are test failures.
+[ERROR] 
+[ERROR] See C:\Users\silve\OneDrive\Documents\ChatGPT\Widoco fix vulenrability\integration-widoco\target\surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :widoco

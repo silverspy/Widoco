@@ -1,0 +1,5145 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.74.0"
+  },
+  "ReportID": "01a0f6f4-0434-70b7-8ee0-b2c0f86265a5",
+  "CreatedAt": "2026-10-01T12:13:02.1320471+02:00",
+  "ArtifactID": "sha256:1f30634b71248b0265477caea6f210a327e12b4bb9dcb093d4374b166ae39d28",
+  "ArtifactName": "integration-widoco",
+  "ArtifactType": "repository",
+  "Metadata": {
+    "RepoURL": "https://github.com/silverspy/Widoco.git",
+    "Branch": "replace-owl2vowl-with-teamdigitale-core",
+    "Commit": "280a463c25c9b1f81b6efa0ddf6b593c4ad1cc1e",
+    "CommitMsg": "Harden embedded viewer and static documentation against known high-risk findings",
+    "Author": "Labrousse Gilles \u003c11924930+silverspy@users.noreply.github.com\u003e",
+    "Committer": "Labrousse Gilles \u003c11924930+silverspy@users.noreply.github.com\u003e"
+  },
+  "Results": [
+    {
+      "Target": "build-reactor/pom.xml",
+      "Class": "lang-pkgs",
+      "Type": "pom",
+      "Packages": [
+        {
+          "ID": "es.oeg:widoco-converter-reactor:1.4.26::f93b14f3",
+          "Name": "es.oeg:widoco-converter-reactor",
+          "Identifier": {
+            "PURL": "pkg:maven/es.oeg/widoco-converter-reactor@1.4.26",
+            "UID": "4cc6545d1cfaeb98"
+          },
+          "Version": "1.4.26",
+          "Relationship": "root",
+          "DependsOn": [
+            "es.oeg:widoco:1.4.26::359a93dc",
+            "it.gov.innovazione:owl2vowl-core:1.0.0-teamdigitale-5cdef094::c3da7ef4"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "es.oeg:widoco:1.4.26::359a93dc",
+          "Name": "es.oeg:widoco",
+          "Identifier": {
+            "PURL": "pkg:maven/es.oeg/widoco@1.4.26",
+            "UID": "e4b0b9e46ab51103"
+          },
+          "Version": "1.4.26",
+          "Relationship": "workspace",
+          "DependsOn": [
+            "com.googlecode.json-simple:json-simple:1.1::14b641e8",
+            "it.gov.innovazione:owl2vowl-core:1.0.0-teamdigitale-5cdef094::5d837b26",
+            "net.sf.saxon:Saxon-HE:10.9::ec47bfa8",
+            "net.sourceforge.owlapi:owlapi-distribution:5.1.18::b93b572a",
+            "org.apache.maven:maven-model:3.9.11::addba706",
+            "org.jsoup:jsoup:1.23.1::b03a0971",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033",
+            "org.slf4j:slf4j-simple:1.7.36::7dc7bd94"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "it.gov.innovazione:owl2vowl-core:1.0.0-teamdigitale-5cdef094::c3da7ef4",
+          "Name": "it.gov.innovazione:owl2vowl-core",
+          "Identifier": {
+            "PURL": "pkg:maven/it.gov.innovazione/owl2vowl-core@1.0.0-teamdigitale-5cdef094",
+            "UID": "ef44e995349e9ca1"
+          },
+          "Version": "1.0.0-teamdigitale-5cdef094",
+          "Relationship": "workspace",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-databind:2.18.11::971780ba",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "jakarta.annotation:jakarta.annotation-api:2.1.1::d3951f30",
+            "net.sourceforge.owlapi:owlapi-distribution:5.1.18::7fd6d62a",
+            "org.apache.commons:commons-lang3:3.18.0::83c88a5d",
+            "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7",
+            "org.apache.logging.log4j:log4j-api:2.25.5::50332a42",
+            "org.apache.logging.log4j:log4j-to-slf4j:2.25.5::56407cca"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-databind:2.18.11::971780ba",
+          "Name": "com.fasterxml.jackson.core:jackson-databind",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.11",
+            "UID": "1db6dd3aa61e9d5e"
+          },
+          "Version": "2.18.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-annotations:2.18.11::3f6a572f",
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::f1c90ef3"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.guava:guava:33.4.0-jre::16f350d7",
+          "Name": "com.google.guava:guava",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/guava@33.4.0-jre",
+            "UID": "fdeef1503c730489"
+          },
+          "Version": "33.4.0-jre",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.errorprone:error_prone_annotations:2.36.0::a6acf526",
+            "com.google.guava:failureaccess:1.0.2::97d4e471",
+            "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava::481979c1",
+            "com.google.j2objc:j2objc-annotations:3.0.0::1b5faccf",
+            "org.checkerframework:checker-qual:3.43.0::726b4cbc"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.googlecode.json-simple:json-simple:1.1::14b641e8",
+          "Name": "com.googlecode.json-simple:json-simple",
+          "Identifier": {
+            "PURL": "pkg:maven/com.googlecode.json-simple/json-simple@1.1",
+            "UID": "3d702e029d87e2b8"
+          },
+          "Version": "1.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "commons-io:commons-io:2.18.0::d781fc3d",
+          "Name": "commons-io:commons-io",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-io/commons-io@2.18.0",
+            "UID": "8ab2376997fd8d8f"
+          },
+          "Version": "2.18.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "it.gov.innovazione:owl2vowl-core:1.0.0-teamdigitale-5cdef094::5d837b26",
+          "Name": "it.gov.innovazione:owl2vowl-core",
+          "Identifier": {
+            "PURL": "pkg:maven/it.gov.innovazione/owl2vowl-core@1.0.0-teamdigitale-5cdef094",
+            "UID": "c66010af5f354b61"
+          },
+          "Version": "1.0.0-teamdigitale-5cdef094",
+          "Relationship": "direct",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-databind:2.18.11::4c55428f",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "jakarta.annotation:jakarta.annotation-api:2.1.1::667d5cff",
+            "net.sourceforge.owlapi:owlapi-distribution:5.1.18::b93b572a",
+            "org.apache.commons:commons-lang3:3.18.0::f637f4b4",
+            "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca",
+            "org.apache.logging.log4j:log4j-api:2.25.5::89514d99",
+            "org.apache.logging.log4j:log4j-to-slf4j:2.25.5::73f989c4"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "jakarta.annotation:jakarta.annotation-api:2.1.1::d3951f30",
+          "Name": "jakarta.annotation:jakarta.annotation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+            "UID": "c1ce8cd345bf90a2"
+          },
+          "Version": "2.1.1",
+          "Licenses": [
+            "EPL-2.0",
+            "GPL-2.0-with-classpath-exception"
+          ],
+          "Relationship": "direct",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sf.saxon:Saxon-HE:10.9::ec47bfa8",
+          "Name": "net.sf.saxon:Saxon-HE",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sf.saxon/Saxon-HE@10.9",
+            "UID": "23fce5d19a60d1e0"
+          },
+          "Version": "10.9",
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Relationship": "direct",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-distribution:5.1.18::7fd6d62a",
+          "Name": "net.sourceforge.owlapi:owlapi-distribution",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-distribution@5.1.18",
+            "UID": "db48cf1d6dca886a"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-annotations:2.18.11::3f6a572f",
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::f1c90ef3",
+            "com.fasterxml.jackson.core:jackson-databind:2.18.11::971780ba",
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.jsonld-java:jsonld-java:0.13.0::69d2ddda",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-compatibility:5.1.18::3ec13dc8",
+            "org.apache.commons:commons-rdf-api:0.5.0::46af6afa",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-binary:3.4.3::ffb66a39",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-hdt:3.4.3::a080634e",
+            "org.eclipse.rdf4j:rdf4j-rio-jsonld:3.4.3::6c182395",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-rio-n3:3.4.3::efb5e0e3",
+            "org.eclipse.rdf4j:rdf4j-rio-nquads:3.4.3::f26ef50c",
+            "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::73c514e5",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfjson:3.4.3::e049be0e",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfxml:3.4.3::d729eefd",
+            "org.eclipse.rdf4j:rdf4j-rio-trig:3.4.3::e6ca03a3",
+            "org.eclipse.rdf4j:rdf4j-rio-trix:3.4.3::afa8bd99",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::ed46be17",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8",
+            "org.slf4j:jcl-over-slf4j:1.7.22::6ec81db3",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188",
+            "org.tukaani:xz:1.6::75024caf"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-distribution:5.1.18::b93b572a",
+          "Name": "net.sourceforge.owlapi:owlapi-distribution",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-distribution@5.1.18",
+            "UID": "b860e6d7aa72a4ea"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-annotations:2.18.11::94f98c0f",
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::52b45640",
+            "com.fasterxml.jackson.core:jackson-databind:2.18.11::4c55428f",
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.jsonld-java:jsonld-java:0.13.0::3d011cf3",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-compatibility:5.1.18::66eb926a",
+            "org.apache.commons:commons-rdf-api:0.5.0::c47d22f1",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-binary:3.4.3::b8669072",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-hdt:3.4.3::b3cb5fe0",
+            "org.eclipse.rdf4j:rdf4j-rio-jsonld:3.4.3::86a25dfd",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-rio-n3:3.4.3::78bae7ac",
+            "org.eclipse.rdf4j:rdf4j-rio-nquads:3.4.3::95645385",
+            "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::8df23640",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfjson:3.4.3::d572ab98",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfxml:3.4.3::dc633280",
+            "org.eclipse.rdf4j:rdf4j-rio-trig:3.4.3::6df0c0f6",
+            "org.eclipse.rdf4j:rdf4j-rio-trix:3.4.3::51064e89",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::b8ab651d",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70",
+            "org.slf4j:jcl-over-slf4j:1.7.22::3a71bb77",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033",
+            "org.tukaani:xz:1.6::6e1583e4"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.commons:commons-lang3:3.18.0::83c88a5d",
+          "Name": "org.apache.commons:commons-lang3",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.commons/commons-lang3@3.18.0",
+            "UID": "88721ada573e6289"
+          },
+          "Version": "3.18.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7",
+          "Name": "org.apache.httpcomponents:httpclient",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14",
+            "UID": "ddd7938a040ebffc"
+          },
+          "Version": "4.5.14",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "commons-codec:commons-codec:1.11::65252ba5",
+            "commons-logging:commons-logging:1.2::a78ab996",
+            "org.apache.httpcomponents:httpcore:4.4.16::8f0de7ad"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-api:2.25.5::50332a42",
+          "Name": "org.apache.logging.log4j:log4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+            "UID": "f5b1522a8a50b3a0"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-to-slf4j:2.25.5::56407cca",
+          "Name": "org.apache.logging.log4j:log4j-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+            "UID": "1bc8a0ac70e812cb"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "org.apache.logging.log4j:log4j-api:2.25.5::50332a42",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.maven:maven-model:3.9.11::addba706",
+          "Name": "org.apache.maven:maven-model",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.maven/maven-model@3.9.11",
+            "UID": "c48e10b065d1ccfe"
+          },
+          "Version": "3.9.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "org.codehaus.plexus:plexus-utils:3.6.1::ef911407"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.jsoup:jsoup:1.23.1::b03a0971",
+          "Name": "org.jsoup:jsoup",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jsoup/jsoup@1.23.1",
+            "UID": "54b709116d1289d0"
+          },
+          "Version": "1.23.1",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.slf4j:slf4j-api:1.7.36::3fe25033",
+          "Name": "org.slf4j:slf4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/slf4j-api@1.7.36",
+            "UID": "9e4644059c7d20e8"
+          },
+          "Version": "1.7.36",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.slf4j:slf4j-simple:1.7.36::7dc7bd94",
+          "Name": "org.slf4j:slf4j-simple",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/slf4j-simple@1.7.36",
+            "UID": "7d97ab72e54ece33"
+          },
+          "Version": "1.7.36",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-annotations:2.18.11::3f6a572f",
+          "Name": "com.fasterxml.jackson.core:jackson-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.18.11",
+            "UID": "4e17e3faa9524569"
+          },
+          "Version": "2.18.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-annotations:2.18.11::94f98c0f",
+          "Name": "com.fasterxml.jackson.core:jackson-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.18.11",
+            "UID": "62cc4a20ff77bad4"
+          },
+          "Version": "2.18.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-core:2.18.11::52b45640",
+          "Name": "com.fasterxml.jackson.core:jackson-core",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.18.11",
+            "UID": "f6769023cf24121f"
+          },
+          "Version": "2.18.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-core:2.18.11::f1c90ef3",
+          "Name": "com.fasterxml.jackson.core:jackson-core",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.18.11",
+            "UID": "b6172dd180ae3e17"
+          },
+          "Version": "2.18.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-databind:2.18.11::4c55428f",
+          "Name": "com.fasterxml.jackson.core:jackson-databind",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.11",
+            "UID": "46f505a7e7b6ba87"
+          },
+          "Version": "2.18.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-annotations:2.18.11::94f98c0f",
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::52b45640"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+          "Name": "com.github.ben-manes.caffeine:caffeine",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.ben-manes.caffeine/caffeine@2.8.1",
+            "UID": "c70d1a318b1f5536"
+          },
+          "Version": "2.8.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.google.errorprone:error_prone_annotations:2.36.0::a6acf526",
+            "org.checkerframework:checker-qual:3.43.0::726b4cbc"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+          "Name": "com.github.ben-manes.caffeine:caffeine",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.ben-manes.caffeine/caffeine@2.8.1",
+            "UID": "2d9c4e170e8638d0"
+          },
+          "Version": "2.8.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.google.errorprone:error_prone_annotations:2.36.0::481a3bef",
+            "org.checkerframework:checker-qual:3.43.0::681e94ea"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.github.jsonld-java:jsonld-java:0.13.0::3d011cf3",
+          "Name": "com.github.jsonld-java:jsonld-java",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.jsonld-java/jsonld-java@0.13.0",
+            "UID": "b120601bd3059d0f"
+          },
+          "Version": "0.13.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::52b45640",
+            "com.fasterxml.jackson.core:jackson-databind:2.18.11::4c55428f",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.apache.httpcomponents:httpclient-osgi:4.5.14::3b73ca66",
+            "org.apache.httpcomponents:httpcore-osgi:4.4.16::f6df784f",
+            "org.slf4j:jcl-over-slf4j:1.7.22::3a71bb77",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.github.jsonld-java:jsonld-java:0.13.0::69d2ddda",
+          "Name": "com.github.jsonld-java:jsonld-java",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.jsonld-java/jsonld-java@0.13.0",
+            "UID": "a8e523b41f38dda9"
+          },
+          "Version": "0.13.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::f1c90ef3",
+            "com.fasterxml.jackson.core:jackson-databind:2.18.11::971780ba",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.apache.httpcomponents:httpclient-osgi:4.5.10::8d0ed466",
+            "org.apache.httpcomponents:httpcore-osgi:4.4.12::f06003c1",
+            "org.slf4j:jcl-over-slf4j:1.7.22::6ec81db3",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+          "Name": "com.github.vsonnier:hppcrt",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.vsonnier/hppcrt@0.7.5",
+            "UID": "2a783192c765aea3"
+          },
+          "Version": "0.7.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+          "Name": "com.github.vsonnier:hppcrt",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.vsonnier/hppcrt@0.7.5",
+            "UID": "a7c772ed57e94f5b"
+          },
+          "Version": "0.7.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+          "Name": "com.google.code.findbugs:jsr305",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2",
+            "UID": "998da733de6cf6b"
+          },
+          "Version": "3.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+          "Name": "com.google.code.findbugs:jsr305",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2",
+            "UID": "f0b7103ae75ee8db"
+          },
+          "Version": "3.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.errorprone:error_prone_annotations:2.36.0::481a3bef",
+          "Name": "com.google.errorprone:error_prone_annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.errorprone/error_prone_annotations@2.36.0",
+            "UID": "321cdb3f76b075e7"
+          },
+          "Version": "2.36.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.errorprone:error_prone_annotations:2.36.0::a6acf526",
+          "Name": "com.google.errorprone:error_prone_annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.errorprone/error_prone_annotations@2.36.0",
+            "UID": "fe4d6953bd495866"
+          },
+          "Version": "2.36.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.guava:failureaccess:1.0.2::11bc1ccc",
+          "Name": "com.google.guava:failureaccess",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/failureaccess@1.0.2",
+            "UID": "6ab1ccc2d5d42d0"
+          },
+          "Version": "1.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.guava:failureaccess:1.0.2::97d4e471",
+          "Name": "com.google.guava:failureaccess",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/failureaccess@1.0.2",
+            "UID": "b7fd5005f5d501e3"
+          },
+          "Version": "1.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+          "Name": "com.google.guava:guava",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/guava@33.4.0-jre",
+            "UID": "1b14e17091a91a1a"
+          },
+          "Version": "33.4.0-jre",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.errorprone:error_prone_annotations:2.36.0::481a3bef",
+            "com.google.guava:failureaccess:1.0.2::11bc1ccc",
+            "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava::1671411f",
+            "com.google.j2objc:j2objc-annotations:3.0.0::56ba41f4",
+            "org.checkerframework:checker-qual:3.43.0::681e94ea"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava::1671411f",
+          "Name": "com.google.guava:listenablefuture",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+            "UID": "b7f4ffade5f789fe"
+          },
+          "Version": "9999.0-empty-to-avoid-conflict-with-guava",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava::481979c1",
+          "Name": "com.google.guava:listenablefuture",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+            "UID": "c64c248d7d234a6f"
+          },
+          "Version": "9999.0-empty-to-avoid-conflict-with-guava",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.j2objc:j2objc-annotations:3.0.0::1b5faccf",
+          "Name": "com.google.j2objc:j2objc-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.j2objc/j2objc-annotations@3.0.0",
+            "UID": "b0ea9eebd3802756"
+          },
+          "Version": "3.0.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.j2objc:j2objc-annotations:3.0.0::56ba41f4",
+          "Name": "com.google.j2objc:j2objc-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.j2objc/j2objc-annotations@3.0.0",
+            "UID": "6bbe3afcfafeb4aa"
+          },
+          "Version": "3.0.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "commons-codec:commons-codec:1.11::65252ba5",
+          "Name": "commons-codec:commons-codec",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-codec/commons-codec@1.11",
+            "UID": "b0664be217c4b17c"
+          },
+          "Version": "1.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "commons-codec:commons-codec:1.11::ccb46fa3",
+          "Name": "commons-codec:commons-codec",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-codec/commons-codec@1.11",
+            "UID": "38039a8f2599b423"
+          },
+          "Version": "1.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "commons-io:commons-io:2.18.0::aa5970cd",
+          "Name": "commons-io:commons-io",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-io/commons-io@2.18.0",
+            "UID": "2fbc501e0a853b67"
+          },
+          "Version": "2.18.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "commons-logging:commons-logging:1.2::413b205a",
+          "Name": "commons-logging:commons-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-logging/commons-logging@1.2",
+            "UID": "9f385bb5b94e431f"
+          },
+          "Version": "1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "commons-logging:commons-logging:1.2::a78ab996",
+          "Name": "commons-logging:commons-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-logging/commons-logging@1.2",
+            "UID": "d009b0279a15e2e9"
+          },
+          "Version": "1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "jakarta.annotation:jakarta.annotation-api:2.1.1::667d5cff",
+          "Name": "jakarta.annotation:jakarta.annotation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+            "UID": "548adba90dab1044"
+          },
+          "Version": "2.1.1",
+          "Licenses": [
+            "EPL-2.0",
+            "GPL-2.0-with-classpath-exception"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "javax.inject:javax.inject:1::3be494ef",
+          "Name": "javax.inject:javax.inject",
+          "Identifier": {
+            "PURL": "pkg:maven/javax.inject/javax.inject@1",
+            "UID": "b680aa0c10b1301a"
+          },
+          "Version": "1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "javax.inject:javax.inject:1::d3ae245b",
+          "Name": "javax.inject:javax.inject",
+          "Identifier": {
+            "PURL": "pkg:maven/javax.inject/javax.inject@1",
+            "UID": "861283408910554a"
+          },
+          "Version": "1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-api:5.1.18::8ec71bc4",
+          "Name": "net.sourceforge.owlapi:owlapi-api",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-api@5.1.18",
+            "UID": "8e1e50c01ed7da29"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "javax.inject:javax.inject:1::3be494ef",
+            "org.apache.commons:commons-rdf-api:0.5.0::c47d22f1",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033",
+            "org.tukaani:xz:1.6::6e1583e4"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-api:5.1.18::c22ae0ea",
+          "Name": "net.sourceforge.owlapi:owlapi-api",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-api@5.1.18",
+            "UID": "53406827c30a369e"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "javax.inject:javax.inject:1::d3ae245b",
+            "org.apache.commons:commons-rdf-api:0.5.0::46af6afa",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188",
+            "org.tukaani:xz:1.6::75024caf"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-apibinding:5.1.18::7d182d11",
+          "Name": "net.sourceforge.owlapi:owlapi-apibinding",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-apibinding@5.1.18",
+            "UID": "efc2071ebdb6cfa0"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::c22ae0ea",
+            "net.sourceforge.owlapi:owlapi-impl:5.1.18::2d881927",
+            "net.sourceforge.owlapi:owlapi-oboformat:5.1.18::29c90594",
+            "net.sourceforge.owlapi:owlapi-parsers:5.1.18::3d27d3ca",
+            "net.sourceforge.owlapi:owlapi-rio:5.1.18::e03010e6",
+            "net.sourceforge.owlapi:owlapi-tools:5.1.18::7f150876",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-apibinding:5.1.18::9dbe51d6",
+          "Name": "net.sourceforge.owlapi:owlapi-apibinding",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-apibinding@5.1.18",
+            "UID": "a345217b27f72574"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::8ec71bc4",
+            "net.sourceforge.owlapi:owlapi-impl:5.1.18::eda6a148",
+            "net.sourceforge.owlapi:owlapi-oboformat:5.1.18::415a65e0",
+            "net.sourceforge.owlapi:owlapi-parsers:5.1.18::35f3ef3a",
+            "net.sourceforge.owlapi:owlapi-rio:5.1.18::abac139b",
+            "net.sourceforge.owlapi:owlapi-tools:5.1.18::31056fb5",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-compatibility:5.1.18::3ec13dc8",
+          "Name": "net.sourceforge.owlapi:owlapi-compatibility",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-compatibility@5.1.18",
+            "UID": "b9d67ba8a4c7897e"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-apibinding:5.1.18::7d182d11",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-compatibility:5.1.18::66eb926a",
+          "Name": "net.sourceforge.owlapi:owlapi-compatibility",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-compatibility@5.1.18",
+            "UID": "d966b118bff5c6a3"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-apibinding:5.1.18::9dbe51d6",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-impl:5.1.18::2d881927",
+          "Name": "net.sourceforge.owlapi:owlapi-impl",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-impl@5.1.18",
+            "UID": "3a1d69518e6f86b4"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "javax.inject:javax.inject:1::d3ae245b",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::c22ae0ea",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-impl:5.1.18::eda6a148",
+          "Name": "net.sourceforge.owlapi:owlapi-impl",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-impl@5.1.18",
+            "UID": "35554039d78948f8"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "javax.inject:javax.inject:1::3be494ef",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::8ec71bc4",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-oboformat:5.1.18::29c90594",
+          "Name": "net.sourceforge.owlapi:owlapi-oboformat",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-oboformat@5.1.18",
+            "UID": "5e8cf50b82499b6"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-parsers:5.1.18::3d27d3ca",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-oboformat:5.1.18::415a65e0",
+          "Name": "net.sourceforge.owlapi:owlapi-oboformat",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-oboformat@5.1.18",
+            "UID": "b6e7a769b2b54ba"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-parsers:5.1.18::35f3ef3a",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-parsers:5.1.18::35f3ef3a",
+          "Name": "net.sourceforge.owlapi:owlapi-parsers",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-parsers@5.1.18",
+            "UID": "3bf7ed15d3d40670"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::8ec71bc4",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-parsers:5.1.18::3d27d3ca",
+          "Name": "net.sourceforge.owlapi:owlapi-parsers",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-parsers@5.1.18",
+            "UID": "237f39f76231678c"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::c22ae0ea",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-rio:5.1.18::abac139b",
+          "Name": "net.sourceforge.owlapi:owlapi-rio",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-rio@5.1.18",
+            "UID": "a544bdd355534cb"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.jsonld-java:jsonld-java:0.13.0::3d011cf3",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-parsers:5.1.18::35f3ef3a",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-binary:3.4.3::b8669072",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-hdt:3.4.3::b3cb5fe0",
+            "org.eclipse.rdf4j:rdf4j-rio-jsonld:3.4.3::86a25dfd",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-rio-n3:3.4.3::78bae7ac",
+            "org.eclipse.rdf4j:rdf4j-rio-nquads:3.4.3::95645385",
+            "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::8df23640",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfjson:3.4.3::d572ab98",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfxml:3.4.3::dc633280",
+            "org.eclipse.rdf4j:rdf4j-rio-trig:3.4.3::6df0c0f6",
+            "org.eclipse.rdf4j:rdf4j-rio-trix:3.4.3::51064e89",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::b8ab651d",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-rio:5.1.18::e03010e6",
+          "Name": "net.sourceforge.owlapi:owlapi-rio",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-rio@5.1.18",
+            "UID": "80b962ad03f49b48"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.jsonld-java:jsonld-java:0.13.0::69d2ddda",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-parsers:5.1.18::3d27d3ca",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-binary:3.4.3::ffb66a39",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-hdt:3.4.3::a080634e",
+            "org.eclipse.rdf4j:rdf4j-rio-jsonld:3.4.3::6c182395",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-rio-n3:3.4.3::efb5e0e3",
+            "org.eclipse.rdf4j:rdf4j-rio-nquads:3.4.3::f26ef50c",
+            "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::73c514e5",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfjson:3.4.3::e049be0e",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfxml:3.4.3::d729eefd",
+            "org.eclipse.rdf4j:rdf4j-rio-trig:3.4.3::e6ca03a3",
+            "org.eclipse.rdf4j:rdf4j-rio-trix:3.4.3::afa8bd99",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::ed46be17",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-tools:5.1.18::31056fb5",
+          "Name": "net.sourceforge.owlapi:owlapi-tools",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-tools@5.1.18",
+            "UID": "8274a27f003b9925"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::8ec71bc4",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-tools:5.1.18::7f150876",
+          "Name": "net.sourceforge.owlapi:owlapi-tools",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-tools@5.1.18",
+            "UID": "53013247af520f5a"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::c22ae0ea",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.commons:commons-lang3:3.18.0::f637f4b4",
+          "Name": "org.apache.commons:commons-lang3",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.commons/commons-lang3@3.18.0",
+            "UID": "3dc57422d6df73b8"
+          },
+          "Version": "3.18.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.commons:commons-rdf-api:0.5.0::46af6afa",
+          "Name": "org.apache.commons:commons-rdf-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.commons/commons-rdf-api@0.5.0",
+            "UID": "97d3ecf694f80027"
+          },
+          "Version": "0.5.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.commons:commons-rdf-api:0.5.0::c47d22f1",
+          "Name": "org.apache.commons:commons-rdf-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.commons/commons-rdf-api@0.5.0",
+            "UID": "bfffafbfd5bcd9c"
+          },
+          "Version": "0.5.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:fluent-hc:4.5.10::f5f15d7d",
+          "Name": "org.apache.httpcomponents:fluent-hc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/fluent-hc@4.5.10",
+            "UID": "7f504bc756d2c55b"
+          },
+          "Version": "4.5.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:fluent-hc:4.5.14::9bedba86",
+          "Name": "org.apache.httpcomponents:fluent-hc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/fluent-hc@4.5.14",
+            "UID": "c85ebe7a03898fbb"
+          },
+          "Version": "4.5.14",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca",
+          "Name": "org.apache.httpcomponents:httpclient",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14",
+            "UID": "681922eadd2315ed"
+          },
+          "Version": "4.5.14",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-codec:commons-codec:1.11::ccb46fa3",
+            "commons-logging:commons-logging:1.2::413b205a",
+            "org.apache.httpcomponents:httpcore:4.4.16::a0a96ba4"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpclient-cache:4.5.10::b0f5a41f",
+          "Name": "org.apache.httpcomponents:httpclient-cache",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpclient-cache@4.5.10",
+            "UID": "d95fd27260ed1860"
+          },
+          "Version": "4.5.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpclient-cache:4.5.14::41e8fffd",
+          "Name": "org.apache.httpcomponents:httpclient-cache",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpclient-cache@4.5.14",
+            "UID": "a707f44dd640f1a0"
+          },
+          "Version": "4.5.14",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpclient-osgi:4.5.10::8d0ed466",
+          "Name": "org.apache.httpcomponents:httpclient-osgi",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpclient-osgi@4.5.10",
+            "UID": "4e032e29dd4771c8"
+          },
+          "Version": "4.5.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-codec:commons-codec:1.11::65252ba5",
+            "org.apache.httpcomponents:fluent-hc:4.5.10::f5f15d7d",
+            "org.apache.httpcomponents:httpclient-cache:4.5.10::b0f5a41f",
+            "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7",
+            "org.apache.httpcomponents:httpmime:4.5.10::8b517718"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpclient-osgi:4.5.14::3b73ca66",
+          "Name": "org.apache.httpcomponents:httpclient-osgi",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpclient-osgi@4.5.14",
+            "UID": "d7d36864f1fc3524"
+          },
+          "Version": "4.5.14",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-codec:commons-codec:1.11::ccb46fa3",
+            "org.apache.httpcomponents:fluent-hc:4.5.14::9bedba86",
+            "org.apache.httpcomponents:httpclient-cache:4.5.14::41e8fffd",
+            "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca",
+            "org.apache.httpcomponents:httpmime:4.5.14::6977b61d"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpcore:4.4.16::8f0de7ad",
+          "Name": "org.apache.httpcomponents:httpcore",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16",
+            "UID": "2be2b6da1c21ebf0"
+          },
+          "Version": "4.4.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpcore:4.4.16::a0a96ba4",
+          "Name": "org.apache.httpcomponents:httpcore",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16",
+            "UID": "c9287d0d16fd2231"
+          },
+          "Version": "4.4.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpcore-nio:4.4.12::8a805564",
+          "Name": "org.apache.httpcomponents:httpcore-nio",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.12",
+            "UID": "ea2f86e9819fcf86"
+          },
+          "Version": "4.4.12",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpcore:4.4.16::8f0de7ad"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpcore-nio:4.4.16::c14fca4d",
+          "Name": "org.apache.httpcomponents:httpcore-nio",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.16",
+            "UID": "14fe294e4ec58051"
+          },
+          "Version": "4.4.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpcore:4.4.16::a0a96ba4"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpcore-osgi:4.4.12::f06003c1",
+          "Name": "org.apache.httpcomponents:httpcore-osgi",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpcore-osgi@4.4.12",
+            "UID": "86b009ae6d058e03"
+          },
+          "Version": "4.4.12",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpcore-nio:4.4.12::8a805564",
+            "org.apache.httpcomponents:httpcore:4.4.16::8f0de7ad"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpcore-osgi:4.4.16::f6df784f",
+          "Name": "org.apache.httpcomponents:httpcore-osgi",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpcore-osgi@4.4.16",
+            "UID": "4f499f8646bd6043"
+          },
+          "Version": "4.4.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpcore-nio:4.4.16::c14fca4d",
+            "org.apache.httpcomponents:httpcore:4.4.16::a0a96ba4"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpmime:4.5.10::8b517718",
+          "Name": "org.apache.httpcomponents:httpmime",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpmime@4.5.10",
+            "UID": "1558a1c7ff5a96a"
+          },
+          "Version": "4.5.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpmime:4.5.14::6977b61d",
+          "Name": "org.apache.httpcomponents:httpmime",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpmime@4.5.14",
+            "UID": "42f92eecfbe74eaf"
+          },
+          "Version": "4.5.14",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-api:2.25.5::89514d99",
+          "Name": "org.apache.logging.log4j:log4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+            "UID": "68c0bcdcb62ed6db"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-to-slf4j:2.25.5::73f989c4",
+          "Name": "org.apache.logging.log4j:log4j-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+            "UID": "e732ce08b3417d17"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.logging.log4j:log4j-api:2.25.5::89514d99",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.checkerframework:checker-qual:3.43.0::681e94ea",
+          "Name": "org.checkerframework:checker-qual",
+          "Identifier": {
+            "PURL": "pkg:maven/org.checkerframework/checker-qual@3.43.0",
+            "UID": "51ba197082d8e56f"
+          },
+          "Version": "3.43.0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.checkerframework:checker-qual:3.43.0::726b4cbc",
+          "Name": "org.checkerframework:checker-qual",
+          "Identifier": {
+            "PURL": "pkg:maven/org.checkerframework/checker-qual@3.43.0",
+            "UID": "b8532c58b64b3717"
+          },
+          "Version": "3.43.0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.codehaus.plexus:plexus-utils:3.6.1::ef911407",
+          "Name": "org.codehaus.plexus:plexus-utils",
+          "Identifier": {
+            "PURL": "pkg:maven/org.codehaus.plexus/plexus-utils@3.6.1",
+            "UID": "bc03ec2a6e082491"
+          },
+          "Version": "3.6.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+          "Name": "org.eclipse.rdf4j:rdf4j-model",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-model@3.4.3",
+            "UID": "de7bc6aaccc4a622"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+          "Name": "org.eclipse.rdf4j:rdf4j-model",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-model@3.4.3",
+            "UID": "9a8dd9c170838a19"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@3.4.3",
+            "UID": "8a7a647adaa7b8f5"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.jsonld-java:jsonld-java:0.13.0::69d2ddda",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@3.4.3",
+            "UID": "54d9ba71b3c6d415"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.jsonld-java:jsonld-java:0.13.0::3d011cf3",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-binary:3.4.3::b8669072",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-binary",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-binary@3.4.3",
+            "UID": "bfb63e6b7342496c"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-binary:3.4.3::ffb66a39",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-binary",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-binary@3.4.3",
+            "UID": "442602baaf5f21c4"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-datatypes",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@3.4.3",
+            "UID": "8005e572427def9b"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-datatypes",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@3.4.3",
+            "UID": "9f68bf0605fa1dc4"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-hdt:3.4.3::a080634e",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-hdt",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-hdt@3.4.3",
+            "UID": "75ee1a993ec40584"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-hdt:3.4.3::b3cb5fe0",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-hdt",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-hdt@3.4.3",
+            "UID": "8814198decb48a56"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-jsonld:3.4.3::6c182395",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-jsonld",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-jsonld@3.4.3",
+            "UID": "1afe57d2c391a5b0"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::f1c90ef3",
+            "com.github.jsonld-java:jsonld-java:0.13.0::69d2ddda",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.apache.httpcomponents:httpclient-cache:4.5.10::b0f5a41f",
+            "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-jsonld:3.4.3::86a25dfd",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-jsonld",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-jsonld@3.4.3",
+            "UID": "9f12b6791535d41b"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::52b45640",
+            "com.github.jsonld-java:jsonld-java:0.13.0::3d011cf3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.apache.httpcomponents:httpclient-cache:4.5.14::41e8fffd",
+            "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-languages",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@3.4.3",
+            "UID": "95faf9d1b5f3720a"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-languages",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@3.4.3",
+            "UID": "e1302149ac7b2daf"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-n3:3.4.3::78bae7ac",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-n3",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-n3@3.4.3",
+            "UID": "31f50bb47dca1974"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::b8ab651d"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-n3:3.4.3::efb5e0e3",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-n3",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-n3@3.4.3",
+            "UID": "ed82249e3f957464"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::ed46be17"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-nquads:3.4.3::95645385",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-nquads",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-nquads@3.4.3",
+            "UID": "d574405e06d48e28"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::8df23640"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-nquads:3.4.3::f26ef50c",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-nquads",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-nquads@3.4.3",
+            "UID": "71702996829e23c8"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::73c514e5"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::73c514e5",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-ntriples",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-ntriples@3.4.3",
+            "UID": "ecbf3ba76d566db3"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::8df23640",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-ntriples",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-ntriples@3.4.3",
+            "UID": "8553ba02f744e2c8"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-rdfjson:3.4.3::d572ab98",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-rdfjson",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-rdfjson@3.4.3",
+            "UID": "8db4f445c940094f"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::52b45640",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-rdfjson:3.4.3::e049be0e",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-rdfjson",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-rdfjson@3.4.3",
+            "UID": "6e3aca6e071b9407"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::f1c90ef3",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-rdfxml:3.4.3::d729eefd",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-rdfxml",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-rdfxml@3.4.3",
+            "UID": "60a90f9fd43b0b43"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-rdfxml:3.4.3::dc633280",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-rdfxml",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-rdfxml@3.4.3",
+            "UID": "b1c061f6a26fe763"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-trig:3.4.3::6df0c0f6",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-trig",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trig@3.4.3",
+            "UID": "5a10c665eb6693e8"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::b8ab651d",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-trig:3.4.3::e6ca03a3",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-trig",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trig@3.4.3",
+            "UID": "1c1813d3a0bffaf7"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::ed46be17",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-trix:3.4.3::51064e89",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-trix",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trix@3.4.3",
+            "UID": "ef077749f66b7b68"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-trix:3.4.3::afa8bd99",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-trix",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trix@3.4.3",
+            "UID": "58209db2383bb7d2"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::b8ab651d",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-turtle",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-turtle@3.4.3",
+            "UID": "fffc483676fb506"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::ed46be17",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-turtle",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-turtle@3.4.3",
+            "UID": "467ff5fa70e76ac"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8",
+          "Name": "org.eclipse.rdf4j:rdf4j-util",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-util@3.4.3",
+            "UID": "45509f5aa15891ef"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70",
+          "Name": "org.eclipse.rdf4j:rdf4j-util",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-util@3.4.3",
+            "UID": "f5f6c61b8231b9d2"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.slf4j:jcl-over-slf4j:1.7.22::3a71bb77",
+          "Name": "org.slf4j:jcl-over-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/jcl-over-slf4j@1.7.22",
+            "UID": "6a234cb091ddc7d1"
+          },
+          "Version": "1.7.22",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.slf4j:jcl-over-slf4j:1.7.22::6ec81db3",
+          "Name": "org.slf4j:jcl-over-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/jcl-over-slf4j@1.7.22",
+            "UID": "f026fa42a346f486"
+          },
+          "Version": "1.7.22",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.slf4j:slf4j-api:1.7.22::a7bc9188",
+          "Name": "org.slf4j:slf4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/slf4j-api@1.7.22",
+            "UID": "564273f5ec38907d"
+          },
+          "Version": "1.7.22",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.tukaani:xz:1.6::6e1583e4",
+          "Name": "org.tukaani:xz",
+          "Identifier": {
+            "PURL": "pkg:maven/org.tukaani/xz@1.6",
+            "UID": "f16b278966d56ea1"
+          },
+          "Version": "1.6",
+          "Licenses": [
+            "Public Domain"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.tukaani:xz:1.6::75024caf",
+          "Name": "org.tukaani:xz",
+          "Identifier": {
+            "PURL": "pkg:maven/org.tukaani/xz@1.6",
+            "UID": "9a9422e397f97028"
+          },
+          "Version": "1.6",
+          "Licenses": [
+            "Public Domain"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        }
+      ]
+    },
+    {
+      "Target": "owl2vowl-core/pom.xml",
+      "Class": "lang-pkgs",
+      "Type": "pom",
+      "Packages": [
+        {
+          "ID": "it.gov.innovazione:owl2vowl-core:1.0.0-teamdigitale-5cdef094::c3da7ef4",
+          "Name": "it.gov.innovazione:owl2vowl-core",
+          "Identifier": {
+            "PURL": "pkg:maven/it.gov.innovazione/owl2vowl-core@1.0.0-teamdigitale-5cdef094",
+            "UID": "a182a86089c21104"
+          },
+          "Version": "1.0.0-teamdigitale-5cdef094",
+          "Relationship": "root",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-databind:2.18.11::971780ba",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "jakarta.annotation:jakarta.annotation-api:2.1.1::d3951f30",
+            "net.sourceforge.owlapi:owlapi-distribution:5.1.18::7fd6d62a",
+            "org.apache.commons:commons-lang3:3.18.0::83c88a5d",
+            "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7",
+            "org.apache.logging.log4j:log4j-api:2.25.5::50332a42",
+            "org.apache.logging.log4j:log4j-to-slf4j:2.25.5::56407cca"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-databind:2.18.11::971780ba",
+          "Name": "com.fasterxml.jackson.core:jackson-databind",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.11",
+            "UID": "769333b964f795dc"
+          },
+          "Version": "2.18.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-annotations:2.18.11::3f6a572f",
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::f1c90ef3"
+          ],
+          "Locations": [
+            {
+              "StartLine": 8,
+              "EndLine": 8
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.guava:guava:33.4.0-jre::16f350d7",
+          "Name": "com.google.guava:guava",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/guava@33.4.0-jre",
+            "UID": "cc1c5e4d27185bd4"
+          },
+          "Version": "33.4.0-jre",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.errorprone:error_prone_annotations:2.36.0::a6acf526",
+            "com.google.guava:failureaccess:1.0.2::97d4e471",
+            "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava::481979c1",
+            "com.google.j2objc:j2objc-annotations:3.0.0::1b5faccf",
+            "org.checkerframework:checker-qual:3.43.0::726b4cbc"
+          ],
+          "Locations": [
+            {
+              "StartLine": 13,
+              "EndLine": 13
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "commons-io:commons-io:2.18.0::d781fc3d",
+          "Name": "commons-io:commons-io",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-io/commons-io@2.18.0",
+            "UID": "4e521b89578caa1e"
+          },
+          "Version": "2.18.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "Locations": [
+            {
+              "StartLine": 11,
+              "EndLine": 11
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "jakarta.annotation:jakarta.annotation-api:2.1.1::d3951f30",
+          "Name": "jakarta.annotation:jakarta.annotation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+            "UID": "c41cc1b5d679781"
+          },
+          "Version": "2.1.1",
+          "Licenses": [
+            "EPL-2.0",
+            "GPL-2.0-with-classpath-exception"
+          ],
+          "Relationship": "direct",
+          "Locations": [
+            {
+              "StartLine": 15,
+              "EndLine": 15
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-distribution:5.1.18::7fd6d62a",
+          "Name": "net.sourceforge.owlapi:owlapi-distribution",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-distribution@5.1.18",
+            "UID": "113c7038a1be6219"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-annotations:2.18.11::3f6a572f",
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::f1c90ef3",
+            "com.fasterxml.jackson.core:jackson-databind:2.18.11::971780ba",
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.jsonld-java:jsonld-java:0.13.0::69d2ddda",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-compatibility:5.1.18::3ec13dc8",
+            "org.apache.commons:commons-rdf-api:0.5.0::46af6afa",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-binary:3.4.3::ffb66a39",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-hdt:3.4.3::a080634e",
+            "org.eclipse.rdf4j:rdf4j-rio-jsonld:3.4.3::6c182395",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-rio-n3:3.4.3::efb5e0e3",
+            "org.eclipse.rdf4j:rdf4j-rio-nquads:3.4.3::f26ef50c",
+            "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::73c514e5",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfjson:3.4.3::e049be0e",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfxml:3.4.3::d729eefd",
+            "org.eclipse.rdf4j:rdf4j-rio-trig:3.4.3::e6ca03a3",
+            "org.eclipse.rdf4j:rdf4j-rio-trix:3.4.3::afa8bd99",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::ed46be17",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8",
+            "org.slf4j:jcl-over-slf4j:1.7.22::6ec81db3",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188",
+            "org.tukaani:xz:1.6::75024caf"
+          ],
+          "Locations": [
+            {
+              "StartLine": 7,
+              "EndLine": 7
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.commons:commons-lang3:3.18.0::83c88a5d",
+          "Name": "org.apache.commons:commons-lang3",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.commons/commons-lang3@3.18.0",
+            "UID": "c558bcbf08961c3a"
+          },
+          "Version": "3.18.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "Locations": [
+            {
+              "StartLine": 12,
+              "EndLine": 12
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7",
+          "Name": "org.apache.httpcomponents:httpclient",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14",
+            "UID": "d74731b1b3b6b69f"
+          },
+          "Version": "4.5.14",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "commons-codec:commons-codec:1.11::65252ba5",
+            "commons-logging:commons-logging:1.2::a78ab996",
+            "org.apache.httpcomponents:httpcore:4.4.16::8f0de7ad"
+          ],
+          "Locations": [
+            {
+              "StartLine": 14,
+              "EndLine": 14
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-api:2.25.5::50332a42",
+          "Name": "org.apache.logging.log4j:log4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+            "UID": "6caa218c4121ea5e"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "Locations": [
+            {
+              "StartLine": 9,
+              "EndLine": 9
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-to-slf4j:2.25.5::56407cca",
+          "Name": "org.apache.logging.log4j:log4j-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+            "UID": "d33f14ef7a5f2072"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "org.apache.logging.log4j:log4j-api:2.25.5::50332a42",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "Locations": [
+            {
+              "StartLine": 10,
+              "EndLine": 10
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-annotations:2.18.11::3f6a572f",
+          "Name": "com.fasterxml.jackson.core:jackson-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.18.11",
+            "UID": "be249c98634af45e"
+          },
+          "Version": "2.18.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-core:2.18.11::f1c90ef3",
+          "Name": "com.fasterxml.jackson.core:jackson-core",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.18.11",
+            "UID": "94db69a70eb250b4"
+          },
+          "Version": "2.18.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+          "Name": "com.github.ben-manes.caffeine:caffeine",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.ben-manes.caffeine/caffeine@2.8.1",
+            "UID": "35561e0d85f96fe1"
+          },
+          "Version": "2.8.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.google.errorprone:error_prone_annotations:2.36.0::a6acf526",
+            "org.checkerframework:checker-qual:3.43.0::726b4cbc"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.github.jsonld-java:jsonld-java:0.13.0::69d2ddda",
+          "Name": "com.github.jsonld-java:jsonld-java",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.jsonld-java/jsonld-java@0.13.0",
+            "UID": "f69151336fe08b86"
+          },
+          "Version": "0.13.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::f1c90ef3",
+            "com.fasterxml.jackson.core:jackson-databind:2.18.11::971780ba",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.apache.httpcomponents:httpclient-osgi:4.5.10::8d0ed466",
+            "org.apache.httpcomponents:httpcore-osgi:4.4.12::f06003c1",
+            "org.slf4j:jcl-over-slf4j:1.7.22::6ec81db3",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+          "Name": "com.github.vsonnier:hppcrt",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.vsonnier/hppcrt@0.7.5",
+            "UID": "80c79f3331d293c0"
+          },
+          "Version": "0.7.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+          "Name": "com.google.code.findbugs:jsr305",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2",
+            "UID": "cfc736892fdd953c"
+          },
+          "Version": "3.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.errorprone:error_prone_annotations:2.36.0::a6acf526",
+          "Name": "com.google.errorprone:error_prone_annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.errorprone/error_prone_annotations@2.36.0",
+            "UID": "93b6e0b6f00e8e9d"
+          },
+          "Version": "2.36.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.guava:failureaccess:1.0.2::97d4e471",
+          "Name": "com.google.guava:failureaccess",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/failureaccess@1.0.2",
+            "UID": "fb45b8c7233965d4"
+          },
+          "Version": "1.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava::481979c1",
+          "Name": "com.google.guava:listenablefuture",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+            "UID": "43380ab7a5e14140"
+          },
+          "Version": "9999.0-empty-to-avoid-conflict-with-guava",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.j2objc:j2objc-annotations:3.0.0::1b5faccf",
+          "Name": "com.google.j2objc:j2objc-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.j2objc/j2objc-annotations@3.0.0",
+            "UID": "69b2fe650f2d9dd9"
+          },
+          "Version": "3.0.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "commons-codec:commons-codec:1.11::65252ba5",
+          "Name": "commons-codec:commons-codec",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-codec/commons-codec@1.11",
+            "UID": "42332204cc5310b3"
+          },
+          "Version": "1.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "commons-logging:commons-logging:1.2::a78ab996",
+          "Name": "commons-logging:commons-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-logging/commons-logging@1.2",
+            "UID": "82d5a815507931d6"
+          },
+          "Version": "1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "javax.inject:javax.inject:1::d3ae245b",
+          "Name": "javax.inject:javax.inject",
+          "Identifier": {
+            "PURL": "pkg:maven/javax.inject/javax.inject@1",
+            "UID": "57abbad3cb845181"
+          },
+          "Version": "1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-api:5.1.18::c22ae0ea",
+          "Name": "net.sourceforge.owlapi:owlapi-api",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-api@5.1.18",
+            "UID": "751a44f878b23051"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "javax.inject:javax.inject:1::d3ae245b",
+            "org.apache.commons:commons-rdf-api:0.5.0::46af6afa",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188",
+            "org.tukaani:xz:1.6::75024caf"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-apibinding:5.1.18::7d182d11",
+          "Name": "net.sourceforge.owlapi:owlapi-apibinding",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-apibinding@5.1.18",
+            "UID": "30719888a2c8f61b"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::c22ae0ea",
+            "net.sourceforge.owlapi:owlapi-impl:5.1.18::2d881927",
+            "net.sourceforge.owlapi:owlapi-oboformat:5.1.18::29c90594",
+            "net.sourceforge.owlapi:owlapi-parsers:5.1.18::3d27d3ca",
+            "net.sourceforge.owlapi:owlapi-rio:5.1.18::e03010e6",
+            "net.sourceforge.owlapi:owlapi-tools:5.1.18::7f150876",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-compatibility:5.1.18::3ec13dc8",
+          "Name": "net.sourceforge.owlapi:owlapi-compatibility",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-compatibility@5.1.18",
+            "UID": "7602bbf2c9e433ad"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-apibinding:5.1.18::7d182d11",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-impl:5.1.18::2d881927",
+          "Name": "net.sourceforge.owlapi:owlapi-impl",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-impl@5.1.18",
+            "UID": "590e213a63816953"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "javax.inject:javax.inject:1::d3ae245b",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::c22ae0ea",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-oboformat:5.1.18::29c90594",
+          "Name": "net.sourceforge.owlapi:owlapi-oboformat",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-oboformat@5.1.18",
+            "UID": "f86cdbf784bf04c1"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-parsers:5.1.18::3d27d3ca",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-parsers:5.1.18::3d27d3ca",
+          "Name": "net.sourceforge.owlapi:owlapi-parsers",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-parsers@5.1.18",
+            "UID": "3e7924e1a8581637"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::c22ae0ea",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-rio:5.1.18::e03010e6",
+          "Name": "net.sourceforge.owlapi:owlapi-rio",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-rio@5.1.18",
+            "UID": "439874d4a0d77dc7"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.jsonld-java:jsonld-java:0.13.0::69d2ddda",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-parsers:5.1.18::3d27d3ca",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-binary:3.4.3::ffb66a39",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-hdt:3.4.3::a080634e",
+            "org.eclipse.rdf4j:rdf4j-rio-jsonld:3.4.3::6c182395",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-rio-n3:3.4.3::efb5e0e3",
+            "org.eclipse.rdf4j:rdf4j-rio-nquads:3.4.3::f26ef50c",
+            "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::73c514e5",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfjson:3.4.3::e049be0e",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfxml:3.4.3::d729eefd",
+            "org.eclipse.rdf4j:rdf4j-rio-trig:3.4.3::e6ca03a3",
+            "org.eclipse.rdf4j:rdf4j-rio-trix:3.4.3::afa8bd99",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::ed46be17",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-tools:5.1.18::7f150876",
+          "Name": "net.sourceforge.owlapi:owlapi-tools",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-tools@5.1.18",
+            "UID": "2a2a7e2a7f78801d"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::98c6a72b",
+            "com.github.vsonnier:hppcrt:0.7.5::6e7a10df",
+            "com.google.code.findbugs:jsr305:3.0.2::65ab6b11",
+            "com.google.guava:guava:33.4.0-jre::16f350d7",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::c22ae0ea",
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.commons:commons-rdf-api:0.5.0::46af6afa",
+          "Name": "org.apache.commons:commons-rdf-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.commons/commons-rdf-api@0.5.0",
+            "UID": "b869f8869cfb24c4"
+          },
+          "Version": "0.5.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:fluent-hc:4.5.10::f5f15d7d",
+          "Name": "org.apache.httpcomponents:fluent-hc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/fluent-hc@4.5.10",
+            "UID": "27e7372affedb294"
+          },
+          "Version": "4.5.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpclient-cache:4.5.10::b0f5a41f",
+          "Name": "org.apache.httpcomponents:httpclient-cache",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpclient-cache@4.5.10",
+            "UID": "10f00c1755e86cd3"
+          },
+          "Version": "4.5.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpclient-osgi:4.5.10::8d0ed466",
+          "Name": "org.apache.httpcomponents:httpclient-osgi",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpclient-osgi@4.5.10",
+            "UID": "1319e70d0226074f"
+          },
+          "Version": "4.5.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-codec:commons-codec:1.11::65252ba5",
+            "org.apache.httpcomponents:fluent-hc:4.5.10::f5f15d7d",
+            "org.apache.httpcomponents:httpclient-cache:4.5.10::b0f5a41f",
+            "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7",
+            "org.apache.httpcomponents:httpmime:4.5.10::8b517718"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpcore:4.4.16::8f0de7ad",
+          "Name": "org.apache.httpcomponents:httpcore",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16",
+            "UID": "30f33b4bef7e1daf"
+          },
+          "Version": "4.4.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpcore-nio:4.4.12::8a805564",
+          "Name": "org.apache.httpcomponents:httpcore-nio",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.12",
+            "UID": "7c12b54d3a416905"
+          },
+          "Version": "4.4.12",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpcore:4.4.16::8f0de7ad"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpcore-osgi:4.4.12::f06003c1",
+          "Name": "org.apache.httpcomponents:httpcore-osgi",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpcore-osgi@4.4.12",
+            "UID": "2e827d1279f27200"
+          },
+          "Version": "4.4.12",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpcore-nio:4.4.12::8a805564",
+            "org.apache.httpcomponents:httpcore:4.4.16::8f0de7ad"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpmime:4.5.10::8b517718",
+          "Name": "org.apache.httpcomponents:httpmime",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpmime@4.5.10",
+            "UID": "c95ecd32a5f7b17d"
+          },
+          "Version": "4.5.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.checkerframework:checker-qual:3.43.0::726b4cbc",
+          "Name": "org.checkerframework:checker-qual",
+          "Identifier": {
+            "PURL": "pkg:maven/org.checkerframework/checker-qual@3.43.0",
+            "UID": "64f469de0a1a4bec"
+          },
+          "Version": "3.43.0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+          "Name": "org.eclipse.rdf4j:rdf4j-model",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-model@3.4.3",
+            "UID": "46268a893dab8c15"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@3.4.3",
+            "UID": "e1a4e88404c5ca0e"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.jsonld-java:jsonld-java:0.13.0::69d2ddda",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-binary:3.4.3::ffb66a39",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-binary",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-binary@3.4.3",
+            "UID": "41612537c08589e3"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-datatypes",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@3.4.3",
+            "UID": "5f716abd38a11ccc"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-hdt:3.4.3::a080634e",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-hdt",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-hdt@3.4.3",
+            "UID": "202549ce38d1f863"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-jsonld:3.4.3::6c182395",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-jsonld",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-jsonld@3.4.3",
+            "UID": "80db71e76aa32db"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::f1c90ef3",
+            "com.github.jsonld-java:jsonld-java:0.13.0::69d2ddda",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.apache.httpcomponents:httpclient-cache:4.5.10::b0f5a41f",
+            "org.apache.httpcomponents:httpclient:4.5.14::7aad88c7",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-languages",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@3.4.3",
+            "UID": "cd5a6b9acbf8a870"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-n3:3.4.3::efb5e0e3",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-n3",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-n3@3.4.3",
+            "UID": "a38e3aaf67aa6487"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::ed46be17"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-nquads:3.4.3::f26ef50c",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-nquads",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-nquads@3.4.3",
+            "UID": "ea6205bb13584307"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::73c514e5"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::73c514e5",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-ntriples",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-ntriples@3.4.3",
+            "UID": "1b7406393667736c"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-rdfjson:3.4.3::e049be0e",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-rdfjson",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-rdfjson@3.4.3",
+            "UID": "5940129aa10e3f8c"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::f1c90ef3",
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-rdfxml:3.4.3::d729eefd",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-rdfxml",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-rdfxml@3.4.3",
+            "UID": "bf3d098d1870b4e4"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-trig:3.4.3::e6ca03a3",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-trig",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trig@3.4.3",
+            "UID": "3a02af77c41126d8"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::ed46be17",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-trix:3.4.3::afa8bd99",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-trix",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trix@3.4.3",
+            "UID": "76cf318e8f34795d"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::ed46be17",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-turtle",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-turtle@3.4.3",
+            "UID": "f520b46ea80d57fb"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::d781fc3d",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::c91bca9a",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::beca2090",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::183a571b",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::73d7fb44",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-util:3.4.3::a47f0ae8",
+          "Name": "org.eclipse.rdf4j:rdf4j-util",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-util@3.4.3",
+            "UID": "50c697d9e34d0f7c"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.slf4j:jcl-over-slf4j:1.7.22::6ec81db3",
+          "Name": "org.slf4j:jcl-over-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/jcl-over-slf4j@1.7.22",
+            "UID": "4e56383435da144d"
+          },
+          "Version": "1.7.22",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.22::a7bc9188"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.slf4j:slf4j-api:1.7.22::a7bc9188",
+          "Name": "org.slf4j:slf4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/slf4j-api@1.7.22",
+            "UID": "6a29c2998d5fa7b2"
+          },
+          "Version": "1.7.22",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.tukaani:xz:1.6::75024caf",
+          "Name": "org.tukaani:xz",
+          "Identifier": {
+            "PURL": "pkg:maven/org.tukaani/xz@1.6",
+            "UID": "33dbd952341126b3"
+          },
+          "Version": "1.6",
+          "Licenses": [
+            "Public Domain"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        }
+      ]
+    },
+    {
+      "Target": "pom.xml",
+      "Class": "lang-pkgs",
+      "Type": "pom",
+      "Packages": [
+        {
+          "ID": "es.oeg:widoco:1.4.26::359a93dc",
+          "Name": "es.oeg:widoco",
+          "Identifier": {
+            "PURL": "pkg:maven/es.oeg/widoco@1.4.26",
+            "UID": "d3f5e4dbfe3100ba"
+          },
+          "Version": "1.4.26",
+          "Relationship": "root",
+          "DependsOn": [
+            "com.googlecode.json-simple:json-simple:1.1::14b641e8",
+            "it.gov.innovazione:owl2vowl-core:1.0.0-teamdigitale-5cdef094::5d837b26",
+            "net.sf.saxon:Saxon-HE:10.9::ec47bfa8",
+            "net.sourceforge.owlapi:owlapi-distribution:5.1.18::b93b572a",
+            "org.apache.maven:maven-model:3.9.11::addba706",
+            "org.jsoup:jsoup:1.23.1::b03a0971",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033",
+            "org.slf4j:slf4j-simple:1.7.36::7dc7bd94"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.googlecode.json-simple:json-simple:1.1::14b641e8",
+          "Name": "com.googlecode.json-simple:json-simple",
+          "Identifier": {
+            "PURL": "pkg:maven/com.googlecode.json-simple/json-simple@1.1",
+            "UID": "881d418f43010413"
+          },
+          "Version": "1.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "Locations": [
+            {
+              "StartLine": 63,
+              "EndLine": 67
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "it.gov.innovazione:owl2vowl-core:1.0.0-teamdigitale-5cdef094::5d837b26",
+          "Name": "it.gov.innovazione:owl2vowl-core",
+          "Identifier": {
+            "PURL": "pkg:maven/it.gov.innovazione/owl2vowl-core@1.0.0-teamdigitale-5cdef094",
+            "UID": "a3566c032a41eca8"
+          },
+          "Version": "1.0.0-teamdigitale-5cdef094",
+          "Relationship": "direct",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-databind:2.18.11::4c55428f",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "jakarta.annotation:jakarta.annotation-api:2.1.1::667d5cff",
+            "net.sourceforge.owlapi:owlapi-distribution:5.1.18::b93b572a",
+            "org.apache.commons:commons-lang3:3.18.0::f637f4b4",
+            "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca",
+            "org.apache.logging.log4j:log4j-api:2.25.5::89514d99",
+            "org.apache.logging.log4j:log4j-to-slf4j:2.25.5::73f989c4"
+          ],
+          "Locations": [
+            {
+              "StartLine": 29,
+              "EndLine": 33
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sf.saxon:Saxon-HE:10.9::ec47bfa8",
+          "Name": "net.sf.saxon:Saxon-HE",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sf.saxon/Saxon-HE@10.9",
+            "UID": "e349d0a362a2f4ef"
+          },
+          "Version": "10.9",
+          "Licenses": [
+            "MPL-2.0"
+          ],
+          "Relationship": "direct",
+          "Locations": [
+            {
+              "StartLine": 51,
+              "EndLine": 55
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-distribution:5.1.18::b93b572a",
+          "Name": "net.sourceforge.owlapi:owlapi-distribution",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-distribution@5.1.18",
+            "UID": "8282a1e8c10bd715"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-annotations:2.18.11::94f98c0f",
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::52b45640",
+            "com.fasterxml.jackson.core:jackson-databind:2.18.11::4c55428f",
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.jsonld-java:jsonld-java:0.13.0::3d011cf3",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-compatibility:5.1.18::66eb926a",
+            "org.apache.commons:commons-rdf-api:0.5.0::c47d22f1",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-binary:3.4.3::b8669072",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-hdt:3.4.3::b3cb5fe0",
+            "org.eclipse.rdf4j:rdf4j-rio-jsonld:3.4.3::86a25dfd",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-rio-n3:3.4.3::78bae7ac",
+            "org.eclipse.rdf4j:rdf4j-rio-nquads:3.4.3::95645385",
+            "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::8df23640",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfjson:3.4.3::d572ab98",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfxml:3.4.3::dc633280",
+            "org.eclipse.rdf4j:rdf4j-rio-trig:3.4.3::6df0c0f6",
+            "org.eclipse.rdf4j:rdf4j-rio-trix:3.4.3::51064e89",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::b8ab651d",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70",
+            "org.slf4j:jcl-over-slf4j:1.7.22::3a71bb77",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033",
+            "org.tukaani:xz:1.6::6e1583e4"
+          ],
+          "Locations": [
+            {
+              "StartLine": 57,
+              "EndLine": 61
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.maven:maven-model:3.9.11::addba706",
+          "Name": "org.apache.maven:maven-model",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.maven/maven-model@3.9.11",
+            "UID": "b793021bfd06c38f"
+          },
+          "Version": "3.9.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "org.codehaus.plexus:plexus-utils:3.6.1::ef911407"
+          ],
+          "Locations": [
+            {
+              "StartLine": 18,
+              "EndLine": 22
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.jsoup:jsoup:1.23.1::b03a0971",
+          "Name": "org.jsoup:jsoup",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jsoup/jsoup@1.23.1",
+            "UID": "488a0ba9442fa97"
+          },
+          "Version": "1.23.1",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "Locations": [
+            {
+              "StartLine": 24,
+              "EndLine": 28
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.slf4j:slf4j-api:1.7.36::3fe25033",
+          "Name": "org.slf4j:slf4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/slf4j-api@1.7.36",
+            "UID": "1d2e8d82c5dc3f10"
+          },
+          "Version": "1.7.36",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "Locations": [
+            {
+              "StartLine": 35,
+              "EndLine": 39
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.slf4j:slf4j-simple:1.7.36::7dc7bd94",
+          "Name": "org.slf4j:slf4j-simple",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/slf4j-simple@1.7.36",
+            "UID": "f87ccf3a90126a64"
+          },
+          "Version": "1.7.36",
+          "Licenses": [
+            "MIT"
+          ],
+          "Relationship": "direct",
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "Locations": [
+            {
+              "StartLine": 40,
+              "EndLine": 44
+            }
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-annotations:2.18.11::94f98c0f",
+          "Name": "com.fasterxml.jackson.core:jackson-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.18.11",
+            "UID": "c4877091c7cfb145"
+          },
+          "Version": "2.18.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-core:2.18.11::52b45640",
+          "Name": "com.fasterxml.jackson.core:jackson-core",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.18.11",
+            "UID": "83e84f2c3d9bbf06"
+          },
+          "Version": "2.18.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-databind:2.18.11::4c55428f",
+          "Name": "com.fasterxml.jackson.core:jackson-databind",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.11",
+            "UID": "243692ccb4d717ce"
+          },
+          "Version": "2.18.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-annotations:2.18.11::94f98c0f",
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::52b45640"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+          "Name": "com.github.ben-manes.caffeine:caffeine",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.ben-manes.caffeine/caffeine@2.8.1",
+            "UID": "ce5499a8e65db3b5"
+          },
+          "Version": "2.8.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.google.errorprone:error_prone_annotations:2.36.0::481a3bef",
+            "org.checkerframework:checker-qual:3.43.0::681e94ea"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.github.jsonld-java:jsonld-java:0.13.0::3d011cf3",
+          "Name": "com.github.jsonld-java:jsonld-java",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.jsonld-java/jsonld-java@0.13.0",
+            "UID": "1cd02465aecd6d2a"
+          },
+          "Version": "0.13.0",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::52b45640",
+            "com.fasterxml.jackson.core:jackson-databind:2.18.11::4c55428f",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.apache.httpcomponents:httpclient-osgi:4.5.14::3b73ca66",
+            "org.apache.httpcomponents:httpcore-osgi:4.4.16::f6df784f",
+            "org.slf4j:jcl-over-slf4j:1.7.22::3a71bb77",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+          "Name": "com.github.vsonnier:hppcrt",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.vsonnier/hppcrt@0.7.5",
+            "UID": "733401420106a77e"
+          },
+          "Version": "0.7.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+          "Name": "com.google.code.findbugs:jsr305",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2",
+            "UID": "421b36c3023df262"
+          },
+          "Version": "3.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.errorprone:error_prone_annotations:2.36.0::481a3bef",
+          "Name": "com.google.errorprone:error_prone_annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.errorprone/error_prone_annotations@2.36.0",
+            "UID": "f838799147f6b3aa"
+          },
+          "Version": "2.36.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.guava:failureaccess:1.0.2::11bc1ccc",
+          "Name": "com.google.guava:failureaccess",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/failureaccess@1.0.2",
+            "UID": "b8ad849b0f17310d"
+          },
+          "Version": "1.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+          "Name": "com.google.guava:guava",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/guava@33.4.0-jre",
+            "UID": "51583b440a08ed37"
+          },
+          "Version": "33.4.0-jre",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.errorprone:error_prone_annotations:2.36.0::481a3bef",
+            "com.google.guava:failureaccess:1.0.2::11bc1ccc",
+            "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava::1671411f",
+            "com.google.j2objc:j2objc-annotations:3.0.0::56ba41f4",
+            "org.checkerframework:checker-qual:3.43.0::681e94ea"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava::1671411f",
+          "Name": "com.google.guava:listenablefuture",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+            "UID": "e2256b55c106a247"
+          },
+          "Version": "9999.0-empty-to-avoid-conflict-with-guava",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "com.google.j2objc:j2objc-annotations:3.0.0::56ba41f4",
+          "Name": "com.google.j2objc:j2objc-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.j2objc/j2objc-annotations@3.0.0",
+            "UID": "bc304e038701cfb3"
+          },
+          "Version": "3.0.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "commons-codec:commons-codec:1.11::ccb46fa3",
+          "Name": "commons-codec:commons-codec",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-codec/commons-codec@1.11",
+            "UID": "3a04e0f10e03d5b2"
+          },
+          "Version": "1.11",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "commons-io:commons-io:2.18.0::aa5970cd",
+          "Name": "commons-io:commons-io",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-io/commons-io@2.18.0",
+            "UID": "6511408811a60826"
+          },
+          "Version": "2.18.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "commons-logging:commons-logging:1.2::413b205a",
+          "Name": "commons-logging:commons-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-logging/commons-logging@1.2",
+            "UID": "d42298133406f3ee"
+          },
+          "Version": "1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "jakarta.annotation:jakarta.annotation-api:2.1.1::667d5cff",
+          "Name": "jakarta.annotation:jakarta.annotation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+            "UID": "561fe0a96b4cbce1"
+          },
+          "Version": "2.1.1",
+          "Licenses": [
+            "EPL-2.0",
+            "GPL-2.0-with-classpath-exception"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "javax.inject:javax.inject:1::3be494ef",
+          "Name": "javax.inject:javax.inject",
+          "Identifier": {
+            "PURL": "pkg:maven/javax.inject/javax.inject@1",
+            "UID": "ca4384e74e0fcb47"
+          },
+          "Version": "1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-api:5.1.18::8ec71bc4",
+          "Name": "net.sourceforge.owlapi:owlapi-api",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-api@5.1.18",
+            "UID": "56e56e6c485eedac"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "javax.inject:javax.inject:1::3be494ef",
+            "org.apache.commons:commons-rdf-api:0.5.0::c47d22f1",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033",
+            "org.tukaani:xz:1.6::6e1583e4"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-apibinding:5.1.18::9dbe51d6",
+          "Name": "net.sourceforge.owlapi:owlapi-apibinding",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-apibinding@5.1.18",
+            "UID": "6a350dac28d6958d"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::8ec71bc4",
+            "net.sourceforge.owlapi:owlapi-impl:5.1.18::eda6a148",
+            "net.sourceforge.owlapi:owlapi-oboformat:5.1.18::415a65e0",
+            "net.sourceforge.owlapi:owlapi-parsers:5.1.18::35f3ef3a",
+            "net.sourceforge.owlapi:owlapi-rio:5.1.18::abac139b",
+            "net.sourceforge.owlapi:owlapi-tools:5.1.18::31056fb5",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-compatibility:5.1.18::66eb926a",
+          "Name": "net.sourceforge.owlapi:owlapi-compatibility",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-compatibility@5.1.18",
+            "UID": "d7f7d649444ae81e"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-apibinding:5.1.18::9dbe51d6",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-impl:5.1.18::eda6a148",
+          "Name": "net.sourceforge.owlapi:owlapi-impl",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-impl@5.1.18",
+            "UID": "ed25903c854ef4d5"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "javax.inject:javax.inject:1::3be494ef",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::8ec71bc4",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-oboformat:5.1.18::415a65e0",
+          "Name": "net.sourceforge.owlapi:owlapi-oboformat",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-oboformat@5.1.18",
+            "UID": "edf55ed3f7d5160b"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-parsers:5.1.18::35f3ef3a",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-parsers:5.1.18::35f3ef3a",
+          "Name": "net.sourceforge.owlapi:owlapi-parsers",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-parsers@5.1.18",
+            "UID": "4f5176811cc63cad"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::8ec71bc4",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-rio:5.1.18::abac139b",
+          "Name": "net.sourceforge.owlapi:owlapi-rio",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-rio@5.1.18",
+            "UID": "1aebfa2f569b20a2"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.jsonld-java:jsonld-java:0.13.0::3d011cf3",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-parsers:5.1.18::35f3ef3a",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-binary:3.4.3::b8669072",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-hdt:3.4.3::b3cb5fe0",
+            "org.eclipse.rdf4j:rdf4j-rio-jsonld:3.4.3::86a25dfd",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-rio-n3:3.4.3::78bae7ac",
+            "org.eclipse.rdf4j:rdf4j-rio-nquads:3.4.3::95645385",
+            "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::8df23640",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfjson:3.4.3::d572ab98",
+            "org.eclipse.rdf4j:rdf4j-rio-rdfxml:3.4.3::dc633280",
+            "org.eclipse.rdf4j:rdf4j-rio-trig:3.4.3::6df0c0f6",
+            "org.eclipse.rdf4j:rdf4j-rio-trix:3.4.3::51064e89",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::b8ab651d",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "net.sourceforge.owlapi:owlapi-tools:5.1.18::31056fb5",
+          "Name": "net.sourceforge.owlapi:owlapi-tools",
+          "Identifier": {
+            "PURL": "pkg:maven/net.sourceforge.owlapi/owlapi-tools@5.1.18",
+            "UID": "6c2f7760afb20d0c"
+          },
+          "Version": "5.1.18",
+          "Licenses": [
+            "Apache License Version 2.0, January 2004",
+            "LGPL-3.0-only"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.ben-manes.caffeine:caffeine:2.8.1::d5d14c12",
+            "com.github.vsonnier:hppcrt:0.7.5::22bdb554",
+            "com.google.code.findbugs:jsr305:3.0.2::10645d58",
+            "com.google.guava:guava:33.4.0-jre::6a54aeb3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "net.sourceforge.owlapi:owlapi-api:5.1.18::8ec71bc4",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.commons:commons-lang3:3.18.0::f637f4b4",
+          "Name": "org.apache.commons:commons-lang3",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.commons/commons-lang3@3.18.0",
+            "UID": "d212a5f97d1593f9"
+          },
+          "Version": "3.18.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.commons:commons-rdf-api:0.5.0::c47d22f1",
+          "Name": "org.apache.commons:commons-rdf-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.commons/commons-rdf-api@0.5.0",
+            "UID": "446d19950abf4111"
+          },
+          "Version": "0.5.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:fluent-hc:4.5.14::9bedba86",
+          "Name": "org.apache.httpcomponents:fluent-hc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/fluent-hc@4.5.14",
+            "UID": "c169a83602d79bb6"
+          },
+          "Version": "4.5.14",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca",
+          "Name": "org.apache.httpcomponents:httpclient",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14",
+            "UID": "526bc10f31a6b770"
+          },
+          "Version": "4.5.14",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-codec:commons-codec:1.11::ccb46fa3",
+            "commons-logging:commons-logging:1.2::413b205a",
+            "org.apache.httpcomponents:httpcore:4.4.16::a0a96ba4"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpclient-cache:4.5.14::41e8fffd",
+          "Name": "org.apache.httpcomponents:httpclient-cache",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpclient-cache@4.5.14",
+            "UID": "9ea0d1ade6b65e9"
+          },
+          "Version": "4.5.14",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpclient-osgi:4.5.14::3b73ca66",
+          "Name": "org.apache.httpcomponents:httpclient-osgi",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpclient-osgi@4.5.14",
+            "UID": "cefeacadabb43871"
+          },
+          "Version": "4.5.14",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-codec:commons-codec:1.11::ccb46fa3",
+            "org.apache.httpcomponents:fluent-hc:4.5.14::9bedba86",
+            "org.apache.httpcomponents:httpclient-cache:4.5.14::41e8fffd",
+            "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca",
+            "org.apache.httpcomponents:httpmime:4.5.14::6977b61d"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpcore:4.4.16::a0a96ba4",
+          "Name": "org.apache.httpcomponents:httpcore",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16",
+            "UID": "d7a822fb9f819ffc"
+          },
+          "Version": "4.4.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpcore-nio:4.4.16::c14fca4d",
+          "Name": "org.apache.httpcomponents:httpcore-nio",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.16",
+            "UID": "932380141f3bb880"
+          },
+          "Version": "4.4.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpcore:4.4.16::a0a96ba4"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpcore-osgi:4.4.16::f6df784f",
+          "Name": "org.apache.httpcomponents:httpcore-osgi",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpcore-osgi@4.4.16",
+            "UID": "230c15809465849e"
+          },
+          "Version": "4.4.16",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpcore-nio:4.4.16::c14fca4d",
+            "org.apache.httpcomponents:httpcore:4.4.16::a0a96ba4"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.httpcomponents:httpmime:4.5.14::6977b61d",
+          "Name": "org.apache.httpcomponents:httpmime",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.httpcomponents/httpmime@4.5.14",
+            "UID": "3e5ea47f09dca05a"
+          },
+          "Version": "4.5.14",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-api:2.25.5::89514d99",
+          "Name": "org.apache.logging.log4j:log4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+            "UID": "4ac387c89fbffe92"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-to-slf4j:2.25.5::73f989c4",
+          "Name": "org.apache.logging.log4j:log4j-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+            "UID": "160e2dcf6c6364da"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.apache.logging.log4j:log4j-api:2.25.5::89514d99",
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.checkerframework:checker-qual:3.43.0::681e94ea",
+          "Name": "org.checkerframework:checker-qual",
+          "Identifier": {
+            "PURL": "pkg:maven/org.checkerframework/checker-qual@3.43.0",
+            "UID": "1c162cf3127d340a"
+          },
+          "Version": "3.43.0",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.codehaus.plexus:plexus-utils:3.6.1::ef911407",
+          "Name": "org.codehaus.plexus:plexus-utils",
+          "Identifier": {
+            "PURL": "pkg:maven/org.codehaus.plexus/plexus-utils@3.6.1",
+            "UID": "ea97d893e2668768"
+          },
+          "Version": "3.6.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+          "Name": "org.eclipse.rdf4j:rdf4j-model",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-model@3.4.3",
+            "UID": "d5ee64682e60062c"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@3.4.3",
+            "UID": "f5d2fe7c344e7b38"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.github.jsonld-java:jsonld-java:0.13.0::3d011cf3",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-binary:3.4.3::b8669072",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-binary",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-binary@3.4.3",
+            "UID": "33deea907014bccd"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-datatypes",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@3.4.3",
+            "UID": "dca5e99a9bf9a681"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-hdt:3.4.3::b3cb5fe0",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-hdt",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-hdt@3.4.3",
+            "UID": "264d08dd54a4bb37"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-jsonld:3.4.3::86a25dfd",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-jsonld",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-jsonld@3.4.3",
+            "UID": "a46fe20e3c955ac2"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::52b45640",
+            "com.github.jsonld-java:jsonld-java:0.13.0::3d011cf3",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.apache.httpcomponents:httpclient-cache:4.5.14::41e8fffd",
+            "org.apache.httpcomponents:httpclient:4.5.14::54d4b9ca",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-languages",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@3.4.3",
+            "UID": "5e86a7062788e64b"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-n3:3.4.3::78bae7ac",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-n3",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-n3@3.4.3",
+            "UID": "d66a26ae74a7a89"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::b8ab651d"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-nquads:3.4.3::95645385",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-nquads",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-nquads@3.4.3",
+            "UID": "cbb8f77ea2debd05"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::8df23640"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-ntriples:3.4.3::8df23640",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-ntriples",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-ntriples@3.4.3",
+            "UID": "24357a77a1728a85"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-rdfjson:3.4.3::d572ab98",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-rdfjson",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-rdfjson@3.4.3",
+            "UID": "7122ea370f32e752"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-core:2.18.11::52b45640",
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-rdfxml:3.4.3::dc633280",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-rdfxml",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-rdfxml@3.4.3",
+            "UID": "e07d7d1ea4d4c032"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-trig:3.4.3::6df0c0f6",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-trig",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trig@3.4.3",
+            "UID": "4d1ae97bf9dced95"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::b8ab651d",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-trix:3.4.3::51064e89",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-trix",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trix@3.4.3",
+            "UID": "6628a12a3048e58d"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-rio-turtle:3.4.3::b8ab651d",
+          "Name": "org.eclipse.rdf4j:rdf4j-rio-turtle",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-turtle@3.4.3",
+            "UID": "22dfdda8b750c63b"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "commons-io:commons-io:2.18.0::aa5970cd",
+            "org.eclipse.rdf4j:rdf4j-model:3.4.3::d0a1871b",
+            "org.eclipse.rdf4j:rdf4j-rio-api:3.4.3::cb9e854a",
+            "org.eclipse.rdf4j:rdf4j-rio-datatypes:3.4.3::6320e83d",
+            "org.eclipse.rdf4j:rdf4j-rio-languages:3.4.3::3ed22b97",
+            "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.eclipse.rdf4j:rdf4j-util:3.4.3::acfb5a70",
+          "Name": "org.eclipse.rdf4j:rdf4j-util",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.rdf4j/rdf4j-util@3.4.3",
+            "UID": "9e1e79e017e46c07"
+          },
+          "Version": "3.4.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.slf4j:jcl-over-slf4j:1.7.22::3a71bb77",
+          "Name": "org.slf4j:jcl-over-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/jcl-over-slf4j@1.7.22",
+            "UID": "14a427bf43708e3c"
+          },
+          "Version": "1.7.22",
+          "Licenses": [
+            "MIT"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "DependsOn": [
+            "org.slf4j:slf4j-api:1.7.36::3fe25033"
+          ],
+          "AnalyzedBy": "pom"
+        },
+        {
+          "ID": "org.tukaani:xz:1.6::6e1583e4",
+          "Name": "org.tukaani:xz",
+          "Identifier": {
+            "PURL": "pkg:maven/org.tukaani/xz@1.6",
+            "UID": "a76b3f04531bec50"
+          },
+          "Version": "1.6",
+          "Licenses": [
+            "Public Domain"
+          ],
+          "Indirect": true,
+          "Relationship": "indirect",
+          "AnalyzedBy": "pom"
+        }
+      ]
+    }
+  ]
+}

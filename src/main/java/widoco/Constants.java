@@ -1265,7 +1265,7 @@ public class Constants {
 				+ "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
 				+ "    <meta name=\"description\" content=\"Evaluation of the ontology with the OOPS tool.\">\n"
 				+ "    <meta name=\"Languaje\" content=\"English\">\n" + "    \n"
-				+ "    <script src=\"evaluation/jquery-1.11.0.js\"></script>\n"
+				+ "    <script src=\"evaluation/jquery-3.7.1.js\"></script>\n"
 				+ "    <script src=\"evaluation/bootstrap.min.js\"></script>\n"
 				+ "    <link rel=\"stylesheet\" href=\"evaluation/style.css\" type=\"text/css\" media=\"print, projection, screen\" />\n"
 				+ "    <script type=\"text/javascript\" src=\"evaluation/jquery.tablesorter.min.js\"></script>\n"

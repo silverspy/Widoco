@@ -1,0 +1,106 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:18198b7f-1ce5-4b30-943f-74994f013ee8",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-01T10:06:57.644Z"
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/d3@3.5.17",
+      "name": "d3",
+      "version": "3.5.17",
+      "purl": "pkg:npm/d3@3.5.17",
+      "properties": [
+        {
+          "name": "widoco:packaged-files",
+          "value": "webvowl_1.1.7_patched/js/d3.min.js"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/jquery@3.7.1",
+      "name": "jquery",
+      "version": "3.7.1",
+      "purl": "pkg:npm/jquery@3.7.1",
+      "properties": [
+        {
+          "name": "widoco:packaged-files",
+          "value": "lode/jquery.js,oops/js/jquery-3.7.1.js"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/marked@18.0.2",
+      "name": "marked",
+      "version": "18.0.2",
+      "purl": "pkg:npm/marked@18.0.2",
+      "properties": [
+        {
+          "name": "widoco:packaged-files",
+          "value": "lode/marked.min.js"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/dompurify@3.4.16",
+      "name": "dompurify",
+      "version": "3.4.16",
+      "purl": "pkg:npm/dompurify@3.4.16",
+      "properties": [
+        {
+          "name": "widoco:packaged-files",
+          "value": "lode/purify.min.js"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/mermaid@11.16.1",
+      "name": "mermaid",
+      "version": "11.16.1",
+      "purl": "pkg:npm/mermaid@11.16.1",
+      "properties": [
+        {
+          "name": "widoco:packaged-files",
+          "value": "lode/mermaid.min.js"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/dompurify@3.4.0",
+      "name": "dompurify",
+      "version": "3.4.0",
+      "purl": "pkg:npm/dompurify@3.4.0",
+      "properties": [
+        {
+          "name": "widoco:packaged-files",
+          "value": "lode/mermaid.min.js"
+        },
+        {
+          "name": "widoco:inventory-note",
+          "value": "Version banner physically present inside the Mermaid bundle; not the separately loaded sanitizer."
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:npm/bootstrap@3.0.3",
+      "name": "bootstrap",
+      "version": "3.0.3",
+      "purl": "pkg:npm/bootstrap@3.0.3",
+      "properties": [
+        {
+          "name": "widoco:packaged-files",
+          "value": "oops/js/bootstrap.js,oops/js/bootstrap.min.js"
+        }
+      ]
+    }
+  ]
+}

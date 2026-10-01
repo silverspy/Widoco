@@ -1,5 +1,11 @@
 # Packaged WIDOCO and static frontend hardening
 
+**Subsequent Trivy audit:** [TRIVY_REPORT.md](TRIVY_REPORT.md) supersedes this
+recorded artifact's frontend status and hash. Trivy detected an additional HIGH
+issue in the legacy OOPS jQuery resource; that resource has since been replaced
+and the new artifact rebuilt and tested. The numbers below describe the earlier
+artifact and its original scans, not the latest Trivy result.
+
 ## Acceptance criterion and result
 
 The requested criterion is **no detected HIGH or CRITICAL vulnerabilities**, rather

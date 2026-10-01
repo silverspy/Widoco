@@ -1,0 +1,132 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.74.0"
+  },
+  "ReportID": "01a0f6f7-d0dc-7e29-87d2-eecbd6db6f01",
+  "CreatedAt": "2026-10-01T12:17:11.1329281+02:00",
+  "ArtifactName": "evidence\\trivy\\pre-fix-frontend.cdx.json",
+  "ArtifactType": "cyclonedx",
+  "Results": [
+    {
+      "Target": "Node.js",
+      "Class": "lang-pkgs",
+      "Type": "node-pkg",
+      "Packages": [
+        {
+          "ID": "bootstrap@3.0.3",
+          "Name": "bootstrap",
+          "Identifier": {
+            "PURL": "pkg:npm/bootstrap@3.0.3",
+            "UID": "3aaa0ddb2ba175ef",
+            "BOMRef": "pkg:npm/bootstrap@3.0.3"
+          },
+          "Version": "3.0.3"
+        },
+        {
+          "ID": "d3@3.5.17",
+          "Name": "d3",
+          "Identifier": {
+            "PURL": "pkg:npm/d3@3.5.17",
+            "UID": "35c151f084e77f5f",
+            "BOMRef": "pkg:npm/d3@3.5.17"
+          },
+          "Version": "3.5.17"
+        },
+        {
+          "ID": "dompurify@3.4.0",
+          "Name": "dompurify",
+          "Identifier": {
+            "PURL": "pkg:npm/dompurify@3.4.0",
+            "UID": "4fbbe6ba599de269",
+            "BOMRef": "pkg:npm/dompurify@3.4.0"
+          },
+          "Version": "3.4.0"
+        },
+        {
+          "ID": "dompurify@3.4.16",
+          "Name": "dompurify",
+          "Identifier": {
+            "PURL": "pkg:npm/dompurify@3.4.16",
+            "UID": "1a52ce28ffb9325a",
+            "BOMRef": "pkg:npm/dompurify@3.4.16"
+          },
+          "Version": "3.4.16"
+        },
+        {
+          "ID": "jquery@1.11.0",
+          "Name": "jquery",
+          "Identifier": {
+            "PURL": "pkg:npm/jquery@1.11.0",
+            "UID": "993ed689488bf65a",
+            "BOMRef": "pkg:npm/jquery@1.11.0"
+          },
+          "Version": "1.11.0"
+        },
+        {
+          "ID": "jquery@3.7.1",
+          "Name": "jquery",
+          "Identifier": {
+            "PURL": "pkg:npm/jquery@3.7.1",
+            "UID": "80fdfc9df35ca9b4",
+            "BOMRef": "pkg:npm/jquery@3.7.1"
+          },
+          "Version": "3.7.1"
+        },
+        {
+          "ID": "marked@18.0.2",
+          "Name": "marked",
+          "Identifier": {
+            "PURL": "pkg:npm/marked@18.0.2",
+            "UID": "e33d746ec25c5766",
+            "BOMRef": "pkg:npm/marked@18.0.2"
+          },
+          "Version": "18.0.2"
+        },
+        {
+          "ID": "mermaid@11.16.1",
+          "Name": "mermaid",
+          "Identifier": {
+            "PURL": "pkg:npm/mermaid@11.16.1",
+            "UID": "362b70bab3835ffb",
+            "BOMRef": "pkg:npm/mermaid@11.16.1"
+          },
+          "Version": "11.16.1"
+        }
+      ],
+      "Vulnerabilities": [
+        {
+          "VulnerabilityID": "NSWG-ECO-328",
+          "PkgID": "jquery@1.11.0",
+          "PkgName": "jquery",
+          "PkgIdentifier": {
+            "PURL": "pkg:npm/jquery@1.11.0",
+            "UID": "993ed689488bf65a",
+            "BOMRef": "pkg:npm/jquery@1.11.0"
+          },
+          "InstalledVersion": "1.11.0",
+          "FixedVersion": "\u003e=3.0.0",
+          "Status": "fixed",
+          "SeveritySource": "nodejs-security-wg",
+          "DataSource": {
+            "ID": "nodejs-security-wg",
+            "Name": "Node.js Ecosystem Security Working Group",
+            "URL": "https://github.com/nodejs/security-wg"
+          },
+          "Fingerprint": "sha256:7db8d55f3465e8de605e984090692b9ab4c22c1bc2d624fd97990f011cf83ec9",
+          "Title": "Cross-Site Scripting (XSS)",
+          "Description": "Jquery is a javascript library for DOM traversal and manipulation, event handling, animation, and Ajax. \n\nWhen text/javascript responses are received from cross-origin ajax requests not containing the option `dataType`, the result is executed in `jQuery.globalEval` potentially allowing an attacker to execute arbitrary code on the origin.",
+          "Severity": "HIGH",
+          "VendorSeverity": {
+            "nodejs-security-wg": 3
+          },
+          "References": [
+            "https://github.com/jquery/jquery/commit/b078a62013782c7424a4a61a240c23c4c0b42614%29",
+            "https://github.com/jquery/jquery/issues/2432%29",
+            "https://github.com/jquery/jquery/pull/2588%29"
+          ]
+        }
+      ]
+    }
+  ]
+}

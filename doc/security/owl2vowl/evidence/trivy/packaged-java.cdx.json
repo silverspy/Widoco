@@ -1,0 +1,483 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:bfaba0a6-5ceb-4e1b-bb50-30ac98fdf588",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-01T10:14:01.861Z"
+  },
+  "components": [
+    {
+      "type": "library",
+      "group": "es.oeg",
+      "name": "widoco",
+      "version": "1.4.26",
+      "bom-ref": "pkg:maven/es.oeg/widoco@1.4.26",
+      "purl": "pkg:maven/es.oeg/widoco@1.4.26"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.maven",
+      "name": "maven-model",
+      "version": "3.9.11",
+      "bom-ref": "pkg:maven/org.apache.maven/maven-model@3.9.11",
+      "purl": "pkg:maven/org.apache.maven/maven-model@3.9.11"
+    },
+    {
+      "type": "library",
+      "group": "org.codehaus.plexus",
+      "name": "plexus-utils",
+      "version": "3.6.1",
+      "bom-ref": "pkg:maven/org.codehaus.plexus/plexus-utils@3.6.1",
+      "purl": "pkg:maven/org.codehaus.plexus/plexus-utils@3.6.1"
+    },
+    {
+      "type": "library",
+      "group": "org.jsoup",
+      "name": "jsoup",
+      "version": "1.23.1",
+      "bom-ref": "pkg:maven/org.jsoup/jsoup@1.23.1",
+      "purl": "pkg:maven/org.jsoup/jsoup@1.23.1"
+    },
+    {
+      "type": "library",
+      "group": "it.gov.innovazione",
+      "name": "owl2vowl-core",
+      "version": "1.0.0-teamdigitale-5cdef094",
+      "bom-ref": "pkg:maven/it.gov.innovazione/owl2vowl-core@1.0.0-teamdigitale-5cdef094",
+      "purl": "pkg:maven/it.gov.innovazione/owl2vowl-core@1.0.0-teamdigitale-5cdef094"
+    },
+    {
+      "type": "library",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-databind",
+      "version": "2.18.11",
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.11",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.18.11"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.logging.log4j",
+      "name": "log4j-api",
+      "version": "2.25.5",
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.logging.log4j",
+      "name": "log4j-to-slf4j",
+      "version": "2.25.5",
+      "bom-ref": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+      "purl": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5"
+    },
+    {
+      "type": "library",
+      "group": "commons-io",
+      "name": "commons-io",
+      "version": "2.18.0",
+      "bom-ref": "pkg:maven/commons-io/commons-io@2.18.0",
+      "purl": "pkg:maven/commons-io/commons-io@2.18.0"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.commons",
+      "name": "commons-lang3",
+      "version": "3.18.0",
+      "bom-ref": "pkg:maven/org.apache.commons/commons-lang3@3.18.0",
+      "purl": "pkg:maven/org.apache.commons/commons-lang3@3.18.0"
+    },
+    {
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "guava",
+      "version": "33.4.0-jre",
+      "bom-ref": "pkg:maven/com.google.guava/guava@33.4.0-jre",
+      "purl": "pkg:maven/com.google.guava/guava@33.4.0-jre"
+    },
+    {
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "failureaccess",
+      "version": "1.0.2",
+      "bom-ref": "pkg:maven/com.google.guava/failureaccess@1.0.2",
+      "purl": "pkg:maven/com.google.guava/failureaccess@1.0.2"
+    },
+    {
+      "type": "library",
+      "group": "com.google.guava",
+      "name": "listenablefuture",
+      "version": "9999.0-empty-to-avoid-conflict-with-guava",
+      "bom-ref": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava",
+      "purl": "pkg:maven/com.google.guava/listenablefuture@9999.0-empty-to-avoid-conflict-with-guava"
+    },
+    {
+      "type": "library",
+      "group": "com.google.errorprone",
+      "name": "error_prone_annotations",
+      "version": "2.36.0",
+      "bom-ref": "pkg:maven/com.google.errorprone/error_prone_annotations@2.36.0",
+      "purl": "pkg:maven/com.google.errorprone/error_prone_annotations@2.36.0"
+    },
+    {
+      "type": "library",
+      "group": "com.google.j2objc",
+      "name": "j2objc-annotations",
+      "version": "3.0.0",
+      "bom-ref": "pkg:maven/com.google.j2objc/j2objc-annotations@3.0.0",
+      "purl": "pkg:maven/com.google.j2objc/j2objc-annotations@3.0.0"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.httpcomponents",
+      "name": "httpclient",
+      "version": "4.5.14",
+      "bom-ref": "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14",
+      "purl": "pkg:maven/org.apache.httpcomponents/httpclient@4.5.14"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.httpcomponents",
+      "name": "httpcore",
+      "version": "4.4.16",
+      "bom-ref": "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16",
+      "purl": "pkg:maven/org.apache.httpcomponents/httpcore@4.4.16"
+    },
+    {
+      "type": "library",
+      "group": "commons-logging",
+      "name": "commons-logging",
+      "version": "1.2",
+      "bom-ref": "pkg:maven/commons-logging/commons-logging@1.2",
+      "purl": "pkg:maven/commons-logging/commons-logging@1.2"
+    },
+    {
+      "type": "library",
+      "group": "commons-codec",
+      "name": "commons-codec",
+      "version": "1.11",
+      "bom-ref": "pkg:maven/commons-codec/commons-codec@1.11",
+      "purl": "pkg:maven/commons-codec/commons-codec@1.11"
+    },
+    {
+      "type": "library",
+      "group": "jakarta.annotation",
+      "name": "jakarta.annotation-api",
+      "version": "2.1.1",
+      "bom-ref": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1",
+      "purl": "pkg:maven/jakarta.annotation/jakarta.annotation-api@2.1.1"
+    },
+    {
+      "type": "library",
+      "group": "org.slf4j",
+      "name": "slf4j-api",
+      "version": "1.7.36",
+      "bom-ref": "pkg:maven/org.slf4j/slf4j-api@1.7.36",
+      "purl": "pkg:maven/org.slf4j/slf4j-api@1.7.36"
+    },
+    {
+      "type": "library",
+      "group": "org.slf4j",
+      "name": "slf4j-simple",
+      "version": "1.7.36",
+      "bom-ref": "pkg:maven/org.slf4j/slf4j-simple@1.7.36",
+      "purl": "pkg:maven/org.slf4j/slf4j-simple@1.7.36"
+    },
+    {
+      "type": "library",
+      "group": "net.sourceforge.owlapi",
+      "name": "owlapi-api",
+      "version": "5.1.18",
+      "bom-ref": "pkg:maven/net.sourceforge.owlapi/owlapi-api@5.1.18",
+      "purl": "pkg:maven/net.sourceforge.owlapi/owlapi-api@5.1.18"
+    },
+    {
+      "type": "library",
+      "group": "net.sourceforge.owlapi",
+      "name": "owlapi-apibinding",
+      "version": "5.1.18",
+      "bom-ref": "pkg:maven/net.sourceforge.owlapi/owlapi-apibinding@5.1.18",
+      "purl": "pkg:maven/net.sourceforge.owlapi/owlapi-apibinding@5.1.18"
+    },
+    {
+      "type": "library",
+      "group": "net.sourceforge.owlapi",
+      "name": "owlapi-compatibility",
+      "version": "5.1.18",
+      "bom-ref": "pkg:maven/net.sourceforge.owlapi/owlapi-compatibility@5.1.18",
+      "purl": "pkg:maven/net.sourceforge.owlapi/owlapi-compatibility@5.1.18"
+    },
+    {
+      "type": "library",
+      "group": "net.sourceforge.owlapi",
+      "name": "owlapi-distribution",
+      "version": "5.1.18",
+      "bom-ref": "pkg:maven/net.sourceforge.owlapi/owlapi-distribution@5.1.18",
+      "purl": "pkg:maven/net.sourceforge.owlapi/owlapi-distribution@5.1.18"
+    },
+    {
+      "type": "library",
+      "group": "net.sourceforge.owlapi",
+      "name": "owlapi-impl",
+      "version": "5.1.18",
+      "bom-ref": "pkg:maven/net.sourceforge.owlapi/owlapi-impl@5.1.18",
+      "purl": "pkg:maven/net.sourceforge.owlapi/owlapi-impl@5.1.18"
+    },
+    {
+      "type": "library",
+      "group": "net.sourceforge.owlapi",
+      "name": "owlapi-oboformat",
+      "version": "5.1.18",
+      "bom-ref": "pkg:maven/net.sourceforge.owlapi/owlapi-oboformat@5.1.18",
+      "purl": "pkg:maven/net.sourceforge.owlapi/owlapi-oboformat@5.1.18"
+    },
+    {
+      "type": "library",
+      "group": "net.sourceforge.owlapi",
+      "name": "owlapi-parsers",
+      "version": "5.1.18",
+      "bom-ref": "pkg:maven/net.sourceforge.owlapi/owlapi-parsers@5.1.18",
+      "purl": "pkg:maven/net.sourceforge.owlapi/owlapi-parsers@5.1.18"
+    },
+    {
+      "type": "library",
+      "group": "net.sourceforge.owlapi",
+      "name": "owlapi-rio",
+      "version": "5.1.18",
+      "bom-ref": "pkg:maven/net.sourceforge.owlapi/owlapi-rio@5.1.18",
+      "purl": "pkg:maven/net.sourceforge.owlapi/owlapi-rio@5.1.18"
+    },
+    {
+      "type": "library",
+      "group": "net.sourceforge.owlapi",
+      "name": "owlapi-tools",
+      "version": "5.1.18",
+      "bom-ref": "pkg:maven/net.sourceforge.owlapi/owlapi-tools@5.1.18",
+      "purl": "pkg:maven/net.sourceforge.owlapi/owlapi-tools@5.1.18"
+    },
+    {
+      "type": "library",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-core",
+      "version": "2.18.11",
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.18.11",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-core@2.18.11"
+    },
+    {
+      "type": "library",
+      "group": "com.fasterxml.jackson.core",
+      "name": "jackson-annotations",
+      "version": "2.18.11",
+      "bom-ref": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.18.11",
+      "purl": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.18.11"
+    },
+    {
+      "type": "library",
+      "group": "org.slf4j",
+      "name": "jcl-over-slf4j",
+      "version": "1.7.22",
+      "bom-ref": "pkg:maven/org.slf4j/jcl-over-slf4j@1.7.22",
+      "purl": "pkg:maven/org.slf4j/jcl-over-slf4j@1.7.22"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-model",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-model@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-model@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-api",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-api@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-languages",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-languages@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-datatypes",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-datatypes@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-binary",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-binary@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-binary@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-n3",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-n3@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-n3@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-nquads",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-nquads@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-nquads@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-ntriples",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-ntriples@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-ntriples@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-rdfjson",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-rdfjson@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-rdfjson@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-jsonld",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-jsonld@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-jsonld@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.httpcomponents",
+      "name": "httpclient-cache",
+      "version": "4.5.14",
+      "bom-ref": "pkg:maven/org.apache.httpcomponents/httpclient-cache@4.5.14",
+      "purl": "pkg:maven/org.apache.httpcomponents/httpclient-cache@4.5.14"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-rdfxml",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-rdfxml@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-rdfxml@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-trix",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trix@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trix@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-turtle",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-turtle@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-turtle@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-trig",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trig@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-trig@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-rio-hdt",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-hdt@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-rio-hdt@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "org.eclipse.rdf4j",
+      "name": "rdf4j-util",
+      "version": "3.4.3",
+      "bom-ref": "pkg:maven/org.eclipse.rdf4j/rdf4j-util@3.4.3",
+      "purl": "pkg:maven/org.eclipse.rdf4j/rdf4j-util@3.4.3"
+    },
+    {
+      "type": "library",
+      "group": "com.github.jsonld-java",
+      "name": "jsonld-java",
+      "version": "0.13.0",
+      "bom-ref": "pkg:maven/com.github.jsonld-java/jsonld-java@0.13.0",
+      "purl": "pkg:maven/com.github.jsonld-java/jsonld-java@0.13.0"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.httpcomponents",
+      "name": "fluent-hc",
+      "version": "4.5.14",
+      "bom-ref": "pkg:maven/org.apache.httpcomponents/fluent-hc@4.5.14",
+      "purl": "pkg:maven/org.apache.httpcomponents/fluent-hc@4.5.14"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.httpcomponents",
+      "name": "httpclient-osgi",
+      "version": "4.5.14",
+      "bom-ref": "pkg:maven/org.apache.httpcomponents/httpclient-osgi@4.5.14",
+      "purl": "pkg:maven/org.apache.httpcomponents/httpclient-osgi@4.5.14"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.httpcomponents",
+      "name": "httpmime",
+      "version": "4.5.14",
+      "bom-ref": "pkg:maven/org.apache.httpcomponents/httpmime@4.5.14",
+      "purl": "pkg:maven/org.apache.httpcomponents/httpmime@4.5.14"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.httpcomponents",
+      "name": "httpcore-nio",
+      "version": "4.4.16",
+      "bom-ref": "pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.16",
+      "purl": "pkg:maven/org.apache.httpcomponents/httpcore-nio@4.4.16"
+    },
+    {
+      "type": "library",
+      "group": "org.apache.httpcomponents",
+      "name": "httpcore-osgi",
+      "version": "4.4.16",
+      "bom-ref": "pkg:maven/org.apache.httpcomponents/httpcore-osgi@4.4.16",
+      "purl": "pkg:maven/org.apache.httpcomponents/httpcore-osgi@4.4.16"
+    },
+    {
+      "type": "library",
+      "group": "com.github.vsonnier",
+      "name": "hppcrt",
+      "version": "0.7.5",
+      "bom-ref": "pkg:maven/com.github.vsonnier/hppcrt@0.7.5",
+      "purl": "pkg:maven/com.github.vsonnier/hppcrt@0.7.5"
+    },
+    {
+      "type": "library",
+      "group": "com.google.code.findbugs",
+      "name": "jsr305",
+      "version": "3.0.2",
+      "bom-ref": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2",
+      "purl": "pkg:maven/com.google.code.findbugs/jsr305@3.0.2"
+    }
+  ]
+}
