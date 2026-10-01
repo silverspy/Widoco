@@ -63,10 +63,10 @@ jobs:
         run: |
           mkdir -p .trivy-tools
           cd .trivy-tools
-          curl --fail --location --retry 3 --output trivy_0.74.0_linux-64bit.tar.gz https://github.com/aquasecurity/trivy/releases/download/v0.74.0/trivy_0.74.0_linux-64bit.tar.gz
+          curl --fail --location --retry 3 --output trivy_0.74.0_Linux-64bit.tar.gz https://github.com/aquasecurity/trivy/releases/download/v0.74.0/trivy_0.74.0_linux-64bit.tar.gz
           curl --fail --location --retry 3 --output checksums.txt https://github.com/aquasecurity/trivy/releases/download/v0.74.0/trivy_0.74.0_checksums.txt
           sha256sum --check --ignore-missing checksums.txt
-          tar -xzf trivy_0.74.0_linux-64bit.tar.gz trivy
+          tar -xzf trivy_0.74.0_Linux-64bit.tar.gz trivy
       - name: Scan the actual JAR, manifests and packaged frontend inventory
         run: |
           mkdir -p target/security/trivy
