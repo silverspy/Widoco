@@ -33,7 +33,7 @@ findings**, but **13 MEDIUM and four LOW findings** remain in Bootstrap 3.0.3 an
 DOMPurify 3.4.0 inside Mermaid. The separately loaded DOMPurify version does not
 replace that nested copy. No findings are suppressed or reclassified.
 
-[The audited JAR and full reports](https://github.com/silverspy/Widoco/actions/runs/36850560381/artifacts/11156015329)
+[The audited JAR and full reports](https://github.com/silverspy/Widoco/actions/runs/36889227047/artifacts/11175796651)
 include the artifact's SHA-256 and scanner/database versions. The Java tests pass
 on Java 11, 17 and 21. Browser checks cover ontology conversion, metadata attacks,
 prototype pollution, links, Markdown/Mermaid, exports and OOPS sorting/collapse.

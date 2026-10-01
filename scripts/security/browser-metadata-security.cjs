@@ -5,7 +5,7 @@ const {pathToFileURL}=require('node:url');
 const {chromium}=require('playwright');
 (async()=>{
   const [html,output]=process.argv.slice(2);
-  const browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL||'msedge',headless:true});
+  const browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL,headless:true});
   const page=await browser.newPage();
   await page.route(/^https?:/,r=>r.abort());
   await page.goto(pathToFileURL(path.resolve(html)).href);
