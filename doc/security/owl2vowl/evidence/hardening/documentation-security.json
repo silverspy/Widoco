@@ -1,0 +1,21 @@
+{
+  "jquery": "3.7.1",
+  "dompurify": "3.4.16",
+  "markedWhitespaceCompleted": true,
+  "strongText": "Preserved Markdown",
+  "dangerousAttributes": 0,
+  "tocInjectedElements": 0,
+  "mermaidRendered": true,
+  "executed": 0,
+  "errors": [],
+  "networkRequests": [
+    "https://img.shields.io/badge/Format-JSON_LD-blue.svg",
+    "https://img.shields.io/badge/Format-RDF/XML-blue.svg",
+    "https://img.shields.io/badge/Format-N_Triples-blue.svg",
+    "https://img.shields.io/badge/Format-TTL-blue.svg",
+    "https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg",
+    "https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg"
+  ],
+  "externalActiveRequests": [],
+  "browser": "154.0.4258.37"
+}

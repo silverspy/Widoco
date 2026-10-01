@@ -434,7 +434,7 @@ public class Constants {
 		String abstractSection = "<h2>" + langFile.getProperty(LANG_ABSTRACT)
 				+ "</h2><span class=\"markdown\">\n";
 		if (abstractContent != null && !"".equals(abstractContent)) {
-			abstractSection += abstractContent;
+			abstractSection += htmlText(abstractContent);
 		} else {
 			abstractSection += langFile.getProperty(LANG_ABSTRACT_PLACEHOLDER);
 		}
@@ -501,26 +501,26 @@ public class Constants {
 			int i = 1;
 			while (it.hasNext()) {
 				Agent currAuth = it.next();
-				String authorName = currAuth.getName(); // the name should be always there
+				String authorName = htmlText(currAuth.getName()); // the name should be always there
 				if (authorName == null || "".equals(authorName)) {
 					authorName = "Agent " + i;
 					i++;
 				}
 				if (currAuth.getURL() != null && !"".equals(currAuth.getURL())) {
-					agents += "<dd><a href=\"" + currAuth.getURL() + "\">" + authorName + "</a>";
+					agents += "<dd><a href=\"" + htmlUrl(currAuth.getURL()) + "\">" + authorName + "</a>";
 				} else {
 					agents += "<dd>" + authorName;
 				}
 				if (currAuth.getInstitutionName() != null && !"".equals(currAuth.getInstitutionName())) {
 					if (currAuth.getInstitutionURL() != null && !"".equals(currAuth.getInstitutionURL())) {
-						agents += ", <a href=\"" + currAuth.getInstitutionURL() + "\">" + currAuth.getInstitutionName()
+						agents += ", <a href=\"" + htmlUrl(currAuth.getInstitutionURL()) + "\">" + htmlText(currAuth.getInstitutionName())
 								+ "</a>";
 					} else {
-						agents += ", " + currAuth.getInstitutionName();
+						agents += ", " + htmlText(currAuth.getInstitutionName());
 					}
 				} else {
 					if (currAuth.getInstitutionURL() != null && !"".equals(currAuth.getInstitutionURL())) {
-						agents += ", <a href=\"" + currAuth.getInstitutionURL() + "\">" + currAuth.getInstitutionURL()
+						agents += ", <a href=\"" + htmlUrl(currAuth.getInstitutionURL()) + "\">" + htmlUrl(currAuth.getInstitutionURL())
 								+ "</a>";
 					}
 				}
@@ -528,7 +528,7 @@ public class Constants {
 					if (!currAuth.getEmail().startsWith("mailto:")){
 						currAuth.setEmail("mailto:" + currAuth.getEmail());
 					}
-					agents += "<a href=\""+currAuth.getEmail()+"\">&#9993;</a>";
+					agents += "<a href=\""+htmlUrl(currAuth.getEmail())+"\">&#9993;</a>";
 				}
 				agents += "</dd>";
 			}
@@ -579,13 +579,13 @@ public class Constants {
 		int i = 1;
 		while (it.hasNext()) {
 			Ontology currentOnto = it.next();
-			String currentOntoName = currentOnto.getName();
+			String currentOntoName = htmlText(currentOnto.getName());
 			if (currentOntoName == null || currentOntoName.isEmpty()) {
 				currentOntoName = "Onto" + i;
 				i++;
 			}
 			if (currentOnto.getNamespaceURI() != null && !"".equals(currentOnto.getNamespaceURI())) {
-				ontologies += "<dd><a href=\"" + currentOnto.getNamespaceURI() + "\">" + currentOntoName + "</a></dd>";
+				ontologies += "<dd><a href=\"" + htmlUrl(currentOnto.getNamespaceURI()) + "\">" + currentOntoName + "</a></dd>";
 			} else {
 				ontologies += "<dd>" + currentOntoName + "</dd>";
 			}
@@ -609,7 +609,7 @@ public class Constants {
 	private static String getURLs(ArrayList<String> resources, String label) {
 		StringBuilder elem = new StringBuilder("<dt>" + label + "</dt>\n");
 		for (String e : resources) {
-			elem.append("<dd><a href=\"").append(e).append("\">").append(e).append("</a></dd>");
+			elem.append("<dd><a href=\"").append(htmlUrl(e)).append("\">").append(htmlText(e)).append("</a></dd>");
 		}
 		elem.append("\n");
 		return elem.toString() ;
@@ -635,7 +635,7 @@ public class Constants {
 		}
 		TreeMap<String, String> sortedMap = new TreeMap<>(namesp);
 		for (Map.Entry<String, String> entry : sortedMap.entrySet()) {
-			ns += "<tr><td><b>" + entry.getKey() + "</b></td><td>&lt;" + entry.getValue() + "&gt;</td></tr>\n";
+			ns += "<tr><td><b>" + htmlText(entry.getKey()) + "</b></td><td>&lt;" + htmlText(entry.getValue()) + "&gt;</td></tr>\n";
 		}
 
 		ns += "</tbody>\n" + "</table>\n" + "</div>\n" + "</div>\n";
@@ -643,99 +643,65 @@ public class Constants {
 	}
 
 	/**
-	 * Serialization of the JSON LD for the ontology specification. Given that I
-	 * have faced some serialization issues, I serialize it by hand, using basic
-	 * properties.
+	 * Serialize specification metadata as JSON and encode it for HTML embedding.
 	 *
 	 * @param c
 	 * @return
 	 */
-	public static String getJSONLDSnippet(Configuration c) {
-		Ontology o = c.getMainOntology();
-		String metadata = "\n\n<!-- SCHEMA.ORG METADATA -->\n<script type=\"application/ld+json\">{\"@context\":\"https://schema.org\",\"@type\":\"TechArticle\","
-				+ "\"url\":\"" + o.getNamespaceURI() + "\"," + "\"image\":\"" + WEBVOWL_SERVICE
-				+ c.getMainOntology().getNamespaceURI() + "\",";
-		// name (mandatory)
-		metadata += "\"name\":";
-		if (o.getTitle() != null && !"".equals(o.getTitle())) {
-			metadata += "\"" + o.getTitle() + "\"";
-		} else {
-			metadata += "\"" + o.getNamespaceURI() + "\"";
-		}
-		// headline (mandatory)
-		metadata += ", \"headline\":";
-		if (c.getAbstractSection() != null && !"".equals(c.getAbstractSection())) {
-			metadata += "\"" + c.getAbstractSection().replace("\n", "").trim() + "\"";
-		} else {
-			metadata += "\"Document describing the ontology " + o.getNamespaceURI() + "\"";
-		}
-		// release date (mandatory)
-		metadata += ", \"dateReleased\":";
-		if (o.getCreationDate() != null && !"".equals(o.getCreationDate())) {
-			metadata += "\"" + o.getCreationDate() + "\"";
-		} else {
-			metadata += "\"" + (new Date()).toString() + "\"";
-		}
-		if (o.getModifiedDate() != null && !"".equals(o.getModifiedDate())) {
-			metadata += ", \"dateModified\":\"" + o.getModifiedDate() + "\"";
-		}
-		// version (optional)
-		if (o.getRevision() != null && !"".equals(o.getRevision())) {
-			metadata += ", \"version\":\"" + o.getRevision() + "\"";
-		}
-		// license (optional)
-		if (o.getLicense() != null && o.getLicense().getUrl() != null && !"".equals(o.getLicense().getUrl())) {
-			metadata += ", \"license\":\"" + o.getLicense().getUrl() + "\"";
-		}
-		if(o.getCodeRepository()!=null && !o.getCodeRepository().isEmpty()){
-			metadata += ", \"codeRepository\":\"" + o.getCodeRepository() + "\"";
-		}
-		// authors (optional)
-		ArrayList<Agent> a = o.getCreators();
-		if (!a.isEmpty()) {
-			metadata += ", \"author\":[";
-			Iterator<Agent> it = a.iterator();
-			while (it.hasNext()) {
-				Agent aux = it.next();
-				metadata += "{\"@type\":\"Person\",";
-				if (aux.getName() != null && !"".equals(aux.getName())) {
-					metadata += "\"name\":\"" + aux.getName() + "\"";
-				}
-				if (aux.getURL() != null && !"".equals(aux.getURL())) {
-					metadata += ",\"url\":\"" + aux.getURL() + "\"";
-				}
-				metadata += "}";
-				if (it.hasNext()) {
-					metadata += ",";
-				}
-			}
-			metadata += "]";
-		}
-		// contributors (optional)
-		ArrayList<Agent> co = o.getContributors();
-		if (!co.isEmpty()) {
-			metadata += ", \"contributor\":[";
-			Iterator<Agent> it = co.iterator();
-			while (it.hasNext()) {
-				Agent aux = it.next();
-				metadata += "{\"@type\":\"Person\",";
-				if (aux.getName() != null && !"".equals(aux.getName())) {
-					metadata += "\"name\":\"" + aux.getName() + "\"";
-				}
-				if (aux.getURL() != null && !"".equals(aux.getURL())) {
-					metadata += ",\"url\":\"" + aux.getURL() + "\"";
-				}
-				metadata += "}";
-				if (it.hasNext()) {
-					metadata += ",";
-				}
-			}
-			metadata += "]";
-		}
-		metadata += "}</script>\n\n";
-		return metadata;
-		// note to self: should clean up to avoid doing the same loop twice.
-	}
+
+    private static String htmlText(String value) {
+        return value == null ? "" : value.replace("&", "&amp;").replace("<", "&lt;")
+                .replace(">", "&gt;").replace("\"", "&quot;").replace("'", "&#39;");
+    }
+
+    private static String htmlUrl(String value) {
+        if (value == null) return "";
+        try {
+            String scheme = new java.net.URI(value).getScheme();
+            if (scheme != null && !Set.of("http", "https", "mailto", "urn").contains(scheme.toLowerCase(Locale.ROOT))) return "";
+            return htmlText(value);
+        } catch (java.net.URISyntaxException ex) { return ""; }
+    }
+
+    private static List<Map<String, String>> jsonAgents(List<Agent> agents) {
+        List<Map<String, String>> result = new ArrayList<>();
+        for (Agent agent : agents) {
+            Map<String, String> item = new LinkedHashMap<>();
+            item.put("@type", "Person");
+            if (agent.getName() != null && !agent.getName().isEmpty()) item.put("name", agent.getName());
+            if (agent.getURL() != null && !agent.getURL().isEmpty()) item.put("url", agent.getURL());
+            result.add(item);
+        }
+        return result;
+    }
+
+    public static String getJSONLDSnippet(Configuration c) {
+        Ontology o = c.getMainOntology();
+        Map<String, Object> metadata = new LinkedHashMap<>();
+        metadata.put("@context", "https://schema.org");
+        metadata.put("@type", "TechArticle");
+        metadata.put("url", o.getNamespaceURI());
+        metadata.put("image", WEBVOWL_SERVICE + o.getNamespaceURI());
+        metadata.put("name", o.getTitle() == null || o.getTitle().isEmpty() ? o.getNamespaceURI() : o.getTitle());
+        metadata.put("headline", c.getAbstractSection() == null || c.getAbstractSection().isEmpty()
+                ? "Document describing the ontology " + o.getNamespaceURI() : c.getAbstractSection().replace("\n", "").trim());
+        metadata.put("dateReleased", o.getCreationDate() == null || o.getCreationDate().isEmpty() ? new Date().toString() : o.getCreationDate());
+        if (o.getModifiedDate() != null && !o.getModifiedDate().isEmpty()) metadata.put("dateModified", o.getModifiedDate());
+        if (o.getRevision() != null && !o.getRevision().isEmpty()) metadata.put("version", o.getRevision());
+        if (o.getLicense() != null && o.getLicense().getUrl() != null && !o.getLicense().getUrl().isEmpty()) metadata.put("license", o.getLicense().getUrl());
+        if (o.getCodeRepository() != null && !o.getCodeRepository().isEmpty()) metadata.put("codeRepository", o.getCodeRepository());
+        if (!o.getCreators().isEmpty()) metadata.put("author", jsonAgents(o.getCreators()));
+        if (!o.getContributors().isEmpty()) metadata.put("contributor", jsonAgents(o.getContributors()));
+        try {
+            // Escape HTML delimiters as JSON Unicode escapes so that metadata
+            // cannot terminate its script element, while retaining JSON values.
+            String json = new com.fasterxml.jackson.databind.ObjectMapper().writeValueAsString(metadata)
+                    .replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026");
+            return "\n\n<!-- SCHEMA.ORG METADATA -->\n<script type=\"application/ld+json\">" + json + "</script>\n\n";
+        } catch (com.fasterxml.jackson.core.JsonProcessingException ex) {
+            throw new IllegalStateException("Unable to serialize ontology metadata", ex);
+        }
+    }
 
 	/**
          * Function that creates an index document assuming sections have been created separately
@@ -760,7 +726,7 @@ public class Constants {
 
 		// add a title to the document
 		if (c.getMainOntology().getTitle() != null && !"".equals(c.getMainOntology().getTitle()))
-			document += " <title>" + c.getMainOntology().getTitle() + "</title>\n";
+			document += " <title>" + htmlText(c.getMainOntology().getTitle()) + "</title>\n";
 		else
 			document += " <title>Ontology Documentation generated by WIDOCO</title>\n";
 
@@ -773,21 +739,23 @@ public class Constants {
 		// JSON-LD snippet
 		document += getJSONLDSnippet(c);
 		document += "<script src=\"" + resourcesFolderName + "/jquery.js\"></script> \n" + "<script src=\""
-				+ "https://cdn.jsdelivr.net/npm/marked@18.0.1/lib/marked.umd.min.js\"></script> \n"
-				+ "<script type=\"module\">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.14.0/+esm';mermaid.initialize({startOnLoad:false});window.mermaid=mermaid;</script> \n"
+				+ resourcesFolderName + "/marked.min.js\"></script> \n"
+                + "<script src=\"" + resourcesFolderName + "/purify.min.js\"></script> \n"
+				+ "<script src=\"" + resourcesFolderName + "/mermaid.min.js\"></script> \n"
+                + "<script>mermaid.initialize({startOnLoad:false,securityLevel:'strict'});</script> \n"
 				+ "    <script> \n" + "function loadHash() {\n"
-				+ "  jQuery(\".markdown\").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});\n"
+				+ "  jQuery(\".markdown\").each(function(el){jQuery(this).after(DOMPurify.sanitize(marked.parse(jQuery(this).text()),{USE_PROFILES:{html:true}})).remove()});\n"
 				+ "  if (typeof window.mermaid !== 'undefined') { window.mermaid.run({ querySelector: 'pre code.language-mermaid' }); }\n"
-				+ "	var hash = location.hash;\n" + "	if($(hash).offset()!=null){\n"
-				+ "	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);\n" + "}\n" + "	loadTOC();\n"
+				+ "	var hashTarget=null;try{hashTarget=document.getElementById(decodeURIComponent(location.hash.substring(1)));}catch(e){}\n" + "	if(hashTarget){\n"
+				+ "	  $('html, body').animate({scrollTop: $(hashTarget).offset().top}, 0);\n" + "}\n" + "	loadTOC();\n"
 				+ "}\n" + "function loadTOC(){\n" + "	//process toc dynamically\n" + "	  var t='<h2>"
 				+ lang.getProperty(LANG_TABLE_OF_CONTENTS) + "</h2><ul>';i = 1;j=0;\n"
 				+ "	  jQuery(\".list\").each(function(){\n" + "		if(jQuery(this).is('h2')){\n"
 				+ "			if(j>0){\n" + "				t+='</ul>';\n" + "				j=0;\n" + "			}\n"
-				+ "			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore(\"span\").text()+'</a></li>';\n"
+				+ "			t+= '<li>'+i+'. <a href=#'+ encodeURIComponent(jQuery(this).attr('id'))+'>'+ jQuery('<span>').text(jQuery(this).ignore(\"span\").text()).html()+'</a></li>';\n"
 				+ "			i++;\n" + "		}\n" + "		if(jQuery(this).is('h3')){\n" + "			if(j==0){\n"
 				+ "				t+='<ul>';\n" + "			}\n" + "			j++;\n"
-				+ "			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore(\"span\").text()+'</a></li>';\n"
+				+ "			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ encodeURIComponent(jQuery(this).attr('id'))+'>'+ jQuery('<span>').text(jQuery(this).ignore(\"span\").text()).html()+'</a></li>';\n"
 				+ "		}\n" + "	  });\n" + "	  t+='</ul>';\n" + "	  $(\"#toc\").html(t); \n" + "}\n"
 				+ " $.fn.ignore = function(sel){\n" + "        return this.clone().find(sel||\">*\").remove().end();\n"
 				+ " };" + "    $(function(){\n"
@@ -927,7 +895,7 @@ public class Constants {
 		}
 		// add a title to the document
 		if (c.getMainOntology().getTitle() != null && !"".equals(c.getMainOntology().getTitle()))
-			document += " <title>" + c.getMainOntology().getTitle() + "</title>\n";
+			document += " <title>" + htmlText(c.getMainOntology().getTitle()) + "</title>\n";
 		else
 			document += " <title>Ontology Documentation generated by WIDOCO</title>\n";
 		// Google analytics code
@@ -938,21 +906,23 @@ public class Constants {
 		// JSON-LD snippet
 		document += getJSONLDSnippet(c);
 		document += "<script src=\"" + resourcesFolderName + "/jquery.js\"></script> \n" + "<script src=\""
-				+ "https://cdn.jsdelivr.net/npm/marked@18.0.1/lib/marked.umd.min.js\"></script> \n"
-				+ "<script type=\"module\">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.14.0/+esm';mermaid.initialize({startOnLoad:false});window.mermaid=mermaid;</script> \n"
+				+ resourcesFolderName + "/marked.min.js\"></script> \n"
+                + "<script src=\"" + resourcesFolderName + "/purify.min.js\"></script> \n"
+				+ "<script src=\"" + resourcesFolderName + "/mermaid.min.js\"></script> \n"
+                + "<script>mermaid.initialize({startOnLoad:false,securityLevel:'strict'});</script> \n"
 				+ "    " + "<script> \n" + "function loadHash() {\n"
-				+ "  jQuery(\".markdown\").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});\n"
+				+ "  jQuery(\".markdown\").each(function(el){jQuery(this).after(DOMPurify.sanitize(marked.parse(jQuery(this).text()),{USE_PROFILES:{html:true}})).remove()});\n"
 				+ "  if (typeof window.mermaid !== 'undefined') { window.mermaid.run({ querySelector: 'pre code.language-mermaid' }); }\n"
-				+ "	var hash = location.hash;\n" + "	if($(hash).offset()!=null){\n"
-				+ "	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);\n" + "}\n" + "	loadTOC();\n"
+				+ "	var hashTarget=null;try{hashTarget=document.getElementById(decodeURIComponent(location.hash.substring(1)));}catch(e){}\n" + "	if(hashTarget){\n"
+				+ "	  $('html, body').animate({scrollTop: $(hashTarget).offset().top}, 0);\n" + "}\n" + "	loadTOC();\n"
 				+ "}\n" + "function loadTOC(){\n" + "	//process toc dynamically\n" + "	  var t='<h2>"
 				+ lang.getProperty(LANG_TABLE_OF_CONTENTS) + "</h2><ul>';i = 1;j=0;\n"
 				+ "	  jQuery(\".list\").each(function(){\n" + "		if(jQuery(this).is('h2')){\n"
 				+ "			if(j>0){\n" + "				t+='</ul>';\n" + "				j=0;\n" + "			}\n"
-				+ "			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore(\"span\").text()+'</a></li>';\n"
+				+ "			t+= '<li>'+i+'. <a href=#'+ encodeURIComponent(jQuery(this).attr('id'))+'>'+ jQuery('<span>').text(jQuery(this).ignore(\"span\").text()).html()+'</a></li>';\n"
 				+ "			i++;\n" + "		}\n" + "		if(jQuery(this).is('h3')){\n" + "			if(j==0){\n"
 				+ "				t+='<ul>';\n" + "			}\n" + "			j++;\n"
-				+ "			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore(\"span\").text()+'</a></li>';\n"
+				+ "			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ encodeURIComponent(jQuery(this).attr('id'))+'>'+ jQuery('<span>').text(jQuery(this).ignore(\"span\").text()).html()+'</a></li>';\n"
 				+ "		}\n" + "	  });\n" + "	  t+='</ul>';\n" + "	  $(\"#toc\").html(t); \n" + "}\n"
                                 + "$(function(){\n"
                                 + "    loadHash();\n"
@@ -998,36 +968,36 @@ public class Constants {
 		}
 		head += "</div>\n";
 		if (c.getMainOntology().getTitle() != null && !"".equals(c.getMainOntology().getTitle()))
-			head += "<h1>" + c.getMainOntology().getTitle() + "</h1>\n";
+			head += "<h1>" + htmlText(c.getMainOntology().getTitle()) + "</h1>\n";
 		//logo setup
 		if (c.getMainOntology().getLogo() != null && !"".equals(c.getMainOntology().getLogo()))
 			head += "<img src=\""+c.getMainOntology().getLogo()+"\" width=\"50/\">\n";
 
 		if (c.getMainOntology().getCreationDate() != null && !"".equals(c.getMainOntology().getCreationDate()))
-			head += "<h2>" + l.getProperty(LANG_DATE) + " " + c.getMainOntology().getCreationDate() + "</h2>\n";
+			head += "<h2>" + l.getProperty(LANG_DATE) + " " + htmlText(c.getMainOntology().getCreationDate()) + "</h2>\n";
 
 		// start definition list
 		head += "\n\n<dl>\n";
 		if (c.getMainOntology().getModifiedDate() != null && !"".equals(c.getMainOntology().getModifiedDate()))
-			head += "<dt>" + l.getProperty(LANG_DATE_MODIFIED) + " " + c.getMainOntology().getModifiedDate() + "</dt>\n";
+			head += "<dt>" + l.getProperty(LANG_DATE_MODIFIED) + " " + htmlText(c.getMainOntology().getModifiedDate()) + "</dt>\n";
 
 		if (c.getMainOntology().getThisVersion() != null && !"".equals(c.getMainOntology().getThisVersion()))
 			head += "<dt>" + l.getProperty(LANG_THIS_VERSION) + "</dt>\n" + "<dd><a href=\""
-					+ c.getMainOntology().getThisVersion() + "\">" + c.getMainOntology().getThisVersion()
+					+ htmlUrl(c.getMainOntology().getThisVersion()) + "\">" + htmlUrl(c.getMainOntology().getThisVersion())
 					+ "</a></dd>\n";
 		if (c.getMainOntology().getLatestVersion() != null && !"".equals(c.getMainOntology().getLatestVersion()))
 			head += "<dt>" + l.getProperty(LANG_LATEST_VERSION) + "</dt>\n" + "<dd><a href=\""
-					+ c.getMainOntology().getLatestVersion() + "\">" + c.getMainOntology().getLatestVersion()
+					+ htmlUrl(c.getMainOntology().getLatestVersion()) + "\">" + htmlUrl(c.getMainOntology().getLatestVersion())
 					+ "</a></dd>\n";
 		if (c.getMainOntology().getPreviousVersion() != null && !"".equals(c.getMainOntology().getPreviousVersion()))
 			head += "<dt>" + l.getProperty(LANG_PREVIOUS_VERSION) + "</dt>\n" + "<dd><a href=\""
-					+ c.getMainOntology().getPreviousVersion() + "\">" + c.getMainOntology().getPreviousVersion()
+					+ htmlUrl(c.getMainOntology().getPreviousVersion()) + "\">" + htmlUrl(c.getMainOntology().getPreviousVersion())
 					+ "</a></dd>\n";
 		if (c.getMainOntology().getRevision() != null && !"".equals(c.getMainOntology().getRevision()))
-			head += "<dt>" + l.getProperty(LANG_REVISION) + "</dt>\n" + "<dd>" + c.getMainOntology().getRevision()
+			head += "<dt>" + l.getProperty(LANG_REVISION) + "</dt>\n" + "<dd>" + htmlText(c.getMainOntology().getRevision())
 					+ "</dd>\n";
 		if (c.getMainOntology().getIssuedDate() != null && !"".equals(c.getMainOntology().getIssuedDate()))
-			head += "<dt>" + l.getProperty(LANG_ISSUED) + "</dt>\n" + "<dd>" + c.getMainOntology().getIssuedDate()
+			head += "<dt>" + l.getProperty(LANG_ISSUED) + "</dt>\n" + "<dd>" + htmlText(c.getMainOntology().getIssuedDate())
 					+ "</dd>\n";
 		if (!c.getMainOntology().getCreators().isEmpty())
 			head += getAuthors(c.getMainOntology().getCreators(), l) + "\n";
@@ -1052,7 +1022,7 @@ public class Constants {
 			HashMap<String, String> availableSerializations = c.getMainOntology().getSerializations();
 			head += "<dt>" + l.getProperty(LANG_SERIALIZATION) + "</dt><dd>";
 			for (String serialization : availableSerializations.keySet()) {
-				head += "<span><a href=\"" + availableSerializations.get(serialization)
+				head += "<span><a href=\"" + htmlUrl(availableSerializations.get(serialization))
 						+ "\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Format-"
 						+ serialization.replace("-", "_") + "-blue.svg\" alt=\"" + serialization + "\" /></a> </span>";
 			}
@@ -1060,12 +1030,12 @@ public class Constants {
 		}
 		String context = c.getContextURI();
 		if (context != null && !context.equals("")) {
-			head += "<dt>JSON-LD Context</dt><dd><a href=\"" + context + "\">" + context + "</a></dd>";
+			head += "<dt>JSON-LD Context</dt><dd><a href=\"" + htmlUrl(context) + "\">" + context + "</a></dd>";
 		}
 
 		if (c.getMainOntology().getLicense() != null) {
-			String lname = c.getMainOntology().getLicense().getName();// "license name goes here";
-			String licenseURL = c.getMainOntology().getLicense().getUrl();// "http://insertlicenseURIhere.example.org";
+			String lname = htmlText(c.getMainOntology().getLicense().getName());// "license name goes here";
+			String licenseURL = htmlUrl(c.getMainOntology().getLicense().getUrl());// "http://insertlicenseURIhere.example.org";
 			if (licenseURL == null || "".equals(licenseURL))
 				licenseURL = l.getProperty(LANG_LICENSE_URL_IF_NULL);
 			if (lname == null || "".equals(lname))
@@ -1076,7 +1046,7 @@ public class Constants {
 			if (c.getMainOntology().getLicense().getIcon() != null
 					&& !"".equals(c.getMainOntology().getLicense().getIcon())) {
 				head += "<a href=\"" + licenseURL + "\" rel=\"license\" target=\"_blank\">\n" + "<img src=\""
-						+ c.getMainOntology().getLicense().getIcon()
+						+ htmlUrl(c.getMainOntology().getLicense().getIcon())
 						+ "\" style=\"border-width:0\" alt=\"License\" />\n" + "</a>\n<br/>";
 			}
 			head += "</dd>";
@@ -1090,34 +1060,34 @@ public class Constants {
                 //add commented a reference in case the evaluation is to be included
                 head+="<!-- <dt>Evaluation:</dt><dd><a href=\"OOPSevaluation/oopsEval.html#\" target=\"_blank\"><img src=\"https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg\" alt=\"Evaluate with OOPS!\" /></a></dd> -->";
 		if (!"".equals(c.getMainOntology().getCiteAs()) && c.getMainOntology().getCiteAs() != null) {
-			head += "<dt>" + l.getProperty(LANG_CITE_AS) + "</dt>\n<dd>" + c.getMainOntology().getCiteAs() + "</dd>\n";
+			head += "<dt>" + l.getProperty(LANG_CITE_AS) + "</dt>\n<dd>" + htmlText(c.getMainOntology().getCiteAs()) + "</dd>\n";
 		}
 		if (!"".equals(c.getMainOntology().getDoi()) && c.getMainOntology().getDoi() != null) {
 			// doi is common for all languages
-			head += "<dt>DOI:</dt>\n<dd><a href=\"http://dx.doi.org/" + c.getMainOntology().getDoi()
-					+ "\"><img src =\"https://img.shields.io/badge/DOI-" + c.getMainOntology().getDoi()
-					+ "-blue.svg\" alt=\"" + c.getMainOntology().getDoi() + "\" /></a></dd>\n";
+			head += "<dt>DOI:</dt>\n<dd><a href=\"http://dx.doi.org/" + htmlText(c.getMainOntology().getDoi())
+					+ "\"><img src =\"https://img.shields.io/badge/DOI-" + htmlText(c.getMainOntology().getDoi())
+					+ "-blue.svg\" alt=\"" + htmlText(c.getMainOntology().getDoi()) + "\" /></a></dd>\n";
 		}
 		if (!"".equals(c.getMainOntology().getBackwardsCompatibleWith())
 				&& c.getMainOntology().getBackwardsCompatibleWith() != null) {
 			// doi is common for all languages
 			head += "<dt>" + l.getProperty(LANG_COMPATIBLE) + ":</dt>\n<dd>"
-					+ "<a href=\""+c.getMainOntology().getBackwardsCompatibleWith()+"\">"
-					+ c.getMainOntology().getBackwardsCompatibleWith() +"</a>" + "</dd>\n";
+					+ "<a href=\""+htmlUrl(c.getMainOntology().getBackwardsCompatibleWith())+"\">"
+					+ htmlUrl(c.getMainOntology().getBackwardsCompatibleWith()) +"</a>" + "</dd>\n";
 		}
 		if (!"".equals(c.getMainOntology().getIncompatibleWith())
 				&& c.getMainOntology().getIncompatibleWith() != null) {
 			// doi is common for all languages
 			head += "<dt>" + l.getProperty(LANG_INCOMPATIBLE) + ":</dt>\n<dd>"
-					+ "<a href=\""+c.getMainOntology().getIncompatibleWith()+"\">"
-					+ c.getMainOntology().getIncompatibleWith() +"</a>" + "</dd>\n";
+					+ "<a href=\""+htmlUrl(c.getMainOntology().getIncompatibleWith())+"\">"
+					+ htmlUrl(c.getMainOntology().getIncompatibleWith()) +"</a>" + "</dd>\n";
 		}
 		if (!"".equals(c.getMainOntology().getCodeRepository())
 				&& c.getMainOntology().getCodeRepository() != null) {
 			// doi is common for all languages
 			head += "<dt>" + l.getProperty(LANG_CODE_REPO) + ":</dt>\n<dd>"
-					+ "<a href=\""+c.getMainOntology().getCodeRepository()+"\">"
-					+ c.getMainOntology().getCodeRepository() +"</a>" + "</dd>\n";
+					+ "<a href=\""+htmlUrl(c.getMainOntology().getCodeRepository())+"\">"
+					+ htmlUrl(c.getMainOntology().getCodeRepository()) +"</a>" + "</dd>\n";
 		}
 
 		// end definition list
@@ -1132,33 +1102,33 @@ public class Constants {
 	}
 
 	public static String getOverviewSectionTitleAndPlaceHolder(Configuration c, Properties lang) {
-		return "<h2 id=\"overv\" class=\"list\">" + c.getMainOntology().getName() + ": "
+		return "<h2 id=\"overv\" class=\"list\">" + htmlText(c.getMainOntology().getName()) + ": "
 				+ lang.getProperty(LANG_OVERVIEW_PLACEHOLDER);
 	}
 
 	public static String getDescriptionSectionTitleAndPlaceHolder(Configuration c, Properties lang) {
 		StringBuilder descriptionString = new StringBuilder(
-				"<h2 id=\"desc\" class=\"list\">" + c.getMainOntology().getName() + ": ");
+				"<h2 id=\"desc\" class=\"list\">" + htmlText(c.getMainOntology().getName()) + ": ");
 		descriptionString.append(lang.getProperty(LANG_DESCRIPTION_TITLE)).append("\n");
 		String ontologyDescription = c.getMainOntology().getDescription();
 		//add description body from ontology or default
 		descriptionString.append("<span class=\"markdown\">");
 		if (ontologyDescription != null && !ontologyDescription.isEmpty()){
-			descriptionString.append(ontologyDescription);
+			descriptionString.append(htmlText(ontologyDescription));
 		}else{
 			descriptionString.append(lang.getProperty(LANG_DESCRIPTION_PLACEHOLDER)).append("\n");
 		}
 		descriptionString.append("</span>");
 		for (String image: c.getMainOntology().getImages()){
-			descriptionString.append("<img src=\"").append(image).append("\">");
+			descriptionString.append("<img src=\"").append(htmlUrl(image)).append("\">");
 		}
 		return descriptionString.toString();
 	}
 
 	public static String getCrossReferenceSectionTitleAndPlaceHolder(Configuration c, Properties lang) {
 		return "<h2 id=\"crossreference\" class=\"list\">" + lang.getProperty(LANG_CROSS_REF_TITLE) + " "
-				+ c.getMainOntology().getName() + " " + lang.getProperty(LANG_CROSS_REF_TITLE2) + "</h2>" + "\n"
-				+ lang.getProperty(LANG_CROSS_REF_PLACEHOLDER) +" "+ c.getMainOntology().getName() + ".\n";
+				+ htmlText(c.getMainOntology().getName()) + " " + lang.getProperty(LANG_CROSS_REF_TITLE2) + "</h2>" + "\n"
+				+ lang.getProperty(LANG_CROSS_REF_PLACEHOLDER) +" "+ htmlText(c.getMainOntology().getName()) + ".\n";
 	}
 
 	public static String getProvenanceHtml(Configuration c, Properties lang) {
@@ -1170,7 +1140,7 @@ public class Constants {
 			provURI = c.getDocumentationURI();
 		}
 		if (c.getMainOntology().getTitle() != null && !"".equals(c.getMainOntology().getTitle())) {
-			provhtml += "<h1>" + lang.getProperty(LANG_PROV1) + " " + c.getMainOntology().getTitle() + " "
+			provhtml += "<h1>" + lang.getProperty(LANG_PROV1) + " " + htmlText(c.getMainOntology().getTitle()) + " "
 					+ lang.getProperty(LANG_PROV2) + " (" + provURI + ")</h1>\n";
 		}
 		provhtml += "<ul>\n";
@@ -1189,15 +1159,15 @@ public class Constants {
 		}
 		if (c.getMainOntology().getLatestVersion() != null && !"".equals(c.getMainOntology().getLatestVersion())) {
 			provhtml += "<li>" + provURI + " " + lang.getProperty(LANG_SPEC) + " "
-					+ c.getMainOntology().getLatestVersion() + "</li>\n";
+					+ htmlUrl(c.getMainOntology().getLatestVersion()) + "</li>\n";
 		}
 		if (c.getMainOntology().getPreviousVersion() != null && !"".equals(c.getMainOntology().getPreviousVersion())) {
 			provhtml += "<li>" + provURI + " " + lang.getProperty(LANG_REV) + " "
-					+ c.getMainOntology().getPreviousVersion() + "</li>\n";
+					+ htmlUrl(c.getMainOntology().getPreviousVersion()) + "</li>\n";
 		}
 		provhtml += "<li>" + lang.getProperty(LANG_RESULT);
 		if (c.getMainOntology().getCreationDate() != null && !"".equals(c.getMainOntology().getCreationDate())) {
-			provhtml += "<li>" + lang.getProperty(LANG_GENERATED) + " " + c.getMainOntology().getCreationDate();
+			provhtml += "<li>" + lang.getProperty(LANG_GENERATED) + " " + htmlText(c.getMainOntology().getCreationDate());
 		}
 		provhtml += "</ul>\n" + "</div>\n<p>" + lang.getProperty(LANG_BACK) + " <a href=\"..\\index-"
 				+ c.getCurrentLanguage() + ".html\">" + lang.getProperty(LANG_BACK1) + "</a>. <a href=\"provenance-"
@@ -1209,9 +1179,9 @@ public class Constants {
 	private static String appendAgentCollectionAsHtml(String html, Iterator<Agent> agents) {
 		while (agents.hasNext()) {
 			Agent currCreator = agents.next();
-			html += " " + currCreator.getName();
+			html += " " + htmlText(currCreator.getName());
 			if (currCreator.getInstitutionName() != null) {
-				html += " (" + currCreator.getInstitutionName() + ")";
+				html += " (" + htmlText(currCreator.getInstitutionName()) + ")";
 			}
 
 			if (agents.hasNext()) {
@@ -1291,7 +1261,7 @@ public class Constants {
 
 	public static String getEvaluationText(String evaluationContent, Configuration c) {
 		String eval = "<!DOCTYPE html>\n" + "<html lang=\"en\">\n" + "  <head>\n" + "    <meta charset=\"UTF-8\">\n"
-				+ "    <title>" + c.getMainOntology().getTitle() + "</title>\n"
+				+ "    <title>" + htmlText(c.getMainOntology().getTitle()) + "</title>\n"
 				+ "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
 				+ "    <meta name=\"description\" content=\"Evaluation of the ontology with the OOPS tool.\">\n"
 				+ "    <meta name=\"Languaje\" content=\"English\">\n" + "    \n"
@@ -1311,11 +1281,11 @@ public class Constants {
 				+ "    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->\n" + "    <!--[if lt IE 9]>\n"
 				+ "      <script src=\"/dist/js/html5shiv.js\"></script>\n" + "    <![endif]-->\n" + "\n"
 				+ "  </head>\n" + "<div class=\"container\">\n" + "<h1> <a href=\"" + c.getOntologyURI()
-				+ "\" target=\"_blank\">" + c.getMainOntology().getTitle() + "</a></h1>\n" + "<br>\n"
+				+ "\" target=\"_blank\">" + htmlText(c.getMainOntology().getTitle()) + "</a></h1>\n" + "<br>\n"
 				+ "<dl class=\"dl-horizontal\">\n" + "<dt>Title</dt>\n" + "<dd><a href=\"" + c.getOntologyURI()
-				+ "\" target=\"_blank\">" + c.getMainOntology().getTitle() + "</a></dd>\n" + "<dt>URI</dt>\n"
+				+ "\" target=\"_blank\">" + htmlText(c.getMainOntology().getTitle()) + "</a></dd>\n" + "<dt>URI</dt>\n"
 				+ "<dd><a href=\"" + c.getOntologyURI() + "\" target=\"_blank\">" + c.getOntologyURI() + "</a></dd>\n"
-				+ "<dt>Version</dt>\n" + "<dd>" + c.getMainOntology().getRevision() + "</dd>\n" + "</dl>"
+				+ "<dt>Version</dt>\n" + "<dd>" + htmlText(c.getMainOntology().getRevision()) + "</dd>\n" + "</dl>"
 				+ "<p> The following evaluation results have been generated by the <a href = \"http://oops-ws.oeg-upm.net/\" target=\"_blank\">RESTFul web service</a> provided by <a href = \"http://oops.linkeddata.es\" target=\"_blank\">OOPS! (OntOlogy Pitfall Scanner!)</a>.</p>"
 				+ "<p>\n"
 				+ "<a href=\"http://oops.linkeddata.es\" target=\"_blank\"><img src=\"http://vocab.linkeddata.es/ontologies/oops/logomini.png\" alt=\"OOPS! logo\" class=\"img-rounded\" class=\"img-responsive\" /></a>"

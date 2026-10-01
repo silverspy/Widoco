@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' https: http: data: blob:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'" />
     <meta name="author" content="Vincent Link, Steffen Lohmann, Eduard Marbach, Stefan Negru, Vitalis Wiens" />
     <meta name="keywords" content="webvowl, vowl, visual notation, web ontology language, owl, rdf, ontology visualization, ontologies, semantic web" />
     <meta name="description" content="WebVOWL - Web-based Visualization of Ontologies" />
@@ -506,9 +507,7 @@
     <script src="js/d3.min.js"></script>
     <script src="js/webvowl.js"></script>
     <script src="js/webvowl.app.js"></script>
-    <script>
-        window.onload = webvowl.app().initialize;
-    </script>
+    <script src="js/webvowl.init.js"></script>
 </body>
 
 </html>

@@ -19,6 +19,10 @@ node scripts/security/scan-osv.mjs target/security/resolved-artifacts.json targe
 if ($LASTEXITCODE -ne 0) { throw 'Resolved dependency vulnerability scan failed' }
 node scripts/security/scan-osv.mjs target/security/jar-artifacts.json target/security/jar-osv.json --fail-on-vulnerability
 if ($LASTEXITCODE -ne 0) { throw 'Packaged JAR vulnerability scan failed' }
+& $Python scripts/security/audit-frontend-jar.py JAR/widoco-1.4.26-jar-with-dependencies.jar src/main/resources target/security/frontend-jar.json target/security/frontend-assets
+if ($LASTEXITCODE -ne 0) { throw 'Packaged frontend inventory failed' }
+node scripts/security/scan-frontend-osv.mjs scripts/security/frontend-components.json target/security/frontend-osv.json
+if ($LASTEXITCODE -ne 0) { throw 'High, critical or unclassified frontend advisory remains' }
 
 # Convert the test's HTTP ontology identifier to a local import document path.
 $importUri = ([Uri](Resolve-Path owl2vowl-core/target/imported.owl).Path).AbsoluteUri
@@ -30,3 +34,6 @@ if ($LASTEXITCODE -ne 0 -or -not (Test-Path target/security/documentation/webvow
 $env:REQUIRE_OFFLINE = '1'
 node scripts/security/browser-smoke.cjs target/security/documentation/webvowl target/security/documentation/webvowl/data/ontology.json target/security/browser
 if ($LASTEXITCODE -ne 0) { throw 'Offline browser rendering failed' }
+& "$PSScriptRoot/verify-viewer.ps1" -Python $Python
+node scripts/security/browser-documentation-security.cjs target/security/documentation target/security/documentation-security.json
+if ($LASTEXITCODE -ne 0) { throw 'Documentation security regression failed' }

@@ -1,5 +1,10 @@
 # Embedded WebVOWL JavaScript and converter feature audit
 
+**Historical audit:** this document records the unpatched revision and its
+original evidence. Subsequent fixes, final JAR scans and negative browser tests
+are documented in [HARDENING_REPORT.md](HARDENING_REPORT.md). The converter
+limitations below remain applicable.
+
 ## Outcome
 
 The embedded viewer is **not free of vulnerabilities**. Two independently

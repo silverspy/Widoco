@@ -1,0 +1,39 @@
+{
+  "jarSha256": "27140e0bb6617ef6b01a990d96ae588e08053c0d12c1dc8182c25863cd02a432",
+  "files": [
+    {
+      "name": "index.html",
+      "bytes": 35782,
+      "sha256": "e5279384150aae6c69b03d4406c743c2320f5a5749f307e46376733bc0beffa6",
+      "matchesSource": true
+    },
+    {
+      "name": "js/d3.min.js",
+      "bytes": 151729,
+      "sha256": "a762ca217f7dc1d7eace1d35a067389856810b70e23487082f08bc01f54cdbd4",
+      "matchesSource": true
+    },
+    {
+      "name": "js/webvowl.js",
+      "bytes": 421583,
+      "sha256": "15e0da4e5c8b0f8254412da682e7ce8efae2bce987fbc050a6c6bf2df083310d",
+      "matchesSource": true
+    },
+    {
+      "name": "js/webvowl.app.js",
+      "bytes": 339759,
+      "sha256": "287a91b3f35220cef2c02d6917a6f46e73c4c412d657f1a7216e2ad086b8d3d2",
+      "matchesSource": true
+    },
+    {
+      "name": "js/webvowl.init.js",
+      "bytes": 105,
+      "sha256": "8aefb6e745e0bea335b9b13d94cc6ebb549cc3df215cd9c864ee9a5535113dd7",
+      "matchesSource": true
+    }
+  ],
+  "obsoleteLodashCodeAbsent": true,
+  "knownUnsafeSinksAbsent": true,
+  "externalInitializer": true,
+  "scriptCspPresent": true
+}

@@ -27,7 +27,7 @@ foreach ($variant in @('old','new')) {
 Run-AuditCommand node @('scripts/security/compare-feature-probes.mjs',"$Output/features-old/results.json","$Output/features-new/results.json","$Output/feature-comparison.json")
 Run-AuditCommand node @('scripts/security/compare-feature-probes.mjs',"$Output/features-old-urn/results.json","$Output/features-new-urn/results.json","$Output/urn-feature-comparison.json")
 Run-AuditCommand java @('-cp',"$classes$separator$NewJar",'ConverterMetadataProbe',$newClass,"$Output/generated-xss-canary.json")
-Run-AuditCommand node @('scripts/security/browser-audit.cjs',$assets,'doc/security/owl2vowl/evidence/ontology.json',"$Output/browser-js-audit.json")
-Run-AuditCommand node @('scripts/security/browser-audit.cjs',$assets,"$Output/generated-xss-canary.json","$Output/browser-roundtrip-audit.json")
+Run-AuditCommand node @('scripts/security/browser-audit.cjs',$assets,'doc/security/owl2vowl/evidence/ontology.json',"$Output/browser-js-audit.json",'--assert-safe')
+Run-AuditCommand node @('scripts/security/browser-audit.cjs',$assets,"$Output/generated-xss-canary.json","$Output/browser-roundtrip-audit.json",'--assert-safe')
 Run-AuditCommand node @('scripts/security/browser-cardinality-audit.cjs',$assets,"$Output/features-new","$Output/browser-cardinality-audit.json")
-Write-Host "Audit evidence saved to $Output. Review confirmed vulnerability markers; completion is not a security pass."
+Write-Host "Feature audit and corrected-viewer regression evidence saved to $Output."

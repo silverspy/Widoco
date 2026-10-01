@@ -1,0 +1,79 @@
+{
+  "browser": "154.0.4258.37",
+  "assertSafe": true,
+  "disableCsp": false,
+  "results": [
+    {
+      "scenario": "input-unmodified",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": false,
+      "aboutHref": "https://example.org/main",
+      "injectedElements": 0,
+      "errors": []
+    },
+    {
+      "scenario": "metadata-view",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": false,
+      "aboutHref": "https://example.org/main",
+      "injectedElements": 0,
+      "errors": []
+    },
+    {
+      "scenario": "metadata-editor",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": false,
+      "aboutHref": "https://example.org/main",
+      "injectedElements": 0,
+      "errors": []
+    },
+    {
+      "scenario": "search-label",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": false,
+      "aboutHref": "https://example.org/main",
+      "injectedElements": 0,
+      "errors": []
+    },
+    {
+      "scenario": "hash-url",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": false,
+      "aboutHref": "#",
+      "injectedElements": 0,
+      "errors": []
+    },
+    {
+      "scenario": "unsafe-link",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": false,
+      "aboutHref": null,
+      "injectedElements": 0,
+      "errors": []
+    },
+    {
+      "scenario": "prototype-input",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": false,
+      "aboutHref": "https://example.org/main",
+      "injectedElements": 0,
+      "errors": []
+    },
+    {
+      "scenario": "bundled-prototype-api",
+      "before": 0,
+      "executed": 0,
+      "prototypePolluted": false,
+      "aboutHref": "https://example.org/main",
+      "injectedElements": 0,
+      "errors": []
+    }
+  ]
+}

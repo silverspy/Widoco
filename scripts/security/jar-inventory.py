@@ -12,7 +12,7 @@ with zipfile.ZipFile(jar) as archive:
     artifacts = []
     for name in names:
         if name.startswith('META-INF/maven/') and name.endswith('/pom.properties'):
-            props = dict(re.findall(r'^([^#!\s=]+)\s*=\s*(.*)$', archive.read(name).decode('utf-8', errors='replace'), re.M))
+            props = {key: value.strip() for key, value in re.findall(r'^([^#!\s=]+)\s*=\s*(.*)$', archive.read(name).decode('utf-8', errors='replace'), re.M)}
             if all(key in props for key in ('groupId', 'artifactId', 'version')):
                 artifacts.append({'group':props['groupId'], 'artifact':props['artifactId'], 'version':props['version'], 'metadata':name})
     prefixes = ['org/codehaus/jackson/', 'org/apache/commons/collections15/', 'org/apache/commons/collections/',

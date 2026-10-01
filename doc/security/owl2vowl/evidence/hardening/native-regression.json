@@ -1,0 +1,27 @@
+{
+  "browser": "154.0.4258.37",
+  "cloneIsShallow": true,
+  "clonePrototypeSafe": true,
+  "arrayCopied": true,
+  "gradientLookup": true,
+  "singleLinkNotPinned": true,
+  "parallelLinksPinned": true,
+  "duplicatesDeduplicated": true,
+  "unsafeSchemesBlocked": true,
+  "httpsLinkPreserved": true,
+  "obsoleteModulesAbsent": true,
+  "nodes": 8,
+  "exports": [
+    {
+      "id": "exportJson",
+      "name": "ontology.json",
+      "bytes": 6478
+    },
+    {
+      "id": "exportSvg",
+      "name": "ontology.svg",
+      "bytes": 14155
+    }
+  ],
+  "errors": []
+}

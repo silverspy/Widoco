@@ -37,6 +37,8 @@ jobs:
           python scripts/security/audit-packaged-classes.py JAR/widoco-1.4.26-jar-with-dependencies.jar target/security/resolved-artifacts.json "$HOME/.m2/repository" target/security/bytecode-provenance.json owl2vowl-core/target/owl2vowl-core-1.0.0-teamdigitale-5cdef094.jar
           node scripts/security/scan-osv.mjs target/security/resolved-artifacts.json target/security/resolved-osv.json --fail-on-vulnerability
           node scripts/security/scan-osv.mjs target/security/jar-artifacts.json target/security/jar-osv.json --fail-on-vulnerability
+          python scripts/security/audit-frontend-jar.py JAR/widoco-1.4.26-jar-with-dependencies.jar src/main/resources target/security/frontend-jar.json target/security/frontend-assets
+          node scripts/security/scan-frontend-osv.mjs scripts/security/frontend-components.json target/security/frontend-osv.json
       - name: Include JDK in filename
         run: |
           FN=$(ls JAR/*.jar)

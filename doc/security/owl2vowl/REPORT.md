@@ -2,11 +2,11 @@
 
 ## Result and scope
 
-**Follow-up viewer audit:** the Java zero-advisory result below does not cover
-JavaScript. [JS_AND_FEATURE_AUDIT.md](JS_AND_FEATURE_AUDIT.md) reproduces two
-inherited DOM XSS entry points and a vulnerable bundled Lodash primitive. It also
-compares the old/new actual converters: the tested limitations already existed
-in the original converter. These viewer findings remain unpatched.
+**Current follow-up:** [HARDENING_REPORT.md](HARDENING_REPORT.md) documents the
+subsequent JavaScript and metadata fixes and the scans/tests of the delivered
+JAR. The earlier [JS_AND_FEATURE_AUDIT.md](JS_AND_FEATURE_AUDIT.md) records the
+original reproduced viewer findings and inherited converter limitations. Its
+unpatched security status is historical, not the status of the hardened build.
 
 The integration is a working, server-free Java library extraction from Team
 Digitale, not a dependency on its Spring Boot WAR. WIDOCO still writes static
