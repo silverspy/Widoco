@@ -1,8 +1,8 @@
-name: CI
+name: Validate focused upstream PR
 
 on:
   push:
-    branches: [develop, master, fix-owl2vowl-security]
+    branches: [audit-owl2vowl-security]
     tags:
      - 'v*'
   pull_request:
@@ -20,6 +20,14 @@ jobs:
         jdk: [11, 17, 21]
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: 716269409d2a32b7361e44921bb1e1d5b47a7719
+      - uses: actions/checkout@v7
+        with:
+          ref: 126ae833223a8aecdc51a08e7b1b0c7de7634110
+          path: audit-tools
+          sparse-checkout: /scripts/security/
+          sparse-checkout-cone-mode: false
       # details https://github.com/actions/setup-java
       - name: Set up JDK  ${{ matrix.jdk }}
         uses: actions/setup-java@v6
@@ -32,11 +40,12 @@ jobs:
       - name: Check resolved dependencies and packaged bytecode
         run: |
           mkdir -p target/security
-          node scripts/security/tree-inventory.mjs dependency-tree.txt target/security/resolved-artifacts.json
-          python scripts/security/jar-inventory.py JAR/widoco-1.4.26-jar-with-dependencies.jar target/security/jar.json --assert-clean
-          python scripts/security/audit-packaged-classes.py JAR/widoco-1.4.26-jar-with-dependencies.jar target/security/resolved-artifacts.json "$HOME/.m2/repository" target/security/bytecode-provenance.json
-          node scripts/security/scan-osv.mjs target/security/resolved-artifacts.json target/security/resolved-osv.json --fail-on-vulnerability
-          node scripts/security/scan-osv.mjs target/security/jar-artifacts.json target/security/jar-osv.json --fail-on-vulnerability
+          git rev-parse HEAD > target/security/source-commit.txt
+          node audit-tools/scripts/security/tree-inventory.mjs dependency-tree.txt target/security/resolved-artifacts.json
+          python audit-tools/scripts/security/jar-inventory.py JAR/widoco-1.4.26-jar-with-dependencies.jar target/security/jar.json --assert-clean
+          python audit-tools/scripts/security/audit-packaged-classes.py JAR/widoco-1.4.26-jar-with-dependencies.jar target/security/resolved-artifacts.json "$HOME/.m2/repository" target/security/bytecode-provenance.json
+          node audit-tools/scripts/security/scan-osv.mjs target/security/resolved-artifacts.json target/security/resolved-osv.json --fail-on-vulnerability
+          node audit-tools/scripts/security/scan-osv.mjs target/security/jar-artifacts.json target/security/jar-osv.json --fail-on-vulnerability
       - name: Include JDK in filename
         run: |
           FN=$(ls JAR/*.jar)
@@ -45,11 +54,22 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: widoco_JDK-${{ matrix.jdk }}
-          path: JAR/*.jar
+          path: |
+            JAR/*.jar
+            target/security/*.json
+            target/security/source-commit.txt
   java-security:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          ref: 716269409d2a32b7361e44921bb1e1d5b47a7719
+      - uses: actions/checkout@v7
+        with:
+          ref: 126ae833223a8aecdc51a08e7b1b0c7de7634110
+          path: audit-tools
+          sparse-checkout: /scripts/security/
+          sparse-checkout-cone-mode: false
       - uses: actions/setup-java@v6
         with:
           distribution: zulu
@@ -67,11 +87,12 @@ jobs:
       - name: Scan Java packages in the actual JAR and Maven manifests
         run: |
           mkdir -p target/security
+          git rev-parse HEAD > target/security/source-commit.txt
           : > target/security/empty.trivyignore
           scan_args=(--cache-dir .trivy-cache --scanners vuln --detection-priority comprehensive --ignorefile target/security/empty.trivyignore --list-all-pkgs --no-progress --timeout 15m --format json)
           .trivy-tools/trivy rootfs "${scan_args[@]}" --output target/security/trivy-java-jar.json JAR/widoco-1.4.26-jar-with-dependencies.jar
           .trivy-tools/trivy fs "${scan_args[@]}" --output target/security/trivy-source.json .
-          node scripts/security/summarize-trivy.mjs target/security/trivy-summary.json target/security/trivy-java-jar.json target/security/trivy-source.json
+          node audit-tools/scripts/security/summarize-trivy.mjs target/security/trivy-summary.json target/security/trivy-java-jar.json target/security/trivy-source.json
           node -e "const r=require('./target/security/trivy-java-jar.json'); if(!r.Results?.some(x=>x.Type==='jar'&&x.Packages?.length)) throw new Error('Trivy detected no Java packages');"
           .trivy-tools/trivy --cache-dir .trivy-cache --version > target/security/trivy-version.txt
           sha256sum JAR/widoco-1.4.26-jar-with-dependencies.jar > target/security/sha256.txt
