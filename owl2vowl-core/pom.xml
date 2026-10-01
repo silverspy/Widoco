@@ -16,6 +16,23 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- OWLAPI/jsonld-java also bring bundled HTTP components. Keep the
+                 standalone library aligned without relying on WIDOCO's POM. -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient-cache</artifactId>
+                <version>4.5.14</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient-osgi</artifactId>
+                <version>4.5.14</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore-osgi</artifactId>
+                <version>4.4.16</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>

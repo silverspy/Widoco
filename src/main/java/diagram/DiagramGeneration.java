@@ -20,7 +20,6 @@ public class DiagramGeneration {
 
 	public static void generateOntologyDiagram(String outFolder, Configuration c) {
 		try {
-			// extract resource to target folder
 			Owl2Vowl o = new Owl2Vowl(c.getMainOntology().getOWLAPIModel());
 			Path output = Path.of(outFolder, "webvowl", "data", "ontology.json");
 			Files.createDirectories(output.getParent());

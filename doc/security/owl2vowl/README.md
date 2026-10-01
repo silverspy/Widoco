@@ -12,6 +12,12 @@ Jackson 1, Collections 15, Spring, Tomcat and Log4j Core are absent from the
 packaged JAR. The library source and its small local changes are described in
 [owl2vowl-core/README.md](../../../owl2vowl-core/README.md).
 
+This is a tested local-module prototype. The proposed integration would publish
+the converter from a separate repository and use a released Maven dependency.
+That release, its maintainer and publishing coordinates still need to be agreed;
+the external-library integration has not yet been validated. Frontend hardening
+can be submitted separately from the converter replacement.
+
 ## Static viewer and documentation
 
 The embedded WebVOWL bundles no longer contain obsolete Lodash modules. Native

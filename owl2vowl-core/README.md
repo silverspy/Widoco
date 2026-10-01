@@ -1,7 +1,7 @@
 # Standalone OWL2VOWL core
 
-Source: https://github.com/teamdigitale/dati-semantic-WebVOWL
-Revision: `5cdef0946423a8a813a58f5c9b478467f68cbd9d`.
+Source: [Team Digitale converter at revision
+`5cdef0946423a8a813a58f5c9b478467f68cbd9d`](https://github.com/teamdigitale/dati-semantic-WebVOWL/tree/5cdef0946423a8a813a58f5c9b478467f68cbd9d).
 
 The Java converter sources are vendored for reproducible builds. `ServerMain.java`
 and the `server` package are excluded entirely. No frontend build, Spring Boot,
@@ -14,6 +14,9 @@ Local modifications:
 - Maven library packaging and Java 11 compilation with `--release 11`.
 - Explicit dependencies, patched Jackson/Log4j/HTTP client versions and no server
   dependency management or suppression file.
+- HTTP bundles pulled in by OWLAPI/jsonld-java are aligned in this module's POM,
+  so standalone consumers do not depend on WIDOCO's version overrides. CI scans
+  the converter dependency graph separately from WIDOCO's graph.
 - `OntologyConverter` marks caller-supplied ontologies as borrowed, so cleanup
   does not remove them from their OWLAPI manager.
 - Converter version metadata and ontology regression tests.
