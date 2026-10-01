@@ -6,7 +6,6 @@ import zipfile
 from pathlib import Path
 
 jar, inventory, repository, output = map(Path, sys.argv[1:5])
-reactor_core = Path(sys.argv[5]) if len(sys.argv) > 5 else None
 with zipfile.ZipFile(jar) as archive:
     packaged = {n:hashlib.sha256(archive.read(n)).hexdigest() for n in archive.namelist()
                 if n.endswith('.class') and not n.startswith('META-INF/versions/') and not n.endswith('module-info.class')}
@@ -16,8 +15,6 @@ for dep in json.loads(inventory.read_text(encoding='utf-8-sig')):
     if dep.get('scope') not in ('compile','runtime'):
         continue
     artifact = repository.joinpath(*dep['group'].split('.'), dep['artifact'], dep['version'], f"{dep['artifact']}-{dep['version']}.jar")
-    if reactor_core and dep['artifact'] == 'owl2vowl-core' and dep['group'] == 'it.gov.innovazione':
-        artifact = reactor_core
     if not artifact.exists():
         missing_artifacts.append(f"{dep['group']}:{dep['artifact']}:{dep['version']}")
         continue

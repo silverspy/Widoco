@@ -1,2 +1,0 @@
-install:
-  - mvn -B -f build-reactor/pom.xml install -DskipTests

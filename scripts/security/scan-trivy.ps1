@@ -18,7 +18,7 @@ if ($LASTEXITCODE -ne 0) { throw 'Trivy is unavailable' }
 & $Trivy rootfs @common --output "$Output/final-jar.json" JAR/widoco-1.4.26-jar-with-dependencies.jar
 if ($LASTEXITCODE -ne 0) { throw 'Packaged JAR scan failed' }
 & $Trivy fs @common --output "$Output/source.json" .
-if ($LASTEXITCODE -ne 0) { throw 'Source scan failed; populate the Maven cache including the locally built converter' }
+if ($LASTEXITCODE -ne 0) { throw 'Source scan failed; check repository access and populate the Maven cache' }
 & $Python "$PSScriptRoot/audit-frontend-jar.py" JAR/widoco-1.4.26-jar-with-dependencies.jar src/main/resources "$Output/frontend-provenance.json" "$Output/frontend-assets"
 if ($LASTEXITCODE -ne 0) { throw 'Packaged frontend differs from source' }
 node "$PSScriptRoot/frontend-sbom.mjs" "$PSScriptRoot/frontend-components.json" "$Output/frontend.cdx.json"

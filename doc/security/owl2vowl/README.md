@@ -1,22 +1,24 @@
 # Converter replacement and security checks
 
-WIDOCO uses the Java converter from
-[Team Digitale's WebVOWL fork](https://github.com/teamdigitale/dati-semantic-WebVOWL/tree/5cdef0946423a8a813a58f5c9b478467f68cbd9d),
-copied into `owl2vowl-core` with its MIT license. The module contains no Spring
-Boot or HTTP server. `DiagramGeneration` passes the existing OWLAPI ontology to
+WIDOCO uses [the independently maintained OWL2VOWL library, version
+1.0.1](https://github.com/silverspy/owl2vowl-core/releases/tag/1.0.1), published on
+JitPack as `com.github.silverspy:owl2vowl-core:1.0.1`. Its source comes from
+[Team Digitale's WebVOWL fork](https://github.com/teamdigitale/dati-semantic-WebVOWL/tree/5cdef0946423a8a813a58f5c9b478467f68cbd9d)
+and retains the MIT license. No converter sources, Spring Boot or HTTP server
+are added to WIDOCO. `DiagramGeneration` passes the existing OWLAPI ontology to
 `Owl2Vowl` and writes its JSON to `webvowl/data/ontology.json` as before.
 
 The extraction fixes cleanup of caller-owned ontologies and annotation parsing.
 The dependencies are pinned to the versions used in the successful scans.
 Jackson 1, Collections 15, Spring, Tomcat and Log4j Core are absent from the
 packaged JAR. The library source and its small local changes are described in
-[owl2vowl-core/README.md](../../../owl2vowl-core/README.md).
+[the library's README](https://github.com/silverspy/owl2vowl-core/tree/1.0.1).
 
-This is a tested local-module prototype. The proposed integration would publish
-the converter from a separate repository and use a released Maven dependency.
-That release, its maintainer and publishing coordinates still need to be agreed;
-the external-library integration has not yet been validated. Frontend hardening
-can be submitted separately from the converter replacement.
+The library repository owns converter tests, dependency updates and releases.
+WIDOCO builds with its normal root POM and checks the final shaded JAR. JitPack
+must be accessible for dependency resolution; consumers may mirror the released
+artifact in their own Maven repository. Frontend hardening can be submitted
+separately from the converter replacement.
 
 ## Static viewer and documentation
 
@@ -39,7 +41,7 @@ findings**, but **13 MEDIUM and four LOW findings** remain in Bootstrap 3.0.3 an
 DOMPurify 3.4.0 inside Mermaid. The separately loaded DOMPurify version does not
 replace that nested copy. No findings are suppressed or reclassified.
 
-[The audited JAR and full reports](https://github.com/silverspy/Widoco/actions/runs/36889227047/artifacts/11175796651)
+[CI's audited JAR and full reports](https://github.com/silverspy/Widoco/actions/workflows/ci.yml)
 include the artifact's SHA-256 and scanner/database versions. The Java tests pass
 on Java 11, 17 and 21. Browser checks cover ontology conversion, metadata attacks,
 prototype pollution, links, Markdown/Mermaid, exports and OOPS sorting/collapse.
@@ -61,10 +63,10 @@ not in the source tree.
 
 ## Reproduce
 
-Build both Maven projects from the repository root:
+Build WIDOCO from the repository root using Java 11 or newer and Maven 3.9.11:
 
 ```sh
-mvn -f build-reactor/pom.xml clean install
+mvn clean install
 ```
 
 For the browser checks, install Playwright locally and make it available to Node.
